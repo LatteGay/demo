@@ -1,6 +1,6 @@
 language: python
 python:
-  - 2.6
+  - "2.7"
 # command to install dependencies
 # UPDATE THIS FILE IF RENPY VERSION IS UPDATED
 install:
@@ -10,5 +10,6 @@ install:
   - rm renpy-7.0.0-sdk.tar.bz2
   - mv renpy-7.0.0-sdk renpy
   - cd renpy
+  - export SDL_AUDIODRIVER=dummy
 # command to run tests
 script: ./renpy.sh "../demo/" lint && ./renpy.sh launcher distribute "../demos/"
