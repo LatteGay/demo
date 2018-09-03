@@ -3,6 +3,25 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#RenpyStuff
+*.rpyc
+*.rpyb
+*.rpymc
+*.pyc
+*.pyo
+
+*~
+*.bak
+
+saves
+tmp
+cache
+
+log.txt
+errors.txt
+traceback.txt
+
+
 # C extensions
 *.so
 
