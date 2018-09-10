@@ -13,9 +13,6 @@ init python:
 
             return rv
 
-define Customer = Character("Marlliey", image= "customer")
-#define customer_side = Character("Marlliey", image= "customer_side")
-
 layeredimage customer:
     group combos:
         attribute upset null
@@ -33,3 +30,8 @@ layeredimage customer:
     group head auto:
         attribute neutral default
     group blush auto
+
+image side customer_side =  LayeredImageProxy("coworker", Transform(crop=(0, 0, 800, 550), zoom=0.8, xoffset=40, yoffset=-200))
+
+define Customer = Character("Marlliey", image= "customer")
+define Customer_side = Character("Marlliey", image= "customer_side")

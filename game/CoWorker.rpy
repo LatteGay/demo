@@ -14,10 +14,6 @@ init python:
             return rv
 
 #Blake Riley
-
-define CW = Character("Blake", image= "coworker",  who_color="#f85f22")
-define CW_side = Character("Blake", image= "coworker_side",  who_color="#f85f22")
-
 layeredimage coworker:
     group combos:
         attribute upset null
@@ -36,3 +32,6 @@ layeredimage coworker:
         attribute neutral default
 
 image side coworker_side =  LayeredImageProxy("coworker", Transform(crop=(0, 0, 800, 550), zoom=0.8, xoffset=40, yoffset=-200))
+
+define CW = Character("Blake", image= "coworker",  who_color="#f85f22")
+define CW_side = Character("Blake", image= "coworker_side",  who_color="#f85f22")
