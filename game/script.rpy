@@ -8,6 +8,7 @@ image bg_shop = "backgrounds/coffee_shop.png"
 
 image bg_cobedroom = im.Scale("backgrounds/bed-bedroom-room-furniture(oil2).jpg", 1920, 1080)
 image bg_fallsidewalk = im.Scale("backgrounds/fallsidewalk.png", 1920, 1080)
+image bg_busystreet = im.Scale("backgrounds/busystreet.png", 1920, 1080)
 # The game starts here.
 
 label start:
@@ -104,19 +105,7 @@ label alarm:
 
     scene bg_fallsidewalk
     with fade
-    "they walk outside"
-
-    CW_side happy "hi"
-    Rival "C'mon sleepy, let's get going."
-    CW_side angry "wtf why r u always so mean 2 me"
-
-    pause
-
-    Rival "See you after work!"
-    CW "Bye!"
-    scene bg_shop
-    "she made it to the coffee shop wow"
-    pause
+    jump scene_a2
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
