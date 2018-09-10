@@ -83,4 +83,80 @@ label scene_a1:
             Rival "Finally. I thought you’d slipped and hit your head or something."
             CW_side sad- "Yeah yeah, you’re hilarious. Let’s go."
 
-        jump j_scenea2
+    jump j_scenea2
+#Scene 1 a
+label scene_a3:
+    scene bg_shop
+    "Blake arrives at work with time to spare. It's early and thankfully quiet, save one of her new coworkers swiftly prepping for the day. Maybe she’s a little bit grateful towards Shay’s need to be punctual."
+    show mc
+    MC "Hey Blake! Just in time. Jun’s letting us try some of her new banana bread fresh outta the oven. Get it while it’s hot!"
+    "Jun walks over with a small plate with a number of small pieces of bread. It smells delicious."
+    hide mc
+    show boss
+    Boss "Go ahead, it’s a new recipe that I’ve been wanting to try out for a while now."
+    "Blake pops a piece into her mouth. Granted, she tends to live on toast and instant noodles, but it's probably one of the best things she's ever tasted. She just manages to catch herself and stop from swearing, considering she's in polite company."
+    CW_side happy "Wow. It's amazing. Thumbs up, boss"
+    "Jun flashes a warm smile at her."
+
+    Boss "I’m glad. I’ll be putting these out later. Please let the customers know that it’s new and to try it."
+    CW_side happy- " Yes, ma’am."
+
+    "sets down the tray, leaves them with some instructions and heads off into the back. Blake waits until she's out of earshot and turns to Maya."
+    hide boss
+    show mc
+    CW_side "This is like, the fifth new recipe that’s been introduced since I started here. Does it happen often?"
+    "Maya sighs. She looks troubled."
+
+    MC "No, I just think she’s just a little tense about  that new (insert chain name) that’s opened up nearby."
+    CW_side "Oh. She’s worried about losing business to them?"
+    MC "Enough to be noticable. We haven't really been open that long ourselves, y'know? We've got some regulars, but we're still a small business and I guess we're not really that established yet. Jun's been coming up with all sorts of ideas, trying to put out ads..."
+
+    "She finishes putting out some of the other freshly baked pastries. Maya shakes her head and smiles faintly at Blake."
+
+    MC "Enough about that. Can you help me finish making sure all the syrup bottles are full? It’s supposed to be hot today, we’ll probably get a ton of cold drinks."
+    CW_side "Sure thing."
+
+    "Time passes uneventfully. Between the two of them, they manage to get the pre-opening duties completed and the store opens. Customers have started to trickle in when Asher finally arrives, looking harried and windswept."
+    MC "About time."
+
+    "Asher disappears into the storeroom and emerges a minute later. Blake catches a glimpse of Jun’s unamused face before the storeroom door closes again."
+
+    show friend at left
+    hide mc
+    show mc at right
+    Asher "There was an accident at the intersection. I had to get off the bus and walk."
+    MC "That’s okay. Just get to grinding the coffee beans, I’m still on newbie duty."
+    Asher "No problem. You holding up okay, Blake?"
+    CW_side "Getting the hang of it I hope."
+    MC "You're doing fine."
+    Asher "Yeah, you’re keeping up with that one girl who orders something new and ridiculous everyday."
+
+    "Blake groans."
+
+    CW_side sad "Yeah, how the hell does she come up with these things? It’s actually a new one every single day."
+    Asher "Dunno, at least she hasn’t asked you to make a frappuccino with no ice,  and then yell at you when it predictably comes out a disaster."
+    CW_side "...Has that happened to you?"
+    Asher "Yup, on my second day too."
+    MC "I had someone yell at me because their ice was melting in their drink. Said I gave them the wrong ice cubes because they were supposed to stay big."
+    CW_side "What."
+    MC "My fourth day."
+    Asher "People are dumb. You’ll become numb to it soon, I promise. Come and join us in the “dead inside at work” club!"
+    CW_side "You guys are the worst at being reassuring. You’re like an awkward dad trying to reassure his teenager’s angst."
+    Asher "Well, they don’t call me daddy for nothing."
+
+    "Maya makes a noise of disgust."
+
+    MC "Stop. No one calls you that. I don’t want to know if your boyfriend calls you that either, so don’t tell me."
+
+    "Asher merely bites his lip and winks at her. Maya makes another disgusted noise."
+
+    MC "Stop scarring me and the newbie and go and do your job."
+    hide friend
+    hide mc
+    show mc
+    "Asher laughs as he disappears into the storeroom. Maya rubs her eyes tiredly."
+
+    CW_side "This conversation took a turn I wasn’t prepared for."
+    MC "Welcome to the family. You’ll get used to it soon."
+
+    jump j_scenea4

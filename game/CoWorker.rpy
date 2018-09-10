@@ -31,7 +31,7 @@ layeredimage coworker:
     group head auto:
         attribute neutral default
 
-image side coworker_side =  LayeredImageProxy("coworker", Transform(crop=(0, 0, 800, 550), zoom=0.8, xoffset=40, yoffset=-200))
+image side coworker_side =  LayeredImageProxy("coworker", Transform(crop=(0, 0, 700, 450), zoom=1, xoffset=-100, yoffset=-200))
 
 define CW = Character("Blake", image= "coworker",  who_color="#f85f22")
 define CW_side = Character("Blake", image= "coworker_side",  who_color="#f85f22")

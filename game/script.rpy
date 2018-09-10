@@ -25,6 +25,7 @@ label start:
     # directory.
 
     label j_scenea3:
+    jump scene_a3
     label j_scenea4:
     jump scene_a4
     label j_scenea5:
