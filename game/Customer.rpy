@@ -13,7 +13,7 @@ init python:
 
             return rv
 
-define customer = Character("Marlliey", image= "customer")
+define Customer = Character("Marlliey", image= "customer")
 #define customer_side = Character("Marlliey", image= "customer_side")
 
 layeredimage customer:
@@ -21,15 +21,15 @@ layeredimage customer:
         attribute upset null
 
     attribute_function Picker([
-
+    "upset customer_left_arm_hip customer_right_arm_hips customer_head_sad"
     ])
 
     group base:
-        attribute outfit1 default
+        attribute dress1 default
     group left_arm auto
     group right_arm auto
-    group arms:
-        attribute crossed default
+    group crossed:
+        attribute arms default
     group head auto:
         attribute neutral default
     group blush auto
