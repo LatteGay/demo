@@ -29,7 +29,7 @@ label scene_a2:
     hide rival
     "Shay flips her off over her shoulder as she walks away."
     Rival "You too, ho."
-    pause 
+    pause
     jump j_scenea3
 label scene_a4:
     scene bg_shop
@@ -79,6 +79,7 @@ label scene_a4:
     "Blake lets out a breath she didn't know she was holding."
     MC "See. We got it."
     CW_side happy "Yeah. We did."
-    "Maya offers a high five. Blake slaps her hand against her’s gratefully. "
-    pause 
-    jump j_scenea5    
+    "Maya offers a high five. Blake slaps her hand against her’s gratefully."
+    hide mc
+    pause
+    jump j_scenea5

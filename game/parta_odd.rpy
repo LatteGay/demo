@@ -1,6 +1,6 @@
 #Scene 1 a
 label scene_a1:
-    $snooze = 0
+    $ snooze = 0
 
     scene bg_cobedroom
     "Blake shifts back under the covers with a groan, squeezing her eyes shut against the sunlight peeking into her messy room. She blindly reaches around her bedside, deciding she now hated the song she'd set as her alarm a few days ago."
@@ -72,7 +72,7 @@ label scene_a1:
             scene bg_cobedroom
             show rival
             Rival "Up." #[Angry]
-            CW_side angry- "Five minutes?"
+            CW_side -angry "Five minutes?"
             Rival "How many times have you said that to yourself this morning?"
             CW_side sad "It’s too early for you to call me out like that."
             Rival "Your shift is in half an hour.  You're going to be late. Get up or I'll throw ice water on you and then leave without you anyway."
@@ -81,7 +81,7 @@ label scene_a1:
 
             "Ten minutes later, Blake stumbles out of her room, hat perched haphazardly on her head. Shay is already halfway out the door."
             Rival "Finally. I thought you’d slipped and hit your head or something."
-            CW_side sad- "Yeah yeah, you’re hilarious. Let’s go."
+            CW_side -sad "Yeah yeah, you’re hilarious. Let’s go."
 
     jump j_scenea2
 #Scene 1 a
@@ -99,7 +99,7 @@ label scene_a3:
     "Jun flashes a warm smile at her."
 
     Boss "I’m glad. I’ll be putting these out later. Please let the customers know that it’s new and to try it."
-    CW_side happy- " Yes, ma’am."
+    CW_side -happy " Yes, ma’am."
 
     "sets down the tray, leaves them with some instructions and heads off into the back. Blake waits until she's out of earshot and turns to Maya."
     hide boss
@@ -121,28 +121,28 @@ label scene_a3:
 
     "Asher disappears into the storeroom and emerges a minute later. Blake catches a glimpse of Jun’s unamused face before the storeroom door closes again."
 
-    show friend at left
+    show bestie at left
     hide mc
     show mc at right
-    Asher "There was an accident at the intersection. I had to get off the bus and walk."
+    Bestie "There was an accident at the intersection. I had to get off the bus and walk."
     MC "That’s okay. Just get to grinding the coffee beans, I’m still on newbie duty."
-    Asher "No problem. You holding up okay, Blake?"
+    Bestie "No problem. You holding up okay, Blake?"
     CW_side "Getting the hang of it I hope."
     MC "You're doing fine."
-    Asher "Yeah, you’re keeping up with that one girl who orders something new and ridiculous everyday."
+    Bestie "Yeah, you’re keeping up with that one girl who orders something new and ridiculous everyday."
 
     "Blake groans."
 
     CW_side sad "Yeah, how the hell does she come up with these things? It’s actually a new one every single day."
-    Asher "Dunno, at least she hasn’t asked you to make a frappuccino with no ice,  and then yell at you when it predictably comes out a disaster."
+    Bestie "Dunno, at least she hasn’t asked you to make a frappuccino with no ice,  and then yell at you when it predictably comes out a disaster."
     CW_side "...Has that happened to you?"
-    Asher "Yup, on my second day too."
+    Bestie "Yup, on my second day too."
     MC "I had someone yell at me because their ice was melting in their drink. Said I gave them the wrong ice cubes because they were supposed to stay big."
-    CW_side "What."
+    CW_side -sad "What."
     MC "My fourth day."
-    Asher "People are dumb. You’ll become numb to it soon, I promise. Come and join us in the “dead inside at work” club!"
+    Bestie "People are dumb. You’ll become numb to it soon, I promise. Come and join us in the “dead inside at work” club!"
     CW_side "You guys are the worst at being reassuring. You’re like an awkward dad trying to reassure his teenager’s angst."
-    Asher "Well, they don’t call me daddy for nothing."
+    Bestie "Well, they don’t call me daddy for nothing."
 
     "Maya makes a noise of disgust."
 
@@ -151,7 +151,7 @@ label scene_a3:
     "Asher merely bites his lip and winks at her. Maya makes another disgusted noise."
 
     MC "Stop scarring me and the newbie and go and do your job."
-    hide friend
+    hide bestie with dissolve
     hide mc
     show mc
     "Asher laughs as he disappears into the storeroom. Maya rubs her eyes tiredly."
@@ -160,3 +160,162 @@ label scene_a3:
     MC "Welcome to the family. You’ll get used to it soon."
 
     jump j_scenea4
+
+label scene_a7:
+
+    "It’s later in the afternoon and past lunch-hour, so the coffee shop is particularly quiet. There has only been a handful of customers in the past several hours and Blake is frankly bored out of her mind. She almost wishes Marllie would order something just to give her something to do."
+
+    "Almost."
+
+    $ bClean1 = True
+    $ bClean2 = True
+    $ bClean3 = True
+    $ bClean4 = True
+    label .clean_menu1:
+        menu:
+            "Look around" if bClean1:
+                $bClean1 = False
+                "There are two customers in right now. One man who looks about done with his coffee but is currently entranced in a book, and Marllie still tapping away on her computer. Asher’s on his break and Maya’s cleaning the coffee machine, and Jun’s in the kitchen baking fresh cakes ready for the influx of people who need a fix after a long day at work."
+            "Clean the front counter." if bClean2:
+                $bClean2 = False
+                CW_side "{i}Eh, I think I’ve cleaned it twice already in the… past half an hour? Goddamn, time is passing slowly.{/i}"
+            "Sweep the floor." if bClean3:
+                $bClean3 = False
+                CW_side "{i}Oh right, Asher swept before his break already. Damn that man’s efficiency.{/i}"
+            "Wipe the tables." if bClean4:
+                $bClean4 = False
+                CW_side "{i}Well, gotta at least look busy. Might as well do the tables again.{/i}"
+                jump .after_clean_menu1
+        jump .clean_menu1
+
+    label .after_clean_menu1:
+    "She takes her time but not slow enough that she looks like she’s wasting it. She meticulously straightens up the condiments on each table, ignoring the guy’s corner table lest she disturb his reading. Marllie pauses her frantic typing to take a sip at her drink without her eyes leaving the screen and now Blake’s a little bit closer, she can make out a few words."
+
+    "She’s been working here a few weeks now and despite how much time she’s technically been in Marllie’s company, it occurs to her she has no idea what the regular is actually doing. She does vaguely recall the speculating she and Maya had done in her first days. She has to admit she’s curious."
+
+    CW_side "{i}Huh, I wonder if I can sneak a look. Never did find out what she’s doing while in here.{/i}"
+
+    "Blake makes her way as nonchalantly as she can to the table behind Marllie. She feels a bit like a creep but she sprays the table a couple of times anyway and starts casually cleaning."
+
+    "Unfortunately, she can't see around Marley's head, damn it. She shifts to the side a little..."
+    show customer with dissolve
+    Customer "You know, you could just ask me what I'm doing."
+
+    "Blake just about jumps out of her skin and knocks the bottle on the floor. She stammers some incoherent apologies as Marllie leans back in her chair to stare at her, and she once again considers telling Asher she’s going to jump off a bridge today so can he please clean the coffee machine later in her place, thanks."
+
+    Customer "You’re not very stealthy."
+    CW_side "Oh, my God."
+    Customer "You were almost leaning  over my shoulder. You even stopped wiping the table at one point."
+    CW_side sad up "I’m so sorry."
+
+    show customer happy
+    "Marllie bursts into a fit of giggles. Blake is dumbfounded, but… she figures Marllie isn’t actually mad, then? Man, is she bad at being discreet. Really, she should have known her capabilities better from all the times Shay’s caught her doing something she shouldn’t have been doing."
+
+    CW_side -sad -up "You’re not upset?"
+    Customer "No. It’s okay."
+    CW_side happy "Okay. Okay, good."
+    Customer "…"
+    CW_side "…"
+    show customer -happy
+    Customer "Do you... want to sit?"
+
+    "The offer breaks the awkward silence. Blake glances back at the register and considers its safety, but they'd be sitting fairly close, the shop's empty, and Asher will be back from his break in a little over ten minutes."
+
+    "Blake pulls out the chair across the table and plonks herself down. She’s got a good view of the counter and the entrance from here so she lets herself relax."
+
+    CW_side -happy "So… You said I could ask what you’re doing?"
+
+    "Marllie stops typing to take another sip of her coffee. She inclines her head towards the mess on the table."
+
+    Customer "Take a guess."
+
+    "Blake casts her gaze down onto the table. Loose pages full of what look to be lecture notes, textbooks."
+
+    CW_side " Er… english major?"
+
+    Customer "Close. Journalism."
+
+    CW_side " Oh. Cool."
+    $ bStudy =  True
+    $ bHere =  True
+
+    label q1_menu:
+        if (bStudy == False) and (bHere == False):
+            jump after_q1
+        else:
+            menu:
+                "How long have you been studying?" if bStudy:
+                        $bStudy = False
+                        Customer "I’m about a year into it. It’s a 20 month course, so halfway done, I guess."
+                "You’re here a lot." if bHere:
+                        $bHere = False
+                        Customer "The coffee is good, the atmosphere is good, and there’s free wifi. What’s there not to love?"
+        jump q1_menu
+
+    label after_q1:
+
+    CW_side "You come here during your free periods?"
+
+    Customer "Yeah. And the professors don’t mind us not showing up as long as we catch up in our own time. I just watch the lecture video later and review the notes here. Like I said, I like the atmosphere."
+
+    "There’s a bit of an awkward pause. Blake internally cringes at how bad she is at small talk."
+
+    Customer "What about you? You haven’t been here that long."
+
+    CW_side "I just moved in with a friend from high school not that long ago. I used to tutor too, but I’m kinda too far away from my students now."
+
+    Customer "You used to tutor?"
+
+    CW_side  "Yeah, biology and maths."
+
+    Customer "Are you in school too?"
+
+    "Blake shakes her head."
+
+    CW_side "I’m taking a break for a semester or two. I think. I don’t really know what I wanna do but I don’t want to move all the way back in with my mom yet in case I change my mind, so I’m just here."
+
+    "She sighs a little wistfully."
+
+    CW_side "I do miss the dogs, though. And my family too, of course."
+
+    "Marllie’s entire being perks up."
+    show customer hips happy
+    Customer "You have dogs?"
+
+    "Blake is already reaching for her phone before the question is even fully posed to her. She clicks through her phone and into the library of images she has stored away."
+
+    CW_side happy "Yeah, three."
+
+    "She pulls up a picture with all three sitting in the living room and points each one out."
+
+    CW_side "The big one is Ein. The oldest one too. Astro is the Shiba, and David’s the Pomeranian mix. We got him not long before I moved out."
+
+    "Marllie’s eyes light up as she looks at them. She cups a hand over her mouth."
+
+    Customer happy "They’re so adorable!"
+
+    CW_side "I know, right? I’m thinking about getting another. I miss having a dog around and I know my roommate would be more than okay with it. Just waiting until the right time when I have some money saved. I’m walking other people's’ dogs right now for a bit of side money and it helps fill the hole a bit."
+
+    Customer "If you do, I’d love to meet them. I’ve never had a pet before."
+
+    CW_side -happy "Really? Never?"
+
+    Customer sad "Yeah… my parents didn’t really have time to take care of them and they don't really trust me to take care of one on my own. Maybe someday. Studying takes up a lot of time."
+
+    "Blake flashes her a smile."
+
+    CW_side happy "Yeah, you’ll want to be able to spoil them. If or when I do get one, I promise I’ll bring them in so you can meet them."
+
+    Customer happy "I’d love that."
+
+    "Blake notices Asher gesturing to her from the register, back from his break. She offers Marllie an apologetic grin."
+
+    CW_side "Back to the grind, I guess. Good luck with your studying."
+
+    Customer "Thanks. I might need a new coffee soon to keep awake."
+
+    "Blake winces, but hides it well. She pushes herself up with the table."
+
+    CW_side -happy "No problem. Just let me know."
+
+    jump j_scene8

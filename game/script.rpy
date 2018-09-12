@@ -14,22 +14,17 @@ image bg_busystreet = im.Scale("backgrounds/busystreet.png", 1920, 1080)
 label start:
     label j_scenea1:
     jump scene_a1
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
     label j_scenea2:
     jump scene_a2
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
     label j_scenea3:
     jump scene_a3
     label j_scenea4:
     jump scene_a4
     label j_scenea5:
     label j_scenea6:
+    label j_scenea7:
+    jump scene_a7
+    label j_scene_a8:
     #show CoWorker
 
     # These display lines of dialogue.
