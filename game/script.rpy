@@ -22,6 +22,7 @@ label start:
     jump scene_a4
     label j_scenea5:
     label j_scenea6:
+    jump scene_a6
     label j_scenea7:
     jump scene_a7
     label j_scene_a8:

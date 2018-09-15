@@ -83,3 +83,113 @@ label scene_a4:
     hide mc
     pause
     jump j_scenea5
+label scene_a6:
+    scene bg_shop
+    "It's been a busier morning today, with more than a few exhausted parents and college students."
+    "Blake finds herself watching the clock with growing trepidation, because she knows that girl with the impossible order is going to come in at about 10AM and it's already 9:50AM and what the fuck is it going to be today?"
+    "Sure enough, she's just refilling the napkin dispenser when Marllie trots into the shop. Blake can feel the sweat dripping down her neck with today's hot weather, yet somehow Marllie is sporting a coat and her hair is still down. Apparently, she isn't feeling the heat on quite the same level."
+    show customer
+    "Blake takes a deep breath."
+    CW_side happy "Hi! What can I get you today?"
+    "Marllie brushes her hair out of her eyes and shifts her computer case into her other hand, eyeing the menu. Blake can almost feel the sweat droplets forming on her forehead."
+    Customer "Hm, I’ll have a extra large latte, four shots."
+    "Blake exhales, disbelieving. Four shots is a little much, but this order is so simple and straightforward that there has to be a catch."
+    CW_side "Of course. Will that be all?"
+    Customer "Actually…"
+    CW_side sad"{b}{i}No, please. Why did I ask? A normal order for once, please.{/i}{/b}"
+    "Marllie actually looks a tiny bit apologetic."
+    Customer "Actually, can you put two decaf shots at the bottom, milk, two normal shots on top and minimal foam? Also extra hot milk"
+    "Blake fights to keep her expression neutral. She can feel the herculean effort she’s exerting to stop her left eye from twitching."
+    CW_side neutral "You betcha. Extra large latte, four shots with milk as hot as it will go without it exploding in my face, coming right up."
+    "Marllie smiles, looking relieved. "
+    show customer happy
+    Customer "As long as it’s not too much trouble."
+    CW_side happy "…None at all."
+    "Marllie watches her as Blake scribbles her name onto the cup, money ready in hand. The rest of the transaction thankfully goes smoothly, and Marllie shoots her another small smile before she turns to head to her favourite table. Blake debates dunking her face in the sink as she begins to fill the order. Maybe the milk will explode in her face and grant her mercy. She can only hope."
+    hide customer
+    "The first two shots of decaf are in the cup when Asher slides up to her, a tray of dirty cups in his hands."
+    show bestie
+    Bestie "What is it today?"
+    "Blake merely grunts and tilts her head towards the ticket, eyes not leaving the thermometer so she doesn’t actually get a faceful of boiling milk. Asher peers at the ticket, letting out a snort."
+    Bestie "I swear it’s always just you."
+    CW_side sad "GOD, I know! It’s like she enjoys watching my suffering." 
+    Bestie "Well…"
+    CW_side "Go away, I didn’t ask you."
+    "Asher laughs before he continues into the kitchen."
+    Bestie "Just think of it as field experience!"
+    hide bestie
+    "Blake grumbles under her breath. The milk is finally ready. Blake is ready for this to be over."
+    "Finally, the order is done. She wipes her sweaty hands on her apron and snaps a lid onto the cup."
+    CW_side happy "Order for Marllie!"
+    show customer neutral
+    "Marllie is up at the counter in a flash. She takes the coffee with another thank you and glides away. She sweeps her hair over on shoulder as she retreats, and it uncovers the back of the jacket."
+    "{b}MARLLIE{/b}"
+    "Blake’s eyes widen before she remembers what she had written on the cup. "
+    "{b}MARLLY{/b}"
+    "She has a dramatic flashback to every other time she’s written Marllie’s name and she’s more than certain none of them were correct. That was fine, but not when there was an actual name printed on the back of a jacket three feet in front of her and she still got it wrong. She leans on the countertop and covers her face with her hands just as Asher walks back out."
+    hide customer
+    show bestie
+    "Asher makes a sympathetic noise while Blake just lets out a long groan."
+    Bestie "Aw, did you have to make her’s again?"
+    CW_side sad "No, worse."
+    Bestie "What do you mean?"
+    CW_side "I’ve kind of sort of been spelling her name wrong the entire time that I’ve worked here. So like, I’m going to take my break now so I can throw myself off the bridge."
+    Bestie "You can’t do that. It’s too busy."
+    CW_side "Wow, thanks for the sympathy. "
+    "Asher flashes her a charming smile."
+    Bestie "You’re welcome! "
+    "He laughs again, lightly patting her on the back."
+    Bestie "Really though, I spell names wrong on purpose. Some customers find it funny. Others are just assholes. She hasn’t thrown a fit so I wouldn’t worry about it. "
+    "Blake’s voice is muffled in her hands."
+    CW_side "Really?"
+    Bestie "Yeah. But you still have to make her drinks, so..."
+    "Asher’s eyes glint with amusement as Blake lets out a long, distressed noise."
+    Bestie "Enjoy your break!"
+    hide bestie
+    jump j_scenea7    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
