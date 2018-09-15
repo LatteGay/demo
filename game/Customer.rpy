@@ -11,7 +11,6 @@ layeredimage customer:
     group blush auto
 
 image side customer_side =  LayeredImageProxy("coworker", Transform(crop=(0, 0, 800, 550), zoom=0.8, xoffset=40, yoffset=-200))
-image customer = LayeredImageProxy("customer", Transform (zoom=0.95))
 
-define Customer = Character("Marlliey", image= "customer")
-define Customer_side = Character("Marlliey", image= "customer_side")
+define Customer = Character("Marlliey", image= "customer", who_color="#fff2d3")
+define Customer_side = Character("Marlliey", image= "customer_side", who_color="#fff2d3")

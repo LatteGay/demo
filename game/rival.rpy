@@ -3,7 +3,6 @@ layeredimage rival:
         attribute work default
 
 image side rival_side =  LayeredImageProxy("rival", Transform(crop=(0, 0, 800, 550), zoom=0.8, xoffset=-80, yoffset=-200))
-image rival = LayeredImageProxy("rival", Transform (zoom=0.95))
 
-define Rival = Character("Shay", image= "rival",  who_color="#c8ffc8")
-define Rival_side = Character("Shay", image= "rival_side",  who_color="#f85f22")
+define Rival = Character("Shay", image= "rival",  who_color="#fff2d3")
+define Rival_side = Character("Shay", image= "rival_side",  who_color="#fff2d3")
