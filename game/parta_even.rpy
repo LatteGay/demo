@@ -147,7 +147,65 @@ label scene_a6:
     Bestie "Enjoy your break!"
     hide bestie
     jump j_scenea7    
-    
+label scene_a8:
+    scene bg_shop
+    "There's a small routine between them now during the coffee shop's quieter hours. As long as someone’s keeping an eye out for potential customers and everything’s tidy and prepared, Jun doesn’t really mind if they stand around for a bit."
+    "So Blake and Marllie keep each other company when they’re both bored out of their minds. It’s a good arrangement."
+    show customer
+    "It’s almost evening now, though, and Marllie is only just slinking in. She looks a bit haggard."
+    CW_side neutral "You’re here late."
+    Customer "One of my classes got swapped around. And I’m going to be pulling an all-nighter, I think."
+    CW_side sad "Ouch. Definitely don’t miss those."
+    "Blake gets to work preparing Marllie’s order. It’s thankfully quite tame, so Blake allows herself to zone out for a bit. She scribbles the name on the cup and sketches a cute little dog face on the side. It earns her a happy, if tired grin."
+    Customer happy "You know I’m going to expect those every time now."
+    CW_side happy "Not going to lie, that’s the only thing I can draw."
+    Customer "I mean, it’s cute!"
+    "Blake lets out a small chuckle. She finishes up the drink and pops the lid on."
+    CW_side "You want that same dog every time? Sure, I can do that. "
+    Customer "Good."
+    "The smaller girl wraps another napkin around her coffee and grabs a couple of sugars to take back to her table. She makes to leave, but she pauses."
+    Customer neutral "So. Uh…  are you the only one here?"
+    CW_side "Hm? Oh, uh, no. Maya and Jun are doing boring adult paperwork in the back somewhere. Just me to close up today. "
+    "Marllie fiddles with the packets in her hands. She glances at the door to the back room and back at Blake. Blake tilts her head quizzically."
+    CW_side neutral "Everything alright?"
+    Customer "Yeah. Everything’s good."
+    "Blake eyes her suspiciously."
+    Customer "Totally fine. I don’t know why you would think I wasn’t."
+    "Blake cocks an eyebrow. She opens her mouth to say it’s okay, but Marllie continues to babble."
+    Customer "I was just wondering, you know?"
+    CW_side "Right…"
+    Customer "Yeah…"
+    "There’s a highly awkward silence. Marllie’s still eyeing the door."
+    CW_side "Erm, do you… want me to go and get her for you? I think they’re going to call it a day soon too. There’s only so much taxes you can do in one day. She’s probably ready to tear her hair out. I know I would be."
+    Customer "No! Uh. No. I wouldn’t want to intrude on important business."
+    "Marllie covers her face with her hands, blushing furiously."
+    Customer "God. And I said you weren’t stealthy. I’m useless at this."
+    CW_side "Hey now. Be nice. I don’t need to live that embarrassment again."
+    Customer "Sorry."
+    "There’s another awkward silence. Blake still has no idea what Marllie wants."
+    Customer "I’m… going to go to my table. I have to work on an assignment. You know how it is. I’ll just-"
+    "The door to the back room opens. Maya, looking tired and disheveled, trudges out and sighs."
+    hide customer with dissolve
+    show mc
+    MC "You know, I didn’t think I’d be doing taxes when I joined up."
+    "Maya leans against the counter tiredly. Blake shrugs, continuing to wipe mugs."
+    CW_side "You’re the one who offered to help."
+    MC "Please don’t remind me."
+    "Maya notices the customer. She offers her her patented Customer Service Worker smile, slipping back into the role easily."
+    hide mc with dissolve
+    show mc at right
+    show customer at left
+    MC happy "Oh, hey Marllie! You’re here late."
+    "Marllie looks like a deer in headlights. Her mouth opens and closes several times, trying and failing to say something. "
+    CW_side "Weren’t you looking for Maya? I didn’t even have to interrupt them."
+    MC "Oh? What can I do for you?"
+    "With Marllie still quiet, Maya pushes herself off the counter and gestures towards the front door."
+    MC "We can talk outside if you want? If it’s easier."
+    "Marllie nods, looking slightly panicked. She throws a glance at Blake before following Maya out the door."
+    hide mc with dissolve
+    hide customer with dissolve
+    CW_side "{b}{i}Huh. Weird.{/i}{/b}"
+    jump j_scenea9
     
     
     

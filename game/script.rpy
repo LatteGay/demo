@@ -25,7 +25,9 @@ label start:
     jump scene_a6
     label j_scenea7:
     jump scene_a7
-    label j_scene_a8:
+    label j_scenea8:
+    jump scene_a8
+    label j_scenea9:
     #show CoWorker
 
     # These display lines of dialogue.
