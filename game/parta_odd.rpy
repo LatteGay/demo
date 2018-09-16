@@ -37,8 +37,8 @@ label scene_a1:
         if snooze < 2:
             scene bg_cobedroom
             "There's a heavy series of knocks against the door."
-            show rival
             pause
+            show rival
             Rival "Hey, Blake, are you getting up or do I have to yank the covers off you again?"
             CW_side "Yeah, yeah. I'm coming out."
             Rival "We had that talk years ago."
@@ -101,7 +101,7 @@ label scene_a3:
     Boss "I’m glad. I’ll be putting these out later. Please let the customers know that it’s new and to try it."
     CW_side -happy " Yes, ma’am."
 
-    "sets down the tray, leaves them with some instructions and heads off into the back. Blake waits until she's out of earshot and turns to Maya."
+    "Jun sets down the tray, leaves them with some instructions and heads off into the back. Blake waits until she's out of earshot and turns to Maya."
     hide boss
     show mc
     CW_side "This is like, the fifth new recipe that’s been introduced since I started here. Does it happen often?"
@@ -279,7 +279,7 @@ label scene_a7:
     CW_side "I do miss the dogs, though. And my family too, of course."
 
     "Marllie’s entire being perks up."
-    show customer hips happy
+    show customer hips happy with dissolve
     Customer "You have dogs?"
 
     "Blake is already reaching for her phone before the question is even fully posed to her. She clicks through her phone and into the library of images she has stored away."
