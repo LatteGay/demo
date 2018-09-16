@@ -377,5 +377,113 @@ label scene_a9:
 
 label scene_a11:
     scene bg_apartment
-
+    "It’s the weekend and Blake’s lying on the couch texting, with one of her shows blaring from the television and a half-eaten sandwich resting on her chest. Shay, having decided to stay home to study, is taking a break. She eyes Blake and seems to consider threatening her if she makes a mess, but Blake picks up the sandwich and somehow shove the entirety of it in her mouth instead."
+    show rival
+    Rival "Why."
+    "Blake garbles unintelligibly  around the food. Shay curls her lip in disgust."
+    Rival "Seriously."
+    "The responded apology is barely heard and pointless on the basis that she’s still doing what she’s apologising for. Shay shifts so she’s facing the other way and shoves her nose back into her book in an attempt to ignore Blake’s antics. Blake finishes and tries again."
+    CW_side "Sorry."
+    Rival "Go away."
+    "Blake’s phone flashes again for what has to be the dozenth time in a ten minute period. She answers, letting out a soft snort of laughter as she reads the message. Blake texts back rapidly with a reply before putting her phone down again. Shay peers at her suspiciously."
+    Rival "Who are you texting? You’re grinning."
+    CW_side "You remember that one customer who kept ordering ridiculous things?"
+    Rival "That doesn't narrow it down, Blake."
+    CW_side "Okay, you're right. Upside down macchiato. Small blonde. Can't spell her name for shit."
+    Rival "Ah, yes. I remember the stories."
+    CW_side "She’s babysitting some kids and they’re engrossed in a movie right now. We’re just talking about stuff."
+    "Shay squints at her, looking between Blake and the phone. She puts her book down."
+    Rival "You like her."
+    "Blake’s smile disappears immediately."
+    CW_side "What’re you talking about?"
+    Rival "You like her. I remember this from your last ex. It’s the same dopey look."
+    CW_side "Psh, what? Nah. It’s actually not. I barely know her."
+    Rival "It actually is."
+    CW_side "Is not."
+    Rival "Is too."
+    CW_side "Is not."
+    Rival "I’m not doing this with you. You’re deflecting."
+    CW_side "She’s a customer! A new friend, nothing more. I’ll admit that she’s… cute. But that’s it."
+    Rival "You’re also blushing."
+    CW_side "Am not."
+    "Shay rolls her eyes again."
+    Rival "Whatever. You should just ask her out if you like her. Save me from the pining from last time. I beg of you. I really don’t need you lying on my floor whimpering about how pretty you think a girl is again."
+    CW_side "Didn’t you listen to a word I just said?"
+    Rival "I did. And I’m still choosing to believe that you’re an idiot."
+    CW_side "Eh, what’s new."
+    Rival "Fair point."
+    "Shay picks up reading from where she left off. Blake feels beyond awkward on her phone now, though, and she notes Shay’s side eye when another text message comes through. She takes a moment to casually turn up the volume on the TV and then she’ll text back as nonchalantly as possible."
+    "The phone flashes again."
+    "Blake gives up."
+    CW_side "I’m gonna go take a nap. Didn’t sleep until 4AM, so…"
+    Rival "Uh huh. Right."
+    CW_side "I’ll see you in a couple of hours."
+    Rival "Or tomorrow morning. I know how your naps are."
+    "Blake is sure \‘naps\’ would be in air quotations if Shay could be bothered to put her book down, but she’ll take it."
+    CW_side "Yeah yeah. See ya."
+    hide rival
+    scene bg_cobedroom
+    "She leaves to her room as quickly as possible without it looking like she’s actually fleeing."
+    CW_side "{b}{i}And I’m not, right? I just don’t wanna talk about my love life with Shay. Not that there is one. We’re just friends and she’s pretty cool, that’s all.{/i}{/b}"
+    "Blake does take a nap, in fact. But she makes certain she texts back first."    
     jump j_scenea12
+label scene_a13:
+    scene bg_park
+    "Blake is waiting near the gate when Marllie arrives. One of the two dogs is whining and tugging at his lead, almost strangling himself in his attempt to enter the park faster. Blake gently scolds him and demands he sit, which he does… albeit very reluctantly. The other smaller dog, at least, waits patiently."
+    show customer
+    Customer "Sorry I’m late! "
+    "She notices the dogs and squeals."
+    Customer happy "They’re so cute! What are their names? Would they be okay with me petting them?"
+    CW_side happy "The big one is Cookie and the well-behaved one is Alfredo. They’re friendly."
+    "As if to emphasise it, Cookie is no longer trying to get into the park but instead pulling to get to Marllie. Alfredo’s tail beats against the pavement at the sight of a new friend."
+    "Marllie crouches down to fuss them both equally, Cookie’s affectionate licks making her giggle. Alfredo whoofs as if demanding he gets a turn, too, so Marllie leans down further to scratch behind the smaller dog’s ears."
+    CW_side "Sorry, I know Cookie can be a bit overwhelming. He almost knocked me down when I showed up to walk him for the first time."
+    Customer "I love them. It’s already making me want a dog of my own."
+    "She stands after giving them both an extra scratch. It’s evening, so there are plenty of people walking their pets after work or school. It’s also a particularly lovely day outside. They start walking together."
+    Customer "I enjoyed your company at the restaurant last night. I know I can talk a lot when it’s something I’m interested in…"
+    CW_side "I didn’t mind. I can tell you’re passionate about your studies. That’s a good thing."
+    "Marllie looks bashful."
+    Customer "That’s sweet of you to say..."
+    "They chatter some more about their respective days, Blake regaling (what is probably) an exaggerated story of a ridiculously demanding customer. Marrlie has tears in her eyes from laughing so hard."
+    CW_side -happy "So I had to add sixteen more pumps of caramel with what I’d already added and she was still insisting it wasn’t sweet enough. I watched her, with my own two eyes, add more of that artificial sweetener that we keep on the tables. Who needs that much sugar? Just because she had almond milk, doesn’t make it \"healthy\"."
+    Customer angryopen "I don’t believe you. That can’t be real."
+    CW_side "No, it gets better. I offered her one of Jun’s muffins after for that promo we’re having and she said -- you wouldn’t believe it -- \"oh, no, I’m on a diet. I have to watch my figure!\""
+    Customer neutral "Pretty sure eighteen pumps of caramel is like, three days worth of sugar intake."
+    CW_side "My head hurts just thinking about it."
+    Customer "My teeth hurt just thinking about it."
+    CW_side "One of my ex’s actually, her usual order was a caramel macchiato with six extra pumps. She had one basically everyday. I tried it once and nearly spat it all over her. I mean I have a sweet tooth, but oh my God."
+    "Marllie’s eyes widen and she blurts out the question before she can stop herself."
+    Customer "\"Her\"?"
+    CW_side "Oh, yeah. You didn’t know? Shay always says I dress like a walking stereotype but I guess you haven’t seen me outside my work clothes."
+    Customer "I guess she’s right. No offense, but you do look like a walking stereotype right now."
+    CW_side "Wow."
+    Customer "Don’t be like that. I… like it."
+    CW_side happy "You like it, huh?"
+    "Marllie blushes. She quickly changes the subject and soon they’re talking away again, and soon an hour’s passed and the little dog is trailing along at a slower, tired speed. Blake leans down to ruffle his fur."
+    CW_side -happy "Aw, are you getting sleepy, buddy?"
+    Customer "You’d better get him home. I’d better get going, too, actually..."
+    "She whips out her phone and calls a cab. There’s one close by, so Blake heads off to wait with her."
+    CW_side "You know… as long as I’m with them, you’re more than welcome to come along when I’m walking some dogs. I wouldn’t mind the company."
+    show customer happy
+    "Marllie pauses as she approaches into the uber, a slow, beaming smile spreading across her lips. Blake isn’t sure if she’s mistaking the faint sheen of colour on the other girl’s face."
+    Customer "That would be wonderful."
+    "Marllie leans down to give both dogs a goodbye scratch. She straightens up again, hesitates for a second before wrapping her arms around Blake’s shoulders for a quick hug. The sudden, unexpected contact and hands too full of dog leashes stops Blake from hugging back."
+    "It’s brief, but Blake’s heart is pounding out of her chest anyway. Marllie has to lean up on her tiptoes and she's so warm and her perfume smells so nice and-"
+    "Blake bites back an embarrassing noise of protest when Marllie pulls away. There’s a lump stuck in her throat as Marllie waves, pink-faced, and climbs into the waiting cab."
+    hide customer disolve
+    "As the vehicle drives away, Blake grips the leads tightly and starts to tug the dogs home. She resists the urge to watch the car turn to the next street."
+    CW_side angry "{b}{i}Oh Jesus, I am so fucked.{/i}{/b}"    
+    jump j_scenea14
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
