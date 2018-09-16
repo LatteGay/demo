@@ -12,7 +12,6 @@ image bg_busystreet = im.Scale("backgrounds/busystreet.png", 1920, 1080)
 # The game starts here.
 
 label start:
-    jump scene_a10
     label j_scenea1:
     jump scene_a1
     label j_scenea2:
@@ -33,6 +32,7 @@ label start:
     jump scene_a10
     label j_scenea11:
     label j_scenea12:
+    jump scene_a12
     label j_scenea13:
     label j_scenea14:
     label j_scenea15:
