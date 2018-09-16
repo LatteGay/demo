@@ -26,8 +26,8 @@ define gui.show_name = True
 define config.version = "1.103"
 
 
-## Text that is placed on the game's about screen. To insert a blank line
-## between paragraphs, write \n\n.
+## Text that is placed on the game's about screen. Place the text between the
+## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _("")
 
@@ -38,6 +38,8 @@ define gui.about = _("")
 
 define build.name = "COFFEE"
 
+## Custom Game Configs ############################################################
+#define config.say_attributes_use_side_image = False
 
 ## Sounds and music ############################################################
 
@@ -74,6 +76,10 @@ define config.has_voice = True
 define config.enter_transition = dissolve
 define config.exit_transition = dissolve
 
+
+## Between screens of the game menu.
+
+define config.intra_transition = dissolve
 
 ## A transition that is used after a game has been loaded.
 
@@ -187,6 +193,11 @@ init python:
 
     build.documentation('*.html')
     build.documentation('*.txt')
+
+## Set this to a string containing your Apple Developer ID Application to enable
+## codesigning on the Mac. Be sure to change it to your own Apple-issued ID.
+
+# define build.mac_identity = "Developer ID Application: Guy Shy (XHTE5H7Z42)"
 
 ## A Google Play license key is required to download expansion files and perform
 ## in-app purchases. It can be found on the "Services & APIs" page of the Google

@@ -113,8 +113,7 @@ screen say(who, what):
     ## If there's a side image, display it above the text. Do not display on the
     ## phone variant - there's no room.
     if not renpy.variant("small"):
-        add SideImage() xalign 0.0 yalign 1.0
-
+        add SideImage() xalign -0.2 yalign 1.0
 
 style window is default
 style say_label is default
@@ -131,7 +130,7 @@ style window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/textbox_sara_hearts2.png", xalign=0.5, yalign=1.0)
+    background Image("images/gui/dialogue/dialogue_box.png", xalign=0.5, yalign=1.0)
 
 style namebox:
     xpos gui.name_xpos
@@ -140,7 +139,7 @@ style namebox:
     ypos gui.name_ypos
     ysize gui.namebox_height
 
-    background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    background Frame("images/gui/dialogue/name_box.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
     padding gui.namebox_borders.padding
 
 style say_label:
@@ -345,7 +344,6 @@ style navigation_button_text:
 ## http://www.renpy.org/doc/html/screen_special.html#main-menu
 
 screen main_menu():
-
     ## This ensures that any other menu screen is replaced.
     tag menu
 
@@ -359,7 +357,12 @@ screen main_menu():
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
-    use navigation
+    #use navigation
+    vbox xalign 0.5 yalign 0.75:
+            imagebutton auto "images/gui/mainmenu/newgame_%s.png" action Start()
+            imagebutton auto "images/gui/mainmenu/loadgame_%s.png" action ShowMenu("load")
+            imagebutton auto "images/gui/mainmenu/options_%s.png" action ShowMenu("preferences")
+            imagebutton auto "images/gui/mainmenu/extras_%s.png" action ShowMenu("about")
 
     if gui.show_name:
 
@@ -378,10 +381,10 @@ style main_menu_title is main_menu_text
 style main_menu_version is main_menu_text
 
 style main_menu_frame:
-    xsize 280
+    #xsize 280
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    #background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
     xalign 1.0
@@ -1455,7 +1458,3 @@ style slider_pref_vbox:
 style slider_pref_slider:
     variant "small"
     xsize 600
-
-
-
-

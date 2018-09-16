@@ -261,13 +261,9 @@ label scene_a7:
     "There’s a bit of an awkward pause. Blake internally cringes at how bad she is at small talk."
 
     Customer "What about you? You haven’t been here that long."
-
     CW_side "I just moved in with a friend from high school not that long ago. I used to tutor too, but I’m kinda too far away from my students now."
-
     Customer "You used to tutor?"
-
     CW_side  "Yeah, biology and maths."
-
     Customer "Are you in school too?"
 
     "Blake shakes her head."
@@ -293,32 +289,26 @@ label scene_a7:
     "Marllie’s eyes light up as she looks at them. She cups a hand over her mouth."
 
     Customer happy "They’re so adorable!"
-
     CW_side "I know, right? I’m thinking about getting another. I miss having a dog around and I know my roommate would be more than okay with it. Just waiting until the right time when I have some money saved. I’m walking other people's’ dogs right now for a bit of side money and it helps fill the hole a bit."
-
     Customer "If you do, I’d love to meet them. I’ve never had a pet before."
-
     CW_side -happy "Really? Never?"
-
     Customer sad "Yeah… my parents didn’t really have time to take care of them and they don't really trust me to take care of one on my own. Maybe someday. Studying takes up a lot of time."
 
     "Blake flashes her a smile."
 
     CW_side happy "Yeah, you’ll want to be able to spoil them. If or when I do get one, I promise I’ll bring them in so you can meet them."
-
     Customer happy "I’d love that."
 
     "Blake notices Asher gesturing to her from the register, back from his break. She offers Marllie an apologetic grin."
 
     CW_side "Back to the grind, I guess. Good luck with your studying."
-
     Customer "Thanks. I might need a new coffee soon to keep awake."
 
     "Blake winces, but hides it well. She pushes herself up with the table."
 
     CW_side -happy "No problem. Just let me know."
 
-    jump j_scene8
+    jump j_scenea8
 
 label scene_a9:
     scene bg_shop
@@ -384,37 +374,8 @@ label scene_a9:
     "Blake leaves, but as slowly as possible. She doesn’t feel too comfortable leaving Marllie alone so she’s relieved when the bus shows up."
     "She waits until Marllie climbs on and only leaves when the other girl waves at her from the window. She heads off to grab her and Shay’s dinner, vowing to shoot Marllie a text before bed."
     jump j_scenea10
-    
+
 label scene_a11:
     scene bg_apartment
-    
+
     jump j_scenea12
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
