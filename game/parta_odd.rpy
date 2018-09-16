@@ -319,3 +319,102 @@ label scene_a7:
     CW_side -happy "No problem. Just let me know."
 
     jump j_scene8
+
+label scene_a9:
+    scene bg_shop
+    "Maya had left early for home not long after, having started an earlier shift anyway that day. She’d seemed… off, Blake thought, but had claimed to be okay and Blake didn’t want to press. Or appear rude for prying."
+    "So she decided to do her usual thing at this time when everything else had been taken care of: stare at the clock until she could go home."
+    scene bg_busystreet
+    "Shay met her outside. She was leaning with one foot against the wall, scrolling through her phone. Her eyes flicked upwards, noticing Blake, and she slipped her phone back in her front pocket and fell into step beside her roommate."
+    show rival
+    CW_side "How was your day?"
+    Rival "I got stuck training the newbies. Plural. They progressed to making cold drinks today so it was pretty chaotic."
+    CW_side "Eh, go easy on them. I can’t imagine that people getting coffee at a big chain store are any less picky."
+    Rival "Ugh, don’t remind me."
+    scene bg_fallsidewalk
+    "They fall into a comfortable silence. Blake is making a list of takeaway places that they can get dinner from in her head when they pass a bus stop. A colourful advertisement that flashes across across a screen catches her eye."
+    CW_side happy "{b}{i}Thai. Gonna get some Thai food for dinner. Hell yeah.{/i}{/b}"
+    "She turns her head to tell Shay, ask her if she wants anything too, but a familiar silhouette makes her stop dead."
+    CW_side -happy "Hey, why don’t you go on ahead and I’ll meet you at home. I’ll pick up some food for us instead."
+    show rival
+    Rival "Everything okay?"
+    CW_side "Yeah. Everything’s cool. I’ll just see you soon, okay?"
+    "Shay looks suspicious, but she bobs her head once. They bicker like enemies sometimes but she appreciates that Shay backs her up in her own way for things like this."
+    Rival "No problem. Don’t be too long."
+    "\"Or I’ll get worried\" is the unspoken finish. Shay’s out of sight a moment later and Blake does an about face back to the bus stop."
+    hide rival disolve
+    CW_side "Marllie?"
+    show customer
+    "The other girl startles. Blake catches a glimpse of her wet cheeks and red eyes before Marllie whips her head back around."
+    Customer "Uh, hey! What are you doing here?"
+    CW_side "I was on my way home. Are you okay?"
+    "Marllie hesitates briefly, then puffs out a sigh and shakes her head. She roughly scrubs at her eyes with the back of her hand."
+    Customer "I will be. It was... stupid. Stupid feelings."
+    CW_side "What-"
+    "The sudden realisation makes Blake want to slap herself. She’s equally as incoherent around girls she likes, after all. And Maya leaving early… fuck, Maya never leaves early."
+    CW_side sad "Shit. I’m an idiot."
+    "Marllie looks confused for a second."
+    Customer sad "What, no! You didn’t do anything wrong."
+    CW_side "I put you on the spot. I’m sorry."
+    Customer "You didn’t know. And it would have happened eventually anyway. I was going to bail so you actually did me a favour. At least this ripped the bandaid off."
+    CW_side "I’m still sorry. Sorry you’re hurting, I mean. "
+    Customer "I’m not… sad. Well I am, but it wasn’t that serious. I’m more embarrassed than anything. I come in everyday… so that’s going to be awkward now."
+    CW_side "Maya’s professional. It won’t affect her service."
+    Customer "I hope not. It’s still going to feel weird for a while."
+    "She sniffles once. Blake precariously snakes an arm around Marllie’s shoulders, unsure if the contact would be welcomed. To her relief, Marllie doesn’t mind."
+    CW_side -sad "Maybe. But not forever."
+    "The reassurance seems to help a little. Marllie leans into the embrace, apparently grateful for it to Blake’s relief."
+    CW_side "Can I help? Do you need anything? Would a Triple, Venti, Half Sweet, Non-Fat, Caramel Macchiato make you feel better? "
+    "A quiet snort escapes Marllie. There’s even a small smile. Blake counts it as a win."
+    Customer -sad "You’d just make it wrong."
+    CW_side "You wound me."
+    "There’s another laugh. Marllie sniffles and swipes at her cheeks again."
+    Customer "Really though, I should get home to finish off my paper. But, uh… thank you. For talking to me."
+    CW_side "It’s not a problem. Let me give you my number. Text me when you get home so I know you made it safely. And, you know, I’ve got no plans tonight and no work tomorrow, so I’ll be around if you change your mind."
+    Customer "I will. But I’ll probably want to be on my own for now… get over the embarrassment."
+    "She manages a smile."
+    Customer happy "But… thanks."
+    CW_side happy "Anytime."
+    "They exchange numbers silently. She notices Marllie add a little dog emoji at the end of her name and laughs."
+    CW_side -happy "I should get going. I’m supposed to be getting takeout for my roommate and I."
+    Customer -happy "I’ll see you later then."
+    CW_side "Get home safely!"
+    Customer "You, too."
+    hide customer
+    "Blake leaves, but as slowly as possible. She doesn’t feel too comfortable leaving Marllie alone so she’s relieved when the bus shows up."
+    "She waits until Marllie climbs on and only leaves when the other girl waves at her from the window. She heads off to grab her and Shay’s dinner, vowing to shoot Marllie a text before bed."
+    jump j_scenea10
+    
+label scene_a11:
+    scene bg_apartment
+    
+    jump j_scenea12
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

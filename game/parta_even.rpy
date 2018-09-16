@@ -214,7 +214,7 @@ label scene_a10:
     Rando "But I don’t like coffee! Why would you serve me this? I want a refund. Get me your manager-"
     "Blake rapidly counts to ten in her head."
     CW_side "I’ll get my boss."
-    hide rando with disolve
+    hide rando disolve
     "Blake pinches her nose once her back is to the customer and heads off into the back, aware of the customer’s eyes staring daggers into the back of her head and Marllie watching sympathetically. She comes back with Jun a moment later and leaves her to deal with it while she takes her place back behind the counter."
     show customer
     CW_side neutral "Hi. What can I get you?"
@@ -226,7 +226,7 @@ label scene_a10:
     show boss
     "Jun walks past them to get back to her own duties, but not before giving them a completely baffled look."
     Boss "I’ve worked far too long in this industry."
-    hide boss with disolve
+    hide boss disolve
     show customer
     "Free of crazy customers (mostly), Blake turns back to Marllie and warily recites her spiel."
     CW_side happy "So what can I get you? Jun made some amazing new muffins if you’d like to try one. Salted caramel. I’d highly recommend them."
@@ -325,47 +325,3 @@ label scene_a12:
     "Marllie smiles widely, cutely twirling her hair around her fingers. Blake tries not to think about that too much, either… even if she wants to."
     Customer "See you tonight."
     jump j_scenea13
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    

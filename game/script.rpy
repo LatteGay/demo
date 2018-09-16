@@ -28,6 +28,7 @@ label start:
     label j_scenea8:
     jump scene_a8
     label j_scenea9:
+    jump scene_a9
     label j_scenea10:
     jump scene_a10
     label j_scenea11:
