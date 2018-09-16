@@ -206,6 +206,50 @@ label scene_a8:
     hide customer with dissolve
     CW_side "{b}{i}Huh. Weird.{/i}{/b}"
     jump j_scenea9
+label scene_a10:
+    scene bg_shop
+    "Blake is dealing with a customer complaint when Marllie walks in. The other girl raises her eyebrows upon hearing the customer’s tantrum and Blake’s desperate retort."
+    show rando
+    CW_side happy "Ma’am, no offense, but we primarily serve coffee… I don’t understand-"
+    Rando "But I don’t like coffee! Why would you serve me this? I want a refund. Get me your manager-"
+    "Blake rapidly counts to ten in her head."
+    CW_side "I’ll get my boss."
+    hide rando with disolve
+    "Blake pinches her nose once her back is to the customer and heads off into the back, aware of the customer’s eyes staring daggers into the back of her head and Marllie watching sympathetically. She comes back with Jun a moment later and leaves her to deal with it while she takes her place back behind the counter."
+    show customer
+    CW_side neutral "Hi. What can I get you?"
+    Customer "What on earth was that about?"
+    "They glance at Jun talking animatedly with the lady and said lady storming out in a huff… without her refund. Jun looks like she’s just aged ten years in their brief encounter."
+    CW_side "She ordered a mocha and insisted it should taste like chocolate, not coffee, because she doesn’t like coffee. "
+    Customer "Wow."
+    hide customer
+    show boss
+    "Jun walks past them to get back to her own duties, but not before giving them a completely baffled look."
+    Boss "I’ve worked far too long in this industry."
+    hide boss with disolve
+    show customer
+    "Free of crazy customers (mostly), Blake turns back to Marllie and warily recites her spiel."
+    CW_side happy "So what can I get you? Jun made some amazing new muffins if you’d like to try one. Salted caramel. I’d highly recommend them."
+    Customer "I’d love one. And you’ve been through enough. Just give me a latte."
+    "Marllie scrunches her face up and puts on a poor imitation of the lady’s posh accent, splaying a hand on her hip."
+    Customer "And can you, like, make it not taste like coffee? I can’t stand coffee!"
+    CW_side "Not you too. That’ll be $6.25. I’ll have your not-coffee ready ASAP."
+    "The regular giggles."
+    Customer happy "Really though, thank you. I know my orders can be a little much on occasion but you’ve always made them drinkable."
+    CW_side "Drinkable, huh?"
+    Customer "Edible. Drinkable. No wait, I mean that it’s never terrible tasting."
+    CW_side "Thanks?"
+    Customer "I’m not doing a very good job at saying this, am I?"
+    CW_side "Luckily for you, I’m regularly even more awkward than you are so I get what you’re trying to say."
+    "It takes a moment for Blake to realise how that sounds when said out loud. A look of horror clouds over her face"
+    CW_side sad "N-not that I’m saying you’re awkward, I mean- "
+    Customer neutral "Point taken."
+    "She doesn’t seem offended thankfully."
+    CW_side "I’ll go and get your order ready before I can put my foot further in my mouth now. "
+    Customer happy "Thanks. Remember, I don’t want it to taste like coffee."
+    CW_side "Sorry, I suddenly don’t speak english."
+    "Marllie laughs and retreats to her usual table, setting her laptop case on the table and already retrieving her books. Blake finds herself smiling as she gets to work."
+    jump j_scenea11
     
     
     
