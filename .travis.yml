@@ -5,10 +5,10 @@ python:
 # UPDATE THIS FILE IF RENPY VERSION IS UPDATED
 install:
   - cd ..
-  - wget http://www.renpy.org/dl/7.0.0/renpy-7.0.0-sdk.tar.bz2
-  - tar xf renpy-7.0.0-sdk.tar.bz2
-  - rm renpy-7.0.0-sdk.tar.bz2
-  - mv renpy-7.0.0-sdk renpy
+  - wget http://www.renpy.org/dl/7.1.0/renpy-7.1.0-sdk.tar.bz2
+  - tar xf renpy-7.1.0-sdk.tar.bz2
+  - rm renpy-7.1.0-sdk.tar.bz2
+  - mv renpy-7.1.0-sdk renpy
   - cd renpy
   - export SDL_AUDIODRIVER=dummy
 # command to run tests
