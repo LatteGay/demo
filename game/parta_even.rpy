@@ -38,7 +38,7 @@ label scene_a4:
     "The bell above the door rings and Blake’s head snaps up, ready to greet the new customer. Her newfound confidence evaporates when she sees who it is. "
     CW_side sad "<panicked image> Oh my God, I forgot to check the clock. Fuck, she’s here again. Please help."
     show mc
-    MC "What are you-"
+    MC annoyed "What are you-"
     hide mc
     "The new customer walks up to the counter. Blake knows exactly who she is and she plasters on a tight smile, internally preparing herself for whatever convoluted order she’s about to receive."
     CW_side happy "Good morning! What can I get for you this morning?"
@@ -53,7 +53,7 @@ label scene_a4:
     CW_side "No worries. That’ll be $7.25 in total."
     "Marllie pays and heads off to her usual table. Blake waits until she’s busy taking out her things before turning to Maya."
     hide customer
-    show mc
+    show mc neutral
     CW_side sad "You gotta help me."
     "Maya finishes rinsing out some equipment and turns to Blake."
     MC "Of course. Something with the order?"
@@ -112,7 +112,7 @@ label scene_a6:
     Bestie "What is it today?"
     "Blake merely grunts and tilts her head towards the ticket, eyes not leaving the thermometer so she doesn’t actually get a faceful of boiling milk. Asher peers at the ticket, letting out a snort."
     Bestie "I swear it’s always just you."
-    CW_side sad "GOD, I know! It’s like she enjoys watching my suffering." 
+    CW_side sad "GOD, I know! It’s like she enjoys watching my suffering."
     Bestie "Well…"
     CW_side "Go away, I didn’t ask you."
     "Asher laughs before he continues into the kitchen."
@@ -146,7 +146,7 @@ label scene_a6:
     "Asher’s eyes glint with amusement as Blake lets out a long, distressed noise."
     Bestie "Enjoy your break!"
     hide bestie
-    jump j_scenea7    
+    jump j_scenea7
 label scene_a8:
     scene bg_shop
     "There's a small routine between them now during the coffee shop's quieter hours. As long as someone’s keeping an eye out for potential customers and everything’s tidy and prepared, Jun doesn’t really mind if they stand around for a bit."

@@ -24,13 +24,14 @@
 layeredimage coworker:
 
     group base:
-        attribute work default
+        attribute outfit1 default
     group left_arm auto:
-        attribute down default
+        attribute down1 default
     group right_arm auto:
-        attribute down default
+        attribute down1 default
     group head auto:
         attribute neutral default
+    group blush auto
 #, xoffset=-200, yoffset=-25
 image side coworker_side =  LayeredImageProxy("coworker", Transform(crop=(0, 0, 700, 550), zoom=.8))
 #image side coworker_side = LayeredImageProxy("coworker")

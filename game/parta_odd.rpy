@@ -160,7 +160,7 @@ label scene_a3:
     MC "Welcome to the family. You’ll get used to it soon."
 
     jump j_scenea4
-    
+
 label scene_a5:
     scene bg_apartment
     "It’s late when Blake arrives home. She fiddles with her earphones, shoving them back in her pocket in a tangled heap, and throws open the door. Stumbling in tiredly, she tosses her bag on to the sofa and drops down with a groan, throwing her arm across her eyes"
@@ -276,12 +276,12 @@ label scene_a7:
     Customer "You’re not very stealthy."
     CW_side "Oh, my God."
     Customer "You were almost leaning  over my shoulder. You even stopped wiping the table at one point."
-    CW_side sad up "I’m so sorry."
+    CW_side sad up1 "I’m so sorry."
 
     show customer happy
     "Marllie bursts into a fit of giggles. Blake is dumbfounded, but… she figures Marllie isn’t actually mad, then? Man, is she bad at being discreet. Really, she should have known her capabilities better from all the times Shay’s caught her doing something she shouldn’t have been doing."
 
-    CW_side -sad -up "You’re not upset?"
+    CW_side -sad -up1 "You’re not upset?"
     Customer "No. It’s okay."
     CW_side happy "Okay. Okay, good."
     Customer "…"
@@ -345,7 +345,7 @@ label scene_a7:
     CW_side "I do miss the dogs, though. And my family too, of course."
 
     "Marllie’s entire being perks up."
-    show customer hips happy with dissolve
+    show customer hips1 happy with dissolve
     Customer "You have dogs?"
 
     "Blake is already reaching for her phone before the question is even fully posed to her. She clicks through her phone and into the library of images she has stored away."
@@ -495,7 +495,7 @@ label scene_a11:
     scene bg_cobedroom
     "She leaves to her room as quickly as possible without it looking like she’s actually fleeing."
     CW_side "{b}{i}And I’m not, right? I just don’t wanna talk about my love life with Shay. Not that there is one. We’re just friends and she’s pretty cool, that’s all.{/i}{/b}"
-    "Blake does take a nap, in fact. But she makes certain she texts back first."    
+    "Blake does take a nap, in fact. But she makes certain she texts back first."
     jump j_scenea12
 label scene_a13:
     scene bg_park
@@ -542,18 +542,5 @@ label scene_a13:
     "Blake bites back an embarrassing noise of protest when Marllie pulls away. There’s a lump stuck in her throat as Marllie waves, pink-faced, and climbs into the waiting cab."
     hide customer disolve
     "As the vehicle drives away, Blake grips the leads tightly and starts to tug the dogs home. She resists the urge to watch the car turn to the next street."
-    CW_side angry "{b}{i}Oh Jesus, I am so fucked.{/i}{/b}"    
+    CW_side angry "{b}{i}Oh Jesus, I am so fucked.{/i}{/b}"
     jump j_scenea14
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    

@@ -3,9 +3,9 @@ layeredimage customer:
     group base:
         attribute dress1 default
     group left_arm auto:
-        attribute crossed default
+        attribute crossed1 default
     group right_arm auto:
-        attribute crossed default
+        attribute crossed1 default
     group head auto:
         attribute neutral default
     group blush auto

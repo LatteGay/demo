@@ -1,7 +1,9 @@
 
 layeredimage bestie:
     group base:
-        attribute placeholder default
+        attribute outfit1 default
+    group head:
+        attribute neutral default
 
 image side bestie_side =  LayeredImageProxy("bestie", Transform(crop=(0, 0, 800, 550), zoom=0.8, xoffset=-80, yoffset=-200))
 

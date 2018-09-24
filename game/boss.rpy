@@ -1,6 +1,13 @@
 layeredimage boss:
-    group base:
-        attribute work default
+
+        group base:
+            attribute outfit1 default
+        group left_arm auto:
+            attribute down1 default
+        group right_arm auto:
+            attribute down1 default
+        group head auto:
+            attribute neutral default
 
 image side boss_side =  LayeredImageProxy("boss", Transform(crop=(0, 0, 800, 550), zoom=0.8, xoffset=-80, yoffset=-200))
 
