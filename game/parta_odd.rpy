@@ -1,7 +1,6 @@
 #Scene 1 a
 label scene_a1:
     $ snooze = 0
-
     scene bg_cobedroom
     "Blake shifts back under the covers with a groan, squeezing her eyes shut against the sunlight peeking into her messy room. She blindly reaches around her bedside, deciding she now hated the song she'd set as her alarm a few days ago."
     "She'd vowed to be a more responsible, punctual adult at her new job. She'd give herself time to wake up, look presentable, eat something and maybe (hopefully) become a functioning human being by the time she arrived at the coffee shop."
@@ -23,7 +22,7 @@ label scene_a1:
             "Get up":
                 jump .get_up
             "Snooze. No, really, five more minutes.":
-                if snooze < 4:
+                if snooze < 2:
                     $snooze += 1
                     scene black with fade
                     pause
@@ -34,7 +33,7 @@ label scene_a1:
                     jump .get_up
 
     label .get_up:
-        if snooze < 2:
+        if snooze < 1:
             scene bg_cobedroom
             "There's a heavy series of knocks against the door."
             pause
