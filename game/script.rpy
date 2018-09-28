@@ -5,11 +5,13 @@
 
 
 image bg_shop = "backgrounds/coffee_shop.png"
-image bg_apartment = "backgrounds/apartment_kitchen.png"
-image bg_cobedroom = im.Scale("backgrounds/bed-bedroom-room-furniture(oil2).jpg", 1920, 1080)
-image bg_fallsidewalk = im.Scale("backgrounds/fallsidewalk.png", 1920, 1080)
-image bg_busystreet = im.Scale("backgrounds/busystreet.png", 1920, 1080)
-image bg_park = im.Scale("backgrounds/background_spaceocean.png", 1920, 1080)
+image bg_cs_lounge = "backgrounds/bg_cs_lounge.png"
+image bg_apartment = "backgrounds/bg_appartment.png"
+image bg_cobedroom = "backgrounds/bg_room.png"
+image bg_fallsidewalk = im.Scale("backgrounds/fallsidewalk.png",1920,1080)
+image bg_busystreet = "backgrounds/busystreet.png"
+image bg_park = "backgrounds/bg_park.png"
+image bg_dorm = "backgrounds/bg_dorm.png"
 # The game starts here.
 
 label start:
