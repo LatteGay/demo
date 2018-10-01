@@ -113,7 +113,9 @@ screen say(who, what):
     ## If there's a side image, display it above the text. Do not display on the
     ## phone variant - there's no room.
     if not renpy.variant("small"):
-        add SideImage() xalign -0.2 yalign 1.0
+        if SideImage():
+            #add Image("images/gui/dialogue/potrait_box.png", xalign=-0.1, yalign=1.0)
+            add SideImage() xalign -0.2 yalign 1.0
 
 style window is default
 style say_label is default
