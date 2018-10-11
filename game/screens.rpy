@@ -5,6 +5,158 @@
 init offset = -1
 
 
+############ phone code here########
+# if you dont use  1920 x 1080 youre going to have to play with these numbers to get it to work and make the phone image be smaller somehow
+# just keep changing stuff and refreshing the game until it works, sorry lol
+
+
+init 5:
+    style phone_message_vbox:
+        xalign 0.5
+        yalign 0
+        ypos 380
+        xsize 360
+        xoffset -40
+
+    style phone_message_frame:
+        background Solid("#d9398c")
+        ypadding 10
+        xpadding 10
+
+    style phone_message_frame2:
+        background Solid("#78E8A0")
+        ypadding 10
+        xpadding 10
+
+    style phone_message_contents:
+        spacing 10
+
+    style phone_message is say_dialogue:
+        xoffset 0
+        outlines []
+        xalign 1
+        yalign 0
+
+    style phone_message2 is say_dialogue:
+        xoffset 0
+        outlines []
+        xalign 1
+        yalign 0
+
+
+    style phone_message_who is phone_message:
+        color "#ecf0f1"
+        size 25
+
+    style phone_message_what is phone_message:
+        color "#ffffff"
+        size 24
+    style phone_reply is default:
+        size 18
+        xalign 0.5
+        xsize 475
+        background Solid("#666")
+        hover_background Solid("#78E8A0")
+        ypadding 10
+        xpadding 10
+
+
+screen phone_message(who, what):
+    vbox at incoming_message:
+        style_group "phone_message"
+        add "images/cellphone_template/bubble-tip.png" at phone_message_bubble_tip
+
+        frame:
+            style_group "phone_message"
+
+            vbox:
+                style "phone_message_contents"
+                text who style "phone_message_who"
+                text what style "phone_message_what"
+
+screen phone_message2(who, what):
+    vbox at incoming_message:
+        style_group "phone_message"
+        xoffset -584
+        xalign 1.0
+        # this one adds the triangular tip for the bubble, if you change colors you change this images too
+        add "images/cellphone_template/bubble-tip2.png" at phone_message_bubble_tip2
+
+        frame:
+            style_group "phone_message2"
+            background Solid("#78E8A0")
+            xsize 200
+
+            vbox:
+                style "phone_message_contents"
+                text who style "phone_message_who"
+                text what style "phone_message_what"
+
+screen phone_message3(what):
+    vbox at incoming_message:
+        style_group "phone_message"
+        xoffset -584
+        xalign 1.0
+        # this one adds the triangular tip for the bubble, if you change colors you change this images too
+        add "images/cellphone_template/bubble-tip2.png" at phone_message_bubble_tip2
+
+        frame:
+            style_group "phone_message2"
+            background Solid("#78E8A0")
+            xsize 200
+
+            vbox:
+                style "phone_message_contents"
+                ##text who style "phone_message_who"
+                text what style "phone_message_what"
+
+screen phone_reply(reply1, label1, reply2, label2):
+    modal True
+    vbox:
+        xalign 0.5
+        yalign 0.8
+        spacing 5
+
+        textbutton "[reply1]" action Jump(label1) style "phone_reply"
+        textbutton "[reply2]" action Jump(label2) style "phone_reply"
+
+# here is a new menu that has more options than two
+# basically i just added one more textbutton here, and the additional labels needed in the call
+# if you wish to make a menu with one or four just copy the code below and modify it a bit
+screen phone_reply3(reply1, label1, reply2, label2, reply3, label3,):
+    modal True
+    vbox:
+        xalign 0.5
+        yalign 0.8
+        spacing 5
+
+        textbutton "[reply1]" action Jump(label1) style "phone_reply"
+        textbutton "[reply2]" action Jump(label2) style "phone_reply"
+        textbutton "[reply3]" action Jump(label3) style "phone_reply"
+
+
+style phone_reply_text:
+    xalign 0.5
+
+screen phone_message_image(who, what, img):
+    vbox at incoming_message:
+        style_group "phone_message"
+        # this one adds the triangular tip for the bubble, if you change colors you change this images too
+        add "images/cellphone_template/bubble-tip.png" at phone_message_bubble_tip
+
+        frame:
+            style_group "phone_message"
+
+            vbox:
+                style "phone_message_contents"
+                text who style "phone_message_who"
+                text what style "phone_message_what"
+                add img
+
+
+
+############# phone code ends ############
+
 ################################################################################
 ## Styles
 ################################################################################
@@ -390,10 +542,10 @@ style main_menu_frame:
 
 style main_menu_vbox:
     xalign 1.0
-    xoffset -20
-    xmaximum 800
+    xoffset -30
+    xmaximum 1200
     yalign 1.0
-    yoffset -20
+    yoffset -30
 
 style main_menu_text:
     properties gui.text_properties("main_menu", accent=True)
@@ -492,32 +644,32 @@ style return_button is navigation_button
 style return_button_text is navigation_button_text
 
 style game_menu_outer_frame:
-    bottom_padding 30
-    top_padding 120
+    bottom_padding 45
+    top_padding 180
 
     background "gui/overlay/game_menu.png"
 
 style game_menu_navigation_frame:
-    xsize 280
+    xsize 420
     yfill True
 
 style game_menu_content_frame:
-    left_margin 40
-    right_margin 20
-    top_margin 10
+    left_margin 60
+    right_margin 30
+    top_margin 15
 
 style game_menu_viewport:
-    xsize 920
+    xsize 1380
 
 style game_menu_vscrollbar:
     unscrollable gui.unscrollable
 
 style game_menu_side:
-    spacing 10
+    spacing 15
 
 style game_menu_label:
-    xpos 50
-    ysize 120
+    xpos 75
+    ysize 180
 
 style game_menu_label_text:
     size gui.title_text_size
@@ -527,7 +679,7 @@ style game_menu_label_text:
 style return_button:
     xpos gui.navigation_xpos
     yalign 1.0
-    yoffset -30
+    yoffset -45
 
 
 ## About screen ################################################################

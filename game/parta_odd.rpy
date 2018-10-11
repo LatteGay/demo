@@ -3,6 +3,7 @@ label scene_a1:
     $ snooze = 0
 
     scene bg_cobedroom
+
     "Blake shifts back under the covers with a groan, squeezing her eyes shut against the sunlight peeking into her messy room. She blindly reaches around her bedside, deciding she now hated the song she'd set as her alarm a few days ago."
     "She'd vowed to be a more responsible, punctual adult at her new job. She'd give herself time to wake up, look presentable, eat something and maybe (hopefully) become a functioning human being by the time she arrived at the coffee shop."
     "{i} But sleep… {/i}"
@@ -24,7 +25,7 @@ label scene_a1:
             "Get up":
                 jump .get_up
             "Snooze. No, really, five more minutes.":
-                if snooze < 4:
+                if snooze < 2:
                     $snooze += 1
                     scene black with fade
                     pause
@@ -32,7 +33,7 @@ label scene_a1:
                 else:
                     scene black with fade
                     pause
-                    jump .get_up
+                    jump .get_upS
 
     label .get_up:
         if snooze < 2:
@@ -186,7 +187,7 @@ label scene_a5:
     Rival -distressed "Oh, there was a parcel that came for you. New game?"
     "Blake sits up quickly. Shay tuts."
     Rival "You really can’t do that in the morning?"
-    CW_side happy "Nope. Where is it?"
+    CW_side -happy "Nope. Where is it?"
     "Shay gestures towards the dining table, uncluttered and a flower in the middle thanks to Shay’s efforts. Blake flies off the sofa and dives at the box. Shay is stands behind her, arms folded across her chest. She attempts to glance over her roommate’s shoulder. The height difference makes it difficult, however."
     Rival chin1 "That’s not a game"
     CW_side "Package from Dad."
