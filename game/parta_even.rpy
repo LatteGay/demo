@@ -1,10 +1,11 @@
 label scene_a2:
-    scene bg_fallsidewalk
+    scene bg_fallsidewalk with fade
     "Blake shivers in the wind."
     CW_side sad "Jesus, what's with the sudden cold snap?"
     show rival
-    Rival "Why didn’t you bring a jacket? I told you before we left."
+    Rival hips1 "Why didn’t you bring a jacket? I told you before we left."
     CW_side sad "Thought it was warmer. We’ll be out of the wind soon anyway."
+    show rival distressed
     "Shay tuts disapprovingly."
     Rival "That’s what you said last time and you caught a cold for like, a week. You are atrocious to deal with when you’re sick."
     CW_side neutral "Pot, meet kettle."
@@ -12,10 +13,10 @@ label scene_a2:
     CW_side sad "Well I felt like I was."
     Rival "If you get sick again I'm staying at a friend's for the week."
     CW_side happy "That's almost tempting."
-    Rival "Rude."
+    Rival angry "Rude."
     CW_side happy "Uh huh."
     hide rival
-    scene bg_busystreet
+    scene bg_busystreet with fade
     "They stop at a busy road. Shay's workplace is even closer and Blake can just make it out now behind all the passing cars."
     show rival
     Rival "I won’t be home for dinner. The girls and I are going to try that fancy new Italian place near the train station. "
@@ -29,10 +30,10 @@ label scene_a2:
     hide rival
     "Shay flips her off over her shoulder as she walks away."
     Rival "You too, ho."
-    pause
+
     jump j_scenea3
 label scene_a4:
-    scene bg_shop
+    scene bg_shop with fade
     "The morning has been going well so far. A little trouble, but Maya has been here to help each time. Blake's even managed to sell most of the banana bread. Jun will be happy."
     "She's actually starting to feel more confident."
     "The bell above the door rings and Blake’s head snaps up, ready to greet the new customer. Her newfound confidence evaporates when she sees who it is. "
@@ -58,10 +59,10 @@ label scene_a4:
     "Maya finishes rinsing out some equipment and turns to Blake."
     MC "Of course. Something with the order?"
     "Blake holds up the ticket in lieu of an explanation. She watches as Maya’s expression shifts from neutral to confused, both eyebrows furrowing."
-    MC "Uh okay, that’s new."
+    MC annoyed "Uh okay, that’s new."
     CW_side "All her orders are like this, I swear."
     "Maya scratches her chin in thoughtfulness. She takes the ticket and picks up one of the milk frothing jugs."
-    MC "Good practice, I guess? I think i know what she means. Here, I'll show you."
+    MC -annoyed hips1 "Good practice, I guess? I think i know what she means. Here, I'll show you."
     CW_side "I wouldn’t object to a few easy ones in the morning though."
     hide mc
     "Luckily, there are no new customers to attend to. It takes two attempts, and both Maya and Blake working together to complete the order properly. The mug of coffee sits on the counter as Blake waits for the bread to come out of the toaster. "
@@ -78,7 +79,7 @@ label scene_a4:
     "She calls out the name and misses her coworker cocking an eyebrow at her spelling, though Maya doesn't say anything."
     "Marllie leaves her laptop at the table. She looks at her drink, looks at Blake, at Maya, back at Blake, and Blake's never felt so scrutinized in her life even though she lives with Shay, and then seemingly satisfied leaves with her things."
     "Blake lets out a breath she didn't know she was holding."
-    MC "See. We got it."
+    MC happy hips1 "See. We got it."
     CW_side happy "Yeah. We did."
     "Maya offers a high five. Blake slaps her hand against her’s gratefully."
     hide mc
@@ -144,16 +145,16 @@ label scene_a6:
     "Asher flashes her a charming smile."
     Bestie "You’re welcome! "
     "He laughs again, lightly patting her on the back."
-    Bestie "Really though, I spell names wrong on purpose. Some customers find it funny. Others are just assholes. She hasn’t thrown a fit so I wouldn’t worry about it. "
+    Bestie happy "Really though, I spell names wrong on purpose. Some customers find it funny. Others are just assholes. She hasn’t thrown a fit so I wouldn’t worry about it. "
     "Blake’s voice is muffled in her hands."
-    CW_side "Really?"
-    Bestie "Yeah. But you still have to make her drinks, so..."
+    CW_side happy "Really?"
+    Bestie -happy "Yeah. But you still have to make her drinks, so..."
     "Asher’s eyes glint with amusement as Blake lets out a long, distressed noise."
     Bestie "Enjoy your break!"
     hide bestie
     jump j_scenea7
 label scene_a8:
-    scene bg_shop
+    scene bg_shop with fade
     "There's a small routine between them now during the coffee shop's quieter hours. As long as someone’s keeping an eye out for potential customers and everything’s tidy and prepared, Jun doesn’t really mind if they stand around for a bit."
     "So Blake and Marllie keep each other company when they’re both bored out of their minds. It’s a good arrangement."
     show customer
@@ -212,7 +213,7 @@ label scene_a8:
     CW_side "{i}Huh. Weird.{/i}"
     jump j_scenea9
 label scene_a10:
-    scene bg_shop
+    scene bg_shop with fade
     "Blake is dealing with a customer complaint when Marllie walks in. The other girl raises her eyebrows upon hearing the customer’s tantrum and Blake’s desperate retort."
     show rando
     CW_side happy "Ma’am, no offense, but we primarily serve coffee… I don’t understand-"
@@ -256,7 +257,7 @@ label scene_a10:
     "Marllie laughs and retreats to her usual table, setting her laptop case on the table and already retrieving her books. Blake finds herself smiling as she gets to work."
     jump j_scenea11
 label scene_a12:
-    scene bg_shop
+    scene bg_shop with fade
     "The lunch rush is over, so the amount of people in the store is slowly dwindling. Blake's already had her break and popped by next door for a sandwich, so at least she's not constantly tempted by the smell of Jun's fresh baking."
     "She finishes up dealing with the queue that's formed and then there's only one guy left, dressed smartly for his... office job? Or whatever. She takes his order and hands him his change."
     "The coffee he wants is simple and Blake’s hands work on autopilot, her attention free to roam around the shop."
@@ -274,7 +275,7 @@ label scene_a12:
     "Blake finishes up quickly, pushing it into the waiting hands of the customer at the counter. She barely waits until their back is turned before she spins around, tapping Maya on the shoulder."
     CW_side neutral "Hey, I’m going for my break."
     "Maya shrugs, grunting in response and Blake wastes no time in untying her apron and tossing it over her shoulder. She snags her water bottle from its hiding place on the counter and jogs as casually as possible over to Marllie’s table."
-    scene bg_cs_lounge
+    scene bg_cs_lounge with fade
     show customer
     CW_side happy "Hey babe, sorry about the wait. I-- oh, hello. Who’s your friend?"
     "Both heads whip up to look at Blake. Blake shoots Marllie her best, subtle “just go with it” face before shuffling over behind her, placing one hand on her shoulder and taking a swig out of her bottle."
@@ -289,7 +290,7 @@ label scene_a12:
     "Marllie ducks her head and smiles shyly."
     Customer happy "Not at all."
     CW_side "Good. I uh… well, I’m on my break now. I’ll stay with you. You know, in case he comes back."
-    Customer "I’d like that."
+    Customer folded1 "I’d like that."
     CW_side "Cool, cool."
     "Blake sits at the offered chair, glad to be off her feet for the time being. She takes the time to pull off her apron and down half the bottle in one go."
     Customer neutral "Honestly don’t know how you can stand for that many hours a day, most days of the week. That lunch rush was busier than usual."
@@ -306,7 +307,7 @@ label scene_a12:
     CW_side "Fancy."
     Customer "Most of the time I was just researching. Interviewing people and collecting all that information and all that."
     CW_side "What did you write about?"
-    Customer "Students who were having difficulties paying their tuition. "
+    Customer neutral crossed1 "Students who were having difficulties paying their tuition. "
     CW_side "That’s a heavy topic."
     Customer "Yeah. I was a bit apprehensive when it was assigned to me at first but I think it was a… learning experience. "
     "Blake takes another swig of her bottle."
@@ -332,7 +333,7 @@ label scene_a12:
     Customer happy "I’ll come back and wait for you to close then."
     CW_side "How did you know I’m closing today?"
     Customer "Today is Wednesday, isn’t it? I’m here enough to notice."
-    CW_side "Fair point. So I’ll… see you tonight then."
+    CW_side hips1 "Fair point. So I’ll… see you tonight then."
     "Marllie smiles widely, cutely twirling her hair around her fingers. Blake tries not to think about that too much, either… even if she wants to."
     Customer "See you tonight."
     scene black with fade

@@ -33,7 +33,7 @@ label scene_a1:
                 else:
                     scene black with fade
                     pause
-                    jump .get_upS
+                    jump .get_up
 
     label .get_up:
         if snooze < 2:
@@ -41,11 +41,11 @@ label scene_a1:
             "There's a heavy series of knocks against the door."
             pause
             show rival
-            Rival "Hey, Blake, are you getting up or do I have to yank the covers off you again?"
+            Rival hips1 "Hey, Blake, are you getting up or do I have to yank the covers off you again?"
             CW_side "Yeah, yeah. I'm coming out."
-            Rival "We had that talk years ago."
+            Rival happy "We had that talk years ago."
             CW_side angry "You asshole. You know what I mean!"
-            Rival "Just hurry up"
+            Rival -hips1 -happy "Just hurry up"
             hide rival
             "Blake forces herself up and sighs. She already misses her bed, but she takes the clothes haphazardly lying over the back of the chair and starts getting dressed. It's a better option than Shay barking at her. And threatening her with cold water."
 
@@ -55,14 +55,15 @@ label scene_a1:
             scene bg_apartment
             show rival
             Rival "Good morning, sleepyhead."
-            CW_side "Morning."
+            CW_side happy "Morning."
 
             "There is a slice of toast in the toaster left. Blake doesn’t even bother with the collection of spreads next to her and shoves a corner of the toast into her mouth."
 
-            Rival "I don't know how you can eat that dry."
-            CW_side "...You put salt in your coffee."
+            Rival hips1 distressed "I don't know how you can eat that dry."
+            CW_side -happy "...You put salt in your coffee."
             Rival "Touche."
 
+            show rival -hips1 -distressed
             "The two friends finish their breakfast in contented silence, save Shay sometimes making noises at her phone. Shay slings her bag over her shoulder and opens the door."
 
             Rival "Ready to go?"
@@ -72,7 +73,7 @@ label scene_a1:
             "In her sleepy haze, Blake doesn’t notice the sound of her bedroom door opening. She does, however, notice when the covers are flung off her."
             CW_side angry "Argh!" with hpunch
             scene bg_cobedroom
-            show rival
+            show rival angry hips1
             Rival "Up." #[Angry]
             CW_side -angry "Five minutes?"
             Rival "How many times have you said that to yourself this morning?"
@@ -81,6 +82,9 @@ label scene_a1:
 
             "Blake groans. Time for another day at work."
 
+            scene bg_apartment with fade
+
+            show rival distressed hips1
             "Ten minutes later, Blake stumbles out of her room, hat perched haphazardly on her head. Shay is already halfway out the door."
             Rival "Finally. I thought you’d slipped and hit your head or something."
             CW_side -sad "Yeah yeah, you’re hilarious. Let’s go."
@@ -90,11 +94,13 @@ label scene_a1:
 label scene_a3:
     scene bg_shop with fade
     "Blake arrives at work with time to spare. It's early and thankfully quiet, save one of her new coworkers swiftly prepping for the day. Maybe she’s a little bit grateful towards Shay’s need to be punctual."
-    show mc
-    MC "Hey Blake! Just in time. Jun’s letting us try some of her new banana bread fresh outta the oven. Get it while it’s hot!"
+    show mc order1
+    window hide
+    pause
+    MC happy "Hey Blake! Just in time. Jun’s letting us try some of her new banana bread fresh outta the oven. Get it while it’s hot!"
     "Jun walks over with a small plate with a number of small pieces of bread. It smells delicious."
     hide mc
-    show boss
+    show boss crossed1
     Boss "Go ahead, it’s a new recipe that I’ve been wanting to try out for a while now."
     "Blake pops a piece into her mouth. Granted, she tends to live on toast and instant noodles, but it's probably one of the best things she's ever tasted. She just manages to catch herself and stop from swearing, considering she's in polite company."
     CW_side happy "Wow. It's amazing. Thumbs up, boss"
@@ -121,7 +127,7 @@ label scene_a3:
     CW_side "Sure thing."
 
     "Time passes uneventfully. Between the two of them, they manage to get the pre-opening duties completed and the store opens. Customers have started to trickle in when Asher finally arrives, looking harried and windswept."
-    MC "About time."
+    MC hips1 annoyed "About time."
 
     "Asher disappears into the storeroom and emerges a minute later. Blake catches a glimpse of Jun’s unamused face before the storeroom door closes again."
 
@@ -129,7 +135,7 @@ label scene_a3:
     hide mc
     show mc at right
     Bestie "There was an accident at the intersection. I had to get off the bus and walk."
-    MC "That’s okay. Just get to grinding the coffee beans, I’m still on newbie duty."
+    MC hips1 "That’s okay. Just get to grinding the coffee beans, I’m still on newbie duty."
     Bestie "No problem. You holding up okay, Blake?"
     CW_side "Getting the hang of it I hope."
     MC "You're doing fine."
@@ -139,14 +145,14 @@ label scene_a3:
 
     CW_side sad "Yeah, how the hell does she come up with these things? It’s actually a new one every single day."
     Bestie "Dunno, at least she hasn’t asked you to make a frappuccino with no ice,  and then yell at you when it predictably comes out a disaster."
-    CW_side "...Has that happened to you?"
+    CW_side -sad "...Has that happened to you?"
     Bestie "Yup, on my second day too."
-    MC "I had someone yell at me because their ice was melting in their drink. Said I gave them the wrong ice cubes because they were supposed to stay big."
+    MC annoyed "I had someone yell at me because their ice was melting in their drink. Said I gave them the wrong ice cubes because they were supposed to stay big."
     CW_side -sad "What."
-    MC "My fourth day."
+    MC annoyedclosed "My fourth day."
     Bestie "People are dumb. You’ll become numb to it soon, I promise. Come and join us in the “dead inside at work” club!"
     CW_side "You guys are the worst at being reassuring. You’re like an awkward dad trying to reassure his teenager’s angst."
-    Bestie "Well, they don’t call me daddy for nothing."
+    Bestie happy "Well, they don’t call me daddy for nothing."
 
     "Maya makes a noise of disgust."
 
@@ -154,10 +160,10 @@ label scene_a3:
 
     "Asher merely bites his lip and winks at her. Maya makes another disgusted noise."
 
-    MC "Stop scarring me and the newbie and go and do your job."
+    MC annoyedclosed "Stop scarring me and the newbie and go and do your job."
     hide bestie with dissolve
     hide mc
-    show mc
+    show mc annoyedclosed hips1
     "Asher laughs as he disappears into the storeroom. Maya rubs her eyes tiredly."
 
     CW_side "This conversation took a turn I wasn’t prepared for."
@@ -171,20 +177,21 @@ label scene_a5:
     show rival
     "Shay's sitting comfortably in a chair reading, having gotten home first. As expected, she spares Blake no attention."
     "So Blake groans again. Louder this time."
-    Rival "Do you require medical attention?"
+    Rival distressed "Do you require medical attention?"
     CW_side "Aren’t you going to care? Ask me about my day?"
     "Shay lets out a long-suffering sigh and sets her book page-down on the chair arm."
-    Rival "Go on. Let it out."
+    Rival -distressed "Go on. Let it out."
     CW_side "Work was fine. How are you?"
-    Rival "That’s it? I was expecting some drama or tragedy."
+    Rival distressed "That’s it? I was expecting some drama or tragedy."
     CW_side "The tragedy is that I had to get out of bed this morning, but alas it must happen."
-    Rival "I consider getting you up to be my morning workout at this point."
+    Rival happy "I consider getting you up to be my morning workout at this point."
+    show rival distressed
     "Blake sits up and wiggles her eyebrows at Shay suggestively. Shay makes a noise of disgust and throws a nearby cushion at her face."
-    Rival distressed "No. Absolutely not. Ever."
+    Rival "No. Absolutely not. Ever."
     CW_side happy "My feelings are hurt."
     Rival happy "Idiot."
     "Blake throws the cushion back and Shay catches it out of the air. Despite her protests, there is a tiny smile playing at the edge of her lips."
-    Rival -distressed "Oh, there was a parcel that came for you. New game?"
+    Rival -happy "Oh, there was a parcel that came for you. New game?"
     "Blake sits up quickly. Shay tuts."
     Rival "You really can’t do that in the morning?"
     CW_side -happy "Nope. Where is it?"
@@ -196,20 +203,20 @@ label scene_a5:
     CW_side "Yeah, he’s in a different location now. Look."
     "Blake picks up some photos and a couple of packets of different candies. She grins."
     CW_side "From Germany to Japan. Bit of a culture difference, I’d say. Wanna try some?"
-    Rival "If you’re offering."
+    Rival happy "If you’re offering."
     CW_side "Of course."
     "Shay sits while Blake ruffles through the selection. Probably would help if any of the packaging was written in English, but it’s always cool to try new things, Blake thinks. She finds a letter, scans it quickly, then refolds it and shoves it into her back pocket for later."
     CW_side "There’s a bear on this one. Let’s start with that."
     "They tear into them and half an hour later they’ve tried at least half the new foods."
-    Rival -chin1 "I need some kale. We’ve had so much sugar that my tongue is sticking to the roof of my mouth."
+    Rival -happy -chin1 "I need some kale. We’ve had so much sugar that my tongue is sticking to the roof of my mouth."
     CW_side "I’m probably going to crash in like, half an hour."
     Rival "Joy of joys."
     CW_side "Hey, my package, my rules."
     "Shay rolls her eyes and stands from her chair. The coffee machine whirs to life. Shay leans on the counter while she waits."
-    Rival "Have you told him about your new job?"
+    Rival hips1 "Have you told him about your new job?"
     "Blake makes an affirmative noise around yet another mouthful of candy."
     Rival "Did you tell him you’re taking a break from college?"
-    CW_side "Yeah. He says he’s okay with it but I know he thinks I’m wasting my time."
+    CW_side sad "Yeah. He says he’s okay with it but I know he thinks I’m wasting my time."
     Rival "He’s not the one in school though."
     CW_side "No, but he’s the one paying the bills."
     Rival "You have to do what’s right for you, Blake. If he says it’s okay, then it’s okay."
@@ -218,7 +225,7 @@ label scene_a5:
     Rival "You’ll figure it out. There’s time, and your parents aren’t going to stop supporting you. They’re actually the nicest people I know."
     "Blake smiles appreciatively, but she can’t help but make a joke."
     CW_side happy "Are we having a moment?"
-    Rival "Not now you’ve ruined it."
+    Rival distressed "Not now you’ve ruined it."
     "There’s laughter behind Shay as she heads back to pour her coffee. Blake begins packing up the box again to take to her room; she’s definitely going to crash soon."
     CW_side -happy "Are you still working on your group assignment?"
     "Shay wordlessly lifts her mug in assent."
@@ -228,16 +235,16 @@ label scene_a5:
     CW_side "Are you being graded as a group?"
     Rival -angry "No. Or I’d be far more pissed off."
     CW_side "I’ll bring us something home tomorrow so you can at least suffer with something nice."
-    Rival " I might even put up with your crappy reality TV if you do."
-    CW_side "Don’t you dare talk shit about the Bachelor."
+    Rival "I might even put up with your crappy reality TV if you do."
+    CW_side "Don’t you dare talk shit about the Bachelor." #people who watch the bachlor go to the bad place
     "Shay hides her smirk behind another swig of her coffee. She makes to retrieve the book she left earlier, setting it aside neatly beside her laptop."
-    Rival "Close your door so I don’t have to work over your snoring."
+    Rival happy "Close your door so I don’t have to work over your snoring."
     CW_side "Yeah, yeah. Will do. G’night, Shay."
     scene black with fade
     jump j_scenea6
 
 label scene_a7:
-    scene bg_cs_lounge
+    scene bg_cs_lounge with fade
     "It’s later in the afternoon and past lunch-hour, so the coffee shop is particularly quiet. There has only been a handful of customers in the past several hours and Blake is frankly bored out of her mind. She almost wishes Marllie would order something just to give her something to do."
 
     "Almost."
@@ -253,13 +260,13 @@ label scene_a7:
                 "There are two customers in right now. One man who looks about done with his coffee but is currently entranced in a book, and Marllie still tapping away on her computer. Asher’s on his break and Maya’s cleaning the coffee machine, and Jun’s in the kitchen baking fresh cakes ready for the influx of people who need a fix after a long day at work."
             "Clean the front counter." if bClean2:
                 $bClean2 = False
-                CW_side "{i}Eh, I think I’ve cleaned it twice already in the… past half an hour? Goddamn, time is passing slowly.{/i}"
+                CW_side neutral "{i}Eh, I think I’ve cleaned it twice already in the… past half an hour? Goddamn, time is passing slowly.{/i}"
             "Sweep the floor." if bClean3:
                 $bClean3 = False
-                CW_side "{i}Oh right, Asher swept before his break already. Damn that man’s efficiency.{/i}"
+                CW_side angry "{i}Oh right, Asher swept before his break already. Damn that man’s efficiency.{/i}"
             "Wipe the tables." if bClean4:
                 $bClean4 = False
-                CW_side "{i}Well, gotta at least look busy. Might as well do the tables again.{/i}"
+                CW_side neutral "{i}Well, gotta at least look busy. Might as well do the tables again.{/i}"
                 jump .after_clean_menu1
         jump .clean_menu1
 
@@ -387,30 +394,30 @@ label scene_a7:
     jump j_scenea8
 
 label scene_a9:
-    scene bg_shop
+    scene bg_shop with fade
     "Maya had left early for home not long after, having started an earlier shift anyway that day. She’d seemed… off, Blake thought, but had claimed to be okay and Blake didn’t want to press. Or appear rude for prying."
     "So she decided to do her usual thing at this time when everything else had been taken care of: stare at the clock until she could go home."
-    scene bg_busystreet
+    scene bg_busystreet with fade
     "Shay met her outside. She was leaning with one foot against the wall, scrolling through her phone. Her eyes flicked upwards, noticing Blake, and she slipped her phone back in her front pocket and fell into step beside her roommate."
     show rival
     CW_side "How was your day?"
     Rival "I got stuck training the newbies. Plural. They progressed to making cold drinks today so it was pretty chaotic."
     CW_side "Eh, go easy on them. I can’t imagine that people getting coffee at a big chain store are any less picky."
-    Rival "Ugh, don’t remind me."
-    scene bg_fallsidewalk
+    Rival distressed "Ugh, don’t remind me."
+    scene bg_fallsidewalk with fade
     "They fall into a comfortable silence. Blake is making a list of takeout places that they can get dinner from in her head when they pass a bus stop. A colourful advertisement that flashes across a screen catches her eye."
     CW_side happy "{i}Thai. Gonna get some Thai food for dinner. Hell yeah.{/i}"
     "She turns her head to tell Shay, ask her if she wants anything too, but a familiar silhouette makes her stop dead."
     CW_side -happy "Hey, why don’t you go on ahead and I’ll meet you at home. I’ll pick up some food for us instead."
-    show rival
-    Rival "Everything okay?"
+    show rival neutral hips1
+    Rival distressed "Everything okay?"
     CW_side "Yeah. Everything’s cool. I’ll just see you soon, okay?"
     "Shay looks suspicious, but she bobs her head once. They bicker like enemies sometimes but she appreciates that Shay backs her up in her own way for things like this."
     Rival "No problem. Don’t be too long."
     "\"Or I’ll get worried\" is the unspoken finish. Shay’s out of sight a moment later and Blake does an about face back to the bus stop."
     hide rival disolve
     CW_side "Marllie?"
-    show customer
+    show customer sad
     "The other girl startles. Blake catches a glimpse of her wet cheeks and red eyes before Marllie whips her head back around."
     Customer "Uh, hey! What are you doing here?"
     CW_side "I was on my way home. Are you okay?"
@@ -453,42 +460,42 @@ label scene_a9:
     jump j_scenea10
 
 label scene_a11:
-    scene bg_apartment
+    scene bg_apartment with fade
     "It’s the weekend and Blake’s lying on the couch texting, with one of her shows blaring from the television and a half-eaten sandwich resting on her chest. Shay, having decided to stay home to study, is taking a break. She eyes Blake and seems to consider threatening her if she makes a mess, but Blake picks up the sandwich and somehow shove the entirety of it in her mouth instead."
     show rival
-    Rival "Why."
+    Rival distressed "Why."
     "Blake garbles unintelligibly  around the food. Shay curls her lip in disgust."
     Rival "Seriously."
     "The responded apology is barely heard and pointless on the basis that she’s still doing what she’s apologising for. Shay shifts so she’s facing the other way and shoves her nose back into her book in an attempt to ignore Blake’s antics. Blake finishes and tries again."
     CW_side "Sorry."
-    Rival "Go away."
+    Rival angry "Go away."
     "Blake’s phone flashes again for what has to be the dozenth time in a ten minute period. She answers, letting out a soft snort of laughter as she reads the message. Blake texts back rapidly with a reply before putting her phone down again. Shay peers at her suspiciously."
-    Rival "Who are you texting? You’re grinning."
+    Rival neutral "Who are you texting? You’re grinning."
     CW_side "You remember that one customer who kept ordering ridiculous things?"
     Rival "That doesn't narrow it down, Blake."
     CW_side "Okay, you're right. Upside down macchiato. Small blonde. Can't spell her name for shit."
     Rival "Ah, yes. I remember the stories."
     CW_side "She’s babysitting some kids and they’re engrossed in a movie right now. We’re just talking about stuff."
     "Shay squints at her, looking between Blake and the phone. She puts her book down."
-    Rival "You like her."
+    Rival happy chin1 "You like her."
     "Blake’s smile disappears immediately."
     CW_side "What’re you talking about?"
     Rival "You like her. I remember this from your last ex. It’s the same dopey look."
     CW_side "Psh, what? Nah. It’s actually not. I barely know her."
-    Rival "It actually is."
+    Rival hips1 "It actually is."
     CW_side "Is not."
     Rival "Is too."
     CW_side "Is not."
-    Rival "I’m not doing this with you. You’re deflecting."
+    Rival -happy "I’m not doing this with you. You’re deflecting."
     CW_side "She’s a customer! A new friend, nothing more. I’ll admit that she’s… cute. But that’s it."
-    Rival "You’re also blushing."
+    Rival happy "You’re also blushing."
     CW_side "Am not."
     "Shay rolls her eyes again."
-    Rival "Whatever. You should just ask her out if you like her. Save me from the pining from last time. I beg of you. I really don’t need you lying on my floor whimpering about how pretty you think a girl is again."
+    Rival distressed "Whatever. You should just ask her out if you like her. Save me from the pining from last time. I beg of you. I really don’t need you lying on my floor whimpering about how pretty you think a girl is again."
     CW_side "Didn’t you listen to a word I just said?"
-    Rival "I did. And I’m still choosing to believe that you’re an idiot."
+    Rival happy "I did. And I’m still choosing to believe that you’re an idiot."
     CW_side "Eh, what’s new."
-    Rival "Fair point."
+    Rival neutral "Fair point."
     "Shay picks up reading from where she left off. Blake feels beyond awkward on her phone now, though, and she notes Shay’s side eye when another text message comes through. She takes a moment to casually turn up the volume on the TV and then she’ll text back as nonchalantly as possible."
     "The phone flashes again."
     "Blake gives up."
@@ -499,14 +506,14 @@ label scene_a11:
     "Blake is sure \‘naps\’ would be in air quotations if Shay could be bothered to put her book down, but she’ll take it."
     CW_side "Yeah yeah. See ya."
     hide rival
-    scene bg_cobedroom
+    scene bg_cobedroom with fade
     "She leaves to her room as quickly as possible without it looking like she’s actually fleeing."
     CW_side "{i}And I’m not, right? I just don’t wanna talk about my love life with Shay. Not that there is one. We’re just friends and she’s pretty cool, that’s all.{/i}"
     "Blake does take a nap, in fact. But she makes certain she texts back first."
     scene black with fade
     jump j_scenea12
 label scene_a13:
-    scene bg_park
+    scene bg_park with fade
     "Blake is waiting near the gate when Marllie arrives. One of the two dogs is whining and tugging at his lead, almost strangling himself in his attempt to enter the park faster. Blake gently scolds him and demands he sit, which he does… albeit very reluctantly. The other smaller dog, at least, waits patiently."
     show customer
     Customer "Sorry I’m late! "

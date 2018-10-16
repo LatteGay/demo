@@ -1,5 +1,5 @@
 layeredimage mc:
-    group base:
+    group base auto:
         attribute outfit1 default
     group left_arm auto:
         attribute down1 default

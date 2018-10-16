@@ -1,6 +1,6 @@
 #COWORKER SPIRTES N STUFF FILES
 layeredimage customer:
-    group base:
+    group base auto:
         attribute dress1 default
     group left_arm auto:
         attribute crossed1 default
