@@ -4,7 +4,6 @@
 
 init offset = -1
 
-
 ############ phone code here########
 # if you dont use  1920 x 1080 youre going to have to play with these numbers to get it to work and make the phone image be smaller somehow
 # just keep changing stuff and refreshing the game until it works, sorry lol
@@ -284,8 +283,9 @@ style window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("images/gui/dialogue/dialogue_box.png", xalign=0.5, yalign=1.0)
+    #image dialogue_box = im.MatrixColor("images/gui/dialogue/dialogue_box.png", im.matrix.opacity(0.5))
 
+    background Image("images/gui/dialogue/dialogue_box.png", xalign=0.5, yalign=1.0)
 style namebox:
     xpos gui.name_xpos
     xanchor gui.name_xalign

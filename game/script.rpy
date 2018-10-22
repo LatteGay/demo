@@ -2,8 +2,7 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
-
-
+define dis = { "master" : Dissolve(0.5) }
 image bg_shop = "backgrounds/coffee_shop.png"
 image bg_cs_lounge = "backgrounds/bg_cs_lounge.png"
 image bg_apartment = "backgrounds/bg_appartment.png"
@@ -12,7 +11,16 @@ image bg_fallsidewalk = im.Scale("backgrounds/fallsidewalk.png",1920,1080)
 image bg_busystreet = "backgrounds/busystreet.png"
 image bg_park = "backgrounds/bg_park.png"
 image bg_dorm = "backgrounds/bg_dorm.png"
-# The game starts here.
+
+define audio.goodmorning = "music/Good-Morning.mp3" #coffe shop theme
+define audio.happy = "music/Happy-Song.mp3"
+define audio.dolphin = "music/I-spoke-to-a-dolphin-and-this-is-what-it-told-me.mp3"
+define audio.nameless = "music/Nameless-Beat.mp3"
+define audio.park = "music/Park-Avenue.mp3"
+define audio.see = "music/See-You-There.mp3"
+define audio.water = "music/Water-Song.mp3"
+define audio.alarm = "music/sfx/android-oxygen.mp3"
+# The game starts here.S
 
 label start:
     label j_scenea1:

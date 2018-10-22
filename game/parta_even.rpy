@@ -16,21 +16,27 @@ label scene_a2:
     Rival angry "Rude."
     CW_side happy "Uh huh."
     hide rival
+    play sound "music/sfx/ambience_busy_street_road.mp3"
     scene bg_busystreet with fade
     "They stop at a busy road. Shay's workplace is even closer and Blake can just make it out now behind all the passing cars."
     show rival
     Rival "I won’t be home for dinner. The girls and I are going to try that fancy new Italian place near the train station. "
     CW_side sad "Aw, where was my invite?"
+    show rival happy
     "Shay raises an eyebrow at Blake."
-    Rival happy hips1 "You sure you want to do that after what happened last time?"
+    show rival chin1 with dis
+    Rival "You sure you want to do that after what happened last time?"
     "Blake winces at the memory. Some of Shay’s friends can be… more abrasive than tactful. Passive aggressive comments, marinara sauce and Blake’s shirt are not a good combination."
     CW_side neutral "Okay, yeah. Maybe next time."
+    hide rival with fade
     "They walk in silence before coming to a stop in front of Shay’s workplace."
     CW_side happy "Have a terrible day at work, bitch."
-    hide rival
+    stop music fadeout 2.0
     "Shay flips her off over her shoulder as she walks away."
+    show rival happy hips1
     Rival "You too, ho."
-
+    hide rival
+    stop sound fadeout 1.0
     jump j_scenea3
 label scene_a4:
     scene bg_shop with fade
@@ -38,7 +44,7 @@ label scene_a4:
     "She's actually starting to feel more confident."
     "The bell above the door rings and Blake’s head snaps up, ready to greet the new customer. Her newfound confidence evaporates when she sees who it is. "
     CW_side sad "Oh my God, I forgot to check the clock. Fuck, she’s here again. Please help."
-    show mc
+    show mc with dissolve
     MC annoyed "What are you-"
     hide mc
     "The new customer walks up to the counter. Blake knows exactly who she is and she plasters on a tight smile, internally preparing herself for whatever convoluted order she’s about to receive."
@@ -79,6 +85,7 @@ label scene_a4:
     "She calls out the name and misses her coworker cocking an eyebrow at her spelling, though Maya doesn't say anything."
     "Marllie leaves her laptop at the table. She looks at her drink, looks at Blake, at Maya, back at Blake, and Blake's never felt so scrutinized in her life even though she lives with Shay, and then seemingly satisfied leaves with her things."
     "Blake lets out a breath she didn't know she was holding."
+    stop music fadeout 6.0
     MC happy hips1 "See. We got it."
     CW_side happy "Yeah. We did."
     "Maya offers a high five. Blake slaps her hand against her’s gratefully."
@@ -86,7 +93,8 @@ label scene_a4:
     pause
     jump j_scenea5
 label scene_a6:
-    scene bg_shop
+    scene bg_shop with fade
+    play music goodmorning loop fadein 10.0
     "It's been a busier morning today, with more than a few exhausted parents and college students."
     "Blake finds herself watching the clock with growing trepidation, because she knows that girl with the impossible order is going to come in at about 10AM and it's already 9:50AM and what the fuck is it going to be today?"
     "Sure enough, she's just refilling the napkin dispenser when Marllie trots into the shop. Blake can feel the sweat dripping down her neck with today's hot weather, yet somehow Marllie is sporting a coat and her hair is still down."
@@ -104,15 +112,15 @@ label scene_a6:
     Customer "Actually, can you put two decaf shots at the bottom, milk, two normal shots on top and minimal foam? Also extra hot milk."
     "Blake fights to keep her expression neutral. She can feel the herculean effort she’s exerting to stop her left eye from twitching."
     CW_side neutral "You betcha. Extra large latte, four shots with milk as hot as it will go without it exploding in my face, coming right up."
-    "Marllie smiles, looking relieved. "
     show customer happy
+    "Marllie smiles, looking relieved."
     Customer "As long as it’s not too much trouble."
     CW_side happy "…None at all."
     "Marllie watches her as Blake scribbles her name onto the cup, money ready in hand."
     "The rest of the transaction thankfully goes smoothly, and Marllie shoots her another small smile before she turns to head to her favourite table."
+    hide customer with dissolve
     "Blake debates dunking her face in the sink as she begins to fill the order. Maybe the milk will explode in her face and grant her mercy."
     "She can only hope."
-    hide customer
     "The first two shots of decaf are in the cup when Asher slides up to her, a tray of dirty cups in his hands."
     show bestie
     Bestie "What is it today?"
@@ -142,6 +150,7 @@ label scene_a6:
     CW_side "I’ve kind of sort of been spelling her name wrong the entire time that I’ve worked here. So like, I’m going to take my break now so I can throw myself off the bridge."
     Bestie "You can’t do that. It’s too busy."
     CW_side "Wow, thanks for the sympathy. "
+    show bestie happy
     "Asher flashes her a charming smile."
     Bestie "You’re welcome! "
     "He laughs again, lightly patting her on the back."
@@ -152,6 +161,7 @@ label scene_a6:
     "Asher’s eyes glint with amusement as Blake lets out a long, distressed noise."
     Bestie "Enjoy your break!"
     hide bestie
+    stop music fadeout 10.0
     jump j_scenea7
 label scene_a8:
     scene bg_shop with fade

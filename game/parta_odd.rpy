@@ -2,13 +2,18 @@
 label scene_a1:
     $ snooze = 0
 
-    scene bg_cobedroom
+    scene black
+    pause 0.5
+    play sound alarm loop
+    pause 2.0
+    scene bg_cobedroom with fade
 
     "Blake shifts back under the covers with a groan, squeezing her eyes shut against the sunlight peeking into her messy room. She blindly reaches around her bedside, deciding she now hated the song she'd set as her alarm a few days ago."
     "She'd vowed to be a more responsible, punctual adult at her new job. She'd give herself time to wake up, look presentable, eat something and maybe (hopefully) become a functioning human being by the time she arrived at the coffee shop."
     "{i} But sleep… {/i}"
 
     label .alarm1:
+        stop sound
         menu:
             "Get up":
                 jump .get_up
@@ -20,11 +25,15 @@ label scene_a1:
                 scene black with fade
 
     label .alarm2:
+        play sound alarm loop
+        pause 2.0
         scene bg_cobedroom with fade
         menu:
             "Get up":
+                stop sound
                 jump .get_up
             "Snooze. No, really, five more minutes.":
+                stop sound
                 if snooze < 2:
                     $snooze += 1
                     scene black with fade
@@ -36,17 +45,22 @@ label scene_a1:
                     jump .get_up
 
     label .get_up:
+        window hide
+        pause 2.0
         if snooze < 2:
             scene bg_cobedroom
+            play sound "music/sfx/Knocking-On-Door.ogg"
             "There's a heavy series of knocks against the door."
-            pause
             show rival
+            play music water fadein 2.0
+            show rival hips1 with dis
             Rival hips1 "Hey, Blake, are you getting up or do I have to yank the covers off you again?"
             CW_side "Yeah, yeah. I'm coming out."
             Rival happy "We had that talk years ago."
             CW_side angry "You asshole. You know what I mean!"
-            Rival -hips1 -happy "Just hurry up"
-            hide rival
+            show rival -hips1 -happy with dis
+            Rival "Just hurry up"
+            hide rival with dissolve
             "Blake forces herself up and sighs. She already misses her bed, but she takes the clothes haphazardly lying over the back of the chair and starts getting dressed. It's a better option than Shay barking at her. And threatening her with cold water."
 
             "Blake's sure she would go through with it, too."
@@ -63,7 +77,7 @@ label scene_a1:
             CW_side -happy "...You put salt in your coffee."
             Rival "Touche."
 
-            show rival -hips1 -distressed
+            show rival -hips1 -distressed  with dis
             "The two friends finish their breakfast in contented silence, save Shay sometimes making noises at her phone. Shay slings her bag over her shoulder and opens the door."
 
             Rival "Ready to go?"
@@ -74,6 +88,7 @@ label scene_a1:
             CW_side angry "Argh!" with hpunch
             scene bg_cobedroom
             show rival angry hips1
+            play music water fadein 2.0
             Rival "Up." #[Angry]
             CW_side -angry "Five minutes?"
             Rival "How many times have you said that to yourself this morning?"
@@ -93,19 +108,20 @@ label scene_a1:
 #Scene 1 a
 label scene_a3:
     scene bg_shop with fade
+    play music goodmorning loop fadein 1.0
     "Blake arrives at work with time to spare. It's early and thankfully quiet, save one of her new coworkers swiftly prepping for the day. Maybe she’s a little bit grateful towards Shay’s need to be punctual."
-    show mc order1
+    show mc order1 with dissolve
     window hide
     pause
     MC happy "Hey Blake! Just in time. Jun’s letting us try some of her new banana bread fresh outta the oven. Get it while it’s hot!"
-    "Jun walks over with a small plate with a number of small pieces of bread. It smells delicious."
     hide mc
-    show boss crossed1
+    show boss crossed1 with dissolve
+    "Jun walks over with a small plate with a number of small pieces of bread. It smells delicious."
     Boss "Go ahead, it’s a new recipe that I’ve been wanting to try out for a while now."
     "Blake pops a piece into her mouth. Granted, she tends to live on toast and instant noodles, but it's probably one of the best things she's ever tasted. She just manages to catch herself and stop from swearing, considering she's in polite company."
     CW_side happy "Wow. It's amazing. Thumbs up, boss"
+    show boss happy with dis
     "Jun flashes a warm smile at her."
-
     Boss "I’m glad. I’ll be putting these out later. Please let the customers know that it’s new and to try it."
     CW_side -happy " Yes, ma’am."
 
@@ -117,7 +133,7 @@ label scene_a3:
     show mc sad
     "Maya sighs. She looks troubled."
 
-    MC "No, I just think she’s just a little tense about that new Expresso Express™ that’s opened up nearby."
+    MC "No, I just think she’s just a little tense about that new Espresso Express™ that’s opened up nearby."
     CW_side "Oh. She’s worried about losing business to them?"
     MC "Enough to be noticable. We haven't really been open that long ourselves, y'know? We've got some regulars, but we're still a small business and I guess we're not really that established yet. Jun's been coming up with all sorts of ideas, trying to put out ads..."
 
@@ -128,14 +144,15 @@ label scene_a3:
 
     "Time passes uneventfully. Between the two of them, they manage to get the pre-opening duties completed and the store opens. Customers have started to trickle in when Asher finally arrives, looking harried and windswept."
     MC hips1 annoyed "About time."
-
+    hide mc with dis
     "Asher disappears into the storeroom and emerges a minute later. Blake catches a glimpse of Jun’s unamused face before the storeroom door closes again."
 
-    show bestie at left
-    hide mc
-    show mc at right
+    show bestie at left  with dissolve
+    show mc at right with dissolve
     Bestie "There was an accident at the intersection. I had to get off the bus and walk."
-    MC hips1 "That’s okay. Just get to grinding the coffee beans, I’m still on newbie duty."
+    show mc hips1
+    with dis
+    MC "That’s okay. Just get to grinding the coffee beans, I’m still on newbie duty."
     Bestie "No problem. You holding up okay, Blake?"
     CW_side "Getting the hang of it I hope."
     MC "You're doing fine."
@@ -172,11 +189,12 @@ label scene_a3:
     jump j_scenea4
 
 label scene_a5:
-    scene bg_apartment
+    scene bg_apartment with fade
+    play music water loop fadein 10.0
     "It’s late when Blake arrives home. She fiddles with her earphones, shoving them back in her pocket in a tangled heap, and throws open the door. Stumbling in tiredly, she tosses her bag on to the sofa and drops down with a groan, throwing her arm across her eyes"
-    show rival
     "Shay's sitting comfortably in a chair reading, having gotten home first. As expected, she spares Blake no attention."
     "So Blake groans again. Louder this time."
+    show rival with dis
     Rival distressed "Do you require medical attention?"
     CW_side "Aren’t you going to care? Ask me about my day?"
     "Shay lets out a long-suffering sigh and sets her book page-down on the chair arm."
@@ -196,7 +214,8 @@ label scene_a5:
     Rival "You really can’t do that in the morning?"
     CW_side -happy "Nope. Where is it?"
     "Shay gestures towards the dining table, uncluttered and a flower in the middle thanks to Shay’s efforts. Blake flies off the sofa and dives at the box. Shay is stands behind her, arms folded across her chest. She attempts to glance over her roommate’s shoulder. The height difference makes it difficult, however."
-    Rival chin1 "That’s not a game"
+    show rival chin1 with dis
+    Rival "That’s not a game"
     CW_side "Package from Dad."
     "She tips the box over the surface and lets everything fall out in a pile (she misses Shay’s distressed twitching at the mess)."
     Rival "That’s the second one this month."
@@ -208,7 +227,8 @@ label scene_a5:
     "Shay sits while Blake ruffles through the selection. Probably would help if any of the packaging was written in English, but it’s always cool to try new things, Blake thinks. She finds a letter, scans it quickly, then refolds it and shoves it into her back pocket for later."
     CW_side "There’s a bear on this one. Let’s start with that."
     "They tear into them and half an hour later they’ve tried at least half the new foods."
-    Rival -happy -chin1 "I need some kale. We’ve had so much sugar that my tongue is sticking to the roof of my mouth."
+    show rival -happy -chin1 with dis
+    Rival "I need some kale. We’ve had so much sugar that my tongue is sticking to the roof of my mouth."
     CW_side "I’m probably going to crash in like, half an hour."
     Rival "Joy of joys."
     CW_side "Hey, my package, my rules."
@@ -217,12 +237,12 @@ label scene_a5:
     "Blake makes an affirmative noise around yet another mouthful of candy."
     Rival "Did you tell him you’re taking a break from college?"
     CW_side sad "Yeah. He says he’s okay with it but I know he thinks I’m wasting my time."
-    Rival "He’s not the one in school though."
+    Rival angry "He’s not the one in school though."
     CW_side "No, but he’s the one paying the bills."
     Rival "You have to do what’s right for you, Blake. If he says it’s okay, then it’s okay."
     CW_side "Yeah…"
     "Blake looks unsure. Shay hesitates for a moment before walking back over to the dining table where Blake is slumped. She lays a hand on Blake’s shoulder."
-    Rival "You’ll figure it out. There’s time, and your parents aren’t going to stop supporting you. They’re actually the nicest people I know."
+    Rival -angry "You’ll figure it out. There’s time, and your parents aren’t going to stop supporting you. They’re actually the nicest people I know."
     "Blake smiles appreciatively, but she can’t help but make a joke."
     CW_side happy "Are we having a moment?"
     Rival distressed "Not now you’ve ruined it."
@@ -233,13 +253,14 @@ label scene_a5:
     CW_side "Ugh."
     Rival "We still have plenty of time. It’s just frustrating that the person said they’d have it completed but they didn’t."
     CW_side "Are you being graded as a group?"
-    Rival -angry "No. Or I’d be far more pissed off."
+    Rival "No. Or I’d be far more pissed off."
     CW_side "I’ll bring us something home tomorrow so you can at least suffer with something nice."
-    Rival "I might even put up with your crappy reality TV if you do."
+    Rival -angry "I might even put up with your crappy reality TV if you do."
     CW_side "Don’t you dare talk shit about the Bachelor." #people who watch the bachlor go to the bad place
     "Shay hides her smirk behind another swig of her coffee. She makes to retrieve the book she left earlier, setting it aside neatly beside her laptop."
     Rival happy "Close your door so I don’t have to work over your snoring."
     CW_side "Yeah, yeah. Will do. G’night, Shay."
+    stop music fadeout 5.0
     scene black with fade
     jump j_scenea6
 
@@ -248,7 +269,7 @@ label scene_a7:
     "It’s later in the afternoon and past lunch-hour, so the coffee shop is particularly quiet. There has only been a handful of customers in the past several hours and Blake is frankly bored out of her mind. She almost wishes Marllie would order something just to give her something to do."
 
     "Almost."
-
+    play music dolphin loop fadein 5.0
     $ bClean1 = True
     $ bClean2 = True
     $ bClean3 = True
@@ -370,15 +391,16 @@ label scene_a7:
     CW_side "The big one is Ein. The oldest one too. Astro is the Shiba, and David’s the Pomeranian mix. We got him not long before I moved out."
 
     "Marllie’s eyes light up as she looks at them. She cups a hand over her mouth."
-
-    Customer happy "They’re so adorable!"
+    show customer happy with dis
+    Customer "They’re so adorable!"
     CW_side "I know, right? I’m thinking about getting another. I miss having a dog around and I know my roommate would be more than okay with it. Just waiting until the right time when I have some money saved. I’m walking other people's’ dogs right now for a bit of side money and it helps fill the hole a bit."
     Customer "If you do, I’d love to meet them. I’ve never had a pet before."
     CW_side -happy "Really? Never?"
     Customer sad "Yeah… my parents didn’t really have time to take care of them and they don't really trust me to take care of one on my own. Maybe someday. Studying takes up a lot of time."
-
+    show customer -sad
     "Blake flashes her a smile."
 
+    show customer happy with dis
     CW_side happy "Yeah, you’ll want to be able to spoil them. If or when I do get one, I promise I’ll bring them in so you can meet them."
     Customer happy "I’d love that."
 
