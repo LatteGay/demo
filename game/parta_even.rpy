@@ -40,6 +40,7 @@ label scene_a2:
     jump j_scenea3
 label scene_a4:
     scene bg_shop with fade
+    play music nameless loop fadein 1.0
     "The morning has been going well so far. A little trouble, but Maya has been here to help each time. Blake's even managed to sell most of the banana bread. Jun will be happy."
     "She's actually starting to feel more confident."
     "The bell above the door rings and Blake’s head snaps up, ready to greet the new customer. Her newfound confidence evaporates when she sees who it is. "
@@ -50,13 +51,13 @@ label scene_a4:
     "The new customer walks up to the counter. Blake knows exactly who she is and she plasters on a tight smile, internally preparing herself for whatever convoluted order she’s about to receive."
     CW_side happy "Good morning! What can I get for you this morning?"
     show customer
-    Customer "Can I please get a quad, non-fat, extra hot caramel macchiato, upside down?"
+    Marlly "Can I please get a quad, non-fat, extra hot caramel macchiato, upside down?"
     CW_side sad "{i}What... the... Fuck?{/i}"
     CW_side "{i}Upside down???? Who is this girl?{/i}"
     "Blake keys the order into the register and repeats it. Marllie nods in confirmation."
     CW_side happy "Sure thing. Anything else? We’ve just put out some new banana bread. It’s made with a different recipe. "
     "Marllie ponders this for a moment. She opens her wallet to take out another bill."
-    Customer "Sure, why not."
+    Marlly "Sure, why not."
     CW_side "No worries. That’ll be $7.25 in total."
     "Marllie pays and heads off to her usual table. Blake waits until she’s busy taking out her things before turning to Maya."
     hide customer
@@ -85,7 +86,7 @@ label scene_a4:
     "She calls out the name and misses her coworker cocking an eyebrow at her spelling, though Maya doesn't say anything."
     "Marllie leaves her laptop at the table. She looks at her drink, looks at Blake, at Maya, back at Blake, and Blake's never felt so scrutinized in her life even though she lives with Shay, and then seemingly satisfied leaves with her things."
     "Blake lets out a breath she didn't know she was holding."
-    stop music fadeout 6.0
+    stop music fadeout 3.0
     MC happy hips1 "See. We got it."
     CW_side happy "Yeah. We did."
     "Maya offers a high five. Blake slaps her hand against her’s gratefully."
@@ -94,7 +95,7 @@ label scene_a4:
     jump j_scenea5
 label scene_a6:
     scene bg_shop with fade
-    play music goodmorning loop fadein 10.0
+    play music happy loop fadein 3.0
     "It's been a busier morning today, with more than a few exhausted parents and college students."
     "Blake finds herself watching the clock with growing trepidation, because she knows that girl with the impossible order is going to come in at about 10AM and it's already 9:50AM and what the fuck is it going to be today?"
     "Sure enough, she's just refilling the napkin dispenser when Marllie trots into the shop. Blake can feel the sweat dripping down her neck with today's hot weather, yet somehow Marllie is sporting a coat and her hair is still down."
@@ -103,18 +104,18 @@ label scene_a6:
     "Blake takes a deep breath."
     CW_side happy "Hi! What can I get you today?"
     "Marllie brushes her hair out of her eyes and shifts her computer case into her other hand, eyeing the menu. Blake can almost feel the sweat droplets forming on her forehead."
-    Customer "Hm, I’ll have a extra large latte, four shots."
+    Marlly "Hm, I’ll have a extra large latte, four shots."
     "Blake exhales, disbelieving. Four shots is a little much, but this order is so simple and straightforward that there has to be a catch."
     CW_side "Of course. Will that be all?"
-    Customer "Actually…"
+    Marlly "Actually…"
     CW_side sad"{i}No, please. Why did I ask? A normal order for once, please.{/i}"
     "Marllie actually looks a tiny bit apologetic."
-    Customer "Actually, can you put two decaf shots at the bottom, milk, two normal shots on top and minimal foam? Also extra hot milk."
+    Marlly "Actually, can you put two decaf shots at the bottom, milk, two normal shots on top and minimal foam? Also extra hot milk."
     "Blake fights to keep her expression neutral. She can feel the herculean effort she’s exerting to stop her left eye from twitching."
     CW_side neutral "You betcha. Extra large latte, four shots with milk as hot as it will go without it exploding in my face, coming right up."
     show customer happy
     "Marllie smiles, looking relieved."
-    Customer "As long as it’s not too much trouble."
+    Marlly "As long as it’s not too much trouble."
     CW_side happy "…None at all."
     "Marllie watches her as Blake scribbles her name onto the cup, money ready in hand."
     "The rest of the transaction thankfully goes smoothly, and Marllie shoots her another small smile before she turns to head to her favourite table."
@@ -161,10 +162,11 @@ label scene_a6:
     "Asher’s eyes glint with amusement as Blake lets out a long, distressed noise."
     Bestie "Enjoy your break!"
     hide bestie
-    stop music fadeout 10.0
+    stop music fadeout 3.0
     jump j_scenea7
 label scene_a8:
     scene bg_shop with fade
+    play music happy loop fadein 2.0
     "There's a small routine between them now during the coffee shop's quieter hours. As long as someone’s keeping an eye out for potential customers and everything’s tidy and prepared, Jun doesn’t really mind if they stand around for a bit."
     "So Blake and Marllie keep each other company when they’re both bored out of their minds. It’s a good arrangement."
     show customer
@@ -199,19 +201,19 @@ label scene_a8:
     CW_side "Hey now. Be nice. I don’t need to live that embarrassment again."
     Customer "Sorry."
     "There’s another awkward silence. Blake still has no idea what Marllie wants."
-    Customer "I’m… going to go to my table. I have to work on an assignment. You know how it is. I’ll just-"
+    Customer angry "I’m… going to go to my table. I have to work on an assignment. You know how it is. I’ll just-"
     "The door to the back room opens. Maya, looking tired and disheveled, trudges out and sighs."
     hide customer with dissolve
-    show mc
+    show mc order1 annoyedclosed
     MC "You know, I didn’t think I’d be doing taxes when I joined up."
     "Maya leans against the counter tiredly. Blake shrugs, continuing to wipe mugs."
     CW_side "You’re the one who offered to help."
-    MC "Please don’t remind me."
+    MC annoyed "Please don’t remind me."
+    show mc happy with dis
     "Maya notices the customer. She offers her her patented Customer Service Worker smile, slipping back into the role easily."
-    hide mc with dissolve
-    show mc at right
-    show customer at left
-    MC happy "Oh, hey Marllie! You’re here late."
+    show mc at right with moveinright
+    show customer at left with moveinleft
+    MC "Oh, hey Marllie! You’re here late."
     "Marllie looks like a deer in headlights. Her mouth opens and closes several times, trying and failing to say something. "
     CW_side "Weren’t you looking for Maya? I didn’t even have to interrupt them."
     MC "Oh? What can I do for you?"
@@ -224,6 +226,7 @@ label scene_a8:
     jump j_scenea9
 label scene_a10:
     scene bg_shop with fade
+    play music water loop fadein 1.0
     "Blake is dealing with a customer complaint when Marllie walks in. The other girl raises her eyebrows upon hearing the customer’s tantrum and Blake’s desperate retort."
     show rando
     CW_side happy "Ma’am, no offense, but we primarily serve coffee… I don’t understand-"
@@ -240,15 +243,17 @@ label scene_a10:
     Customer "Wow."
     hide customer
     show boss
+    stop music fadeout 4.0
     "Jun walks past them to get back to her own duties, but not before giving them a completely baffled look."
     Boss "I’ve worked far too long in this industry."
     hide boss disolve
+    play music happy fadein 5.0
     show customer
     "Free of crazy customers (mostly), Blake turns back to Marllie and warily recites her spiel."
     CW_side happy "So what can I get you? Jun made some amazing new muffins if you’d like to try one. Salted caramel. I’d highly recommend them."
     Customer "I’d love one. And you’ve been through enough. Just give me a latte."
     "Marllie scrunches her face up and puts on a poor imitation of the lady’s posh accent, splaying a hand on her hip."
-    Customer "And can you, like, make it not taste like coffee? I can’t stand coffee!"
+    Customer happy "And can you, like, make it not taste like coffee? I can’t stand coffee!"
     CW_side "Not you too. That’ll be $6.25. I’ll have your not-coffee ready ASAP."
     "The regular giggles."
     Customer happy "Really though, thank you. I know my orders can be a little much on occasion but you’ve always made them drinkable."
@@ -264,10 +269,12 @@ label scene_a10:
     CW_side "I’ll go and get your order ready before I can put my foot further in my mouth now. "
     Customer happy "Thanks. Remember, I don’t want it to taste like coffee."
     CW_side "Sorry, I suddenly don’t speak english."
+    stop music fadeout 5.0
     "Marllie laughs and retreats to her usual table, setting her laptop case on the table and already retrieving her books. Blake finds herself smiling as she gets to work."
     jump j_scenea11
 label scene_a12:
     scene bg_shop with fade
+    play music nameless loop fadein 1.0
     "The lunch rush is over, so the amount of people in the store is slowly dwindling. Blake's already had her break and popped by next door for a sandwich, so at least she's not constantly tempted by the smell of Jun's fresh baking."
     "She finishes up dealing with the queue that's formed and then there's only one guy left, dressed smartly for his... office job? Or whatever. She takes his order and hands him his change."
     "The coffee he wants is simple and Blake’s hands work on autopilot, her attention free to roam around the shop."
@@ -302,6 +309,7 @@ label scene_a12:
     CW_side "Good. I uh… well, I’m on my break now. I’ll stay with you. You know, in case he comes back."
     Customer folded1 "I’d like that."
     CW_side "Cool, cool."
+    stop music fadeout 1.0
     "Blake sits at the offered chair, glad to be off her feet for the time being. She takes the time to pull off her apron and down half the bottle in one go."
     Customer neutral "Honestly don’t know how you can stand for that many hours a day, most days of the week. That lunch rush was busier than usual."
     CW_side "You get used to it."

@@ -31,7 +31,7 @@ layeredimage coworker:
         attribute down1 default
     group head auto:
         attribute neutral default
-    group blush auto
+    group effect auto
 #, xoffset=-200, yoffset=-25
 image side coworker_side =  LayeredImageProxy("coworker", Transform(crop=(0, 0, 800, 550), zoom=.8))
 #image side coworker_side = LayeredImageProxy("coworker")

@@ -52,7 +52,7 @@ label scene_a1:
             play sound "music/sfx/Knocking-On-Door.ogg"
             "There's a heavy series of knocks against the door."
             show rival
-            play music water fadein 2.0
+            play music goodmorning fadein 2.0
             show rival hips1 with dis
             Rival hips1 "Hey, Blake, are you getting up or do I have to yank the covers off you again?"
             CW_side "Yeah, yeah. I'm coming out."
@@ -86,9 +86,9 @@ label scene_a1:
         else:
             "In her sleepy haze, Blake doesn’t notice the sound of her bedroom door opening. She does, however, notice when the covers are flung off her."
             CW_side angry "Argh!" with hpunch
-            scene bg_cobedroom
+            scene bg_cobedroom with fade
             show rival angry hips1
-            play music water fadein 2.0
+            play music goodmorning fadein 2.0
             Rival "Up." #[Angry]
             CW_side -angry "Five minutes?"
             Rival "How many times have you said that to yourself this morning?"
@@ -108,7 +108,7 @@ label scene_a1:
 #Scene 1 a
 label scene_a3:
     scene bg_shop with fade
-    play music goodmorning loop fadein 1.0
+    play music happy loop fadein 1.0
     "Blake arrives at work with time to spare. It's early and thankfully quiet, save one of her new coworkers swiftly prepping for the day. Maybe she’s a little bit grateful towards Shay’s need to be punctual."
     show mc order1 with dissolve
     window hide
@@ -195,12 +195,12 @@ label scene_a5:
     "Shay's sitting comfortably in a chair reading, having gotten home first. As expected, she spares Blake no attention."
     "So Blake groans again. Louder this time."
     show rival with dis
-    Rival distressed "Do you require medical attention?"
+    Rival distressed hips1 "Do you require medical attention?"
     CW_side "Aren’t you going to care? Ask me about my day?"
     "Shay lets out a long-suffering sigh and sets her book page-down on the chair arm."
     Rival -distressed "Go on. Let it out."
     CW_side "Work was fine. How are you?"
-    Rival distressed "That’s it? I was expecting some drama or tragedy."
+    Rival distressed -hips1 "That’s it? I was expecting some drama or tragedy."
     CW_side "The tragedy is that I had to get out of bed this morning, but alas it must happen."
     Rival happy "I consider getting you up to be my morning workout at this point."
     show rival distressed
@@ -412,6 +412,7 @@ label scene_a7:
     "Blake winces, but hides it well. She pushes herself up with the table."
 
     CW_side -happy "No problem. Just let me know."
+    stop music fadeout 2.0
     scene black with fade
     jump j_scenea8
 
@@ -421,9 +422,9 @@ label scene_a9:
     "So she decided to do her usual thing at this time when everything else had been taken care of: stare at the clock until she could go home."
     scene bg_busystreet with fade
     "Shay met her outside. She was leaning with one foot against the wall, scrolling through her phone. Her eyes flicked upwards, noticing Blake, and she slipped her phone back in her front pocket and fell into step beside her roommate."
-    show rival
+    show rival chin1
     CW_side "How was your day?"
-    Rival "I got stuck training the newbies. Plural. They progressed to making cold drinks today so it was pretty chaotic."
+    Rival angry "I got stuck training the newbies. Plural. They progressed to making cold drinks today so it was pretty chaotic."
     CW_side "Eh, go easy on them. I can’t imagine that people getting coffee at a big chain store are any less picky."
     Rival distressed "Ugh, don’t remind me."
     scene bg_fallsidewalk with fade
@@ -436,8 +437,10 @@ label scene_a9:
     CW_side "Yeah. Everything’s cool. I’ll just see you soon, okay?"
     "Shay looks suspicious, but she bobs her head once. They bicker like enemies sometimes but she appreciates that Shay backs her up in her own way for things like this."
     Rival "No problem. Don’t be too long."
+    stop music fadeout 3.0
     "\"Or I’ll get worried\" is the unspoken finish. Shay’s out of sight a moment later and Blake does an about face back to the bus stop."
     hide rival disolve
+    play music park fadein 3.0
     CW_side "Marllie?"
     show customer sad
     "The other girl startles. Blake catches a glimpse of her wet cheeks and red eyes before Marllie whips her head back around."
@@ -476,6 +479,7 @@ label scene_a9:
     CW_side "Get home safely!"
     Customer "You too."
     hide customer
+    stop music fadeout 1.0
     "Blake leaves, but as slowly as possible. She doesn’t feel too comfortable leaving Marllie alone so she’s relieved when the bus shows up."
     "She waits until Marllie climbs on and only leaves when the other girl waves at her from the window. She heads off to grab her and Shay’s dinner, vowing to shoot Marllie a text before bed."
     scene black with fade
@@ -483,6 +487,7 @@ label scene_a9:
 
 label scene_a11:
     scene bg_apartment with fade
+    play music goodmorning loop fadein 3.0
     "It’s the weekend and Blake’s lying on the couch texting, with one of her shows blaring from the television and a half-eaten sandwich resting on her chest. Shay, having decided to stay home to study, is taking a break. She eyes Blake and seems to consider threatening her if she makes a mess, but Blake picks up the sandwich and somehow shove the entirety of it in her mouth instead."
     show rival
     Rival distressed "Why."
@@ -497,11 +502,11 @@ label scene_a11:
     Rival "That doesn't narrow it down, Blake."
     CW_side "Okay, you're right. Upside down macchiato. Small blonde. Can't spell her name for shit."
     Rival "Ah, yes. I remember the stories."
-    CW_side "She’s babysitting some kids and they’re engrossed in a movie right now. We’re just talking about stuff."
+    CW_side happy "She’s babysitting some kids and they’re engrossed in a movie right now. We’re just talking about stuff."
     "Shay squints at her, looking between Blake and the phone. She puts her book down."
     Rival happy chin1 "You like her."
     "Blake’s smile disappears immediately."
-    CW_side "What’re you talking about?"
+    CW_side angry blush "What’re you talking about?"
     Rival "You like her. I remember this from your last ex. It’s the same dopey look."
     CW_side "Psh, what? Nah. It’s actually not. I barely know her."
     Rival hips1 "It actually is."
@@ -536,6 +541,7 @@ label scene_a11:
     jump j_scenea12
 label scene_a13:
     scene bg_park with fade
+    play music happy fadeout 3.0
     "Blake is waiting near the gate when Marllie arrives. One of the two dogs is whining and tugging at his lead, almost strangling himself in his attempt to enter the park faster. Blake gently scolds him and demands he sit, which he does… albeit very reluctantly. The other smaller dog, at least, waits patiently."
     show customer
     Customer "Sorry I’m late! "
@@ -578,7 +584,9 @@ label scene_a13:
     "It’s brief, but Blake’s heart is pounding out of her chest anyway. Marllie has to lean up on her tiptoes and she's so warm and her perfume smells so nice and-"
     "Blake bites back an embarrassing noise of protest when Marllie pulls away. There’s a lump stuck in her throat as Marllie waves, pink-faced, and climbs into the waiting cab."
     hide customer disolve
+    stop music fadeout 1.0
     "As the vehicle drives away, Blake grips the leads tightly and starts to tug the dogs home. She resists the urge to watch the car turn to the next street."
     CW_side angry "{i}Oh Jesus, I am so fucked.{/i}"
     scene black with fade
+
     jump j_scenea14

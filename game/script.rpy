@@ -3,7 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 define dis = { "master" : Dissolve(0.5) }
-image bg_shop = "backgrounds/coffee_shop.png"
+image bg_shop = "backgrounds/bg_cs_main.png"
 image bg_cs_lounge = "backgrounds/bg_cs_lounge.png"
 image bg_apartment = "backgrounds/bg_appartment.png"
 image bg_cobedroom = "backgrounds/bg_room.png"
