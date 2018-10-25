@@ -23,6 +23,7 @@ define audio.alarm = "music/sfx/android-oxygen.mp3"
 # The game starts here.S
 
 label start:
+    jump scene_b1
     label j_scenea1:
     jump scene_a1
     label j_scenea2:
@@ -49,7 +50,9 @@ label start:
     jump scene_a12
     label j_scenea13:
     jump scene_a13
-    label j_scenea14:
+    label j_sceneb1:
+    jump scene_b1
+    label j_sceneb2:
     label end:
     #show CoWorker
 
