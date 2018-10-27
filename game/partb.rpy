@@ -354,6 +354,58 @@ label scene_b5:
     # TODO PANIC
     Customer_side sad "{b}{i}...Oh my God.{/i}{/b}"
     jump j_sceneb6
+# Scene B6
+label scene_b6:
+    scene bg_fallsidewalk with fade
+    "The awkward tension in the air still hovers around them like a thick fog. Marllie shivers as she steps out, wrapping her arms about herself. Despite the burning humiliation, there's a part of her that wishes Blake was still - "
+    Customer_side -sad "{b}{i}Nope. Stop that right now. Don’t embarrass yourself further.{/i}{/b}"
+    show coworker
+    CW "You cold?"
+    Customer_side "Yeah. I don’t think I’m wearing the right jacket for tonight. They like it pretty warm in that office."
+    show coworker sad
+    "Blake frowns and pulls her phone out. She checks the time briefly before slipping it back into her pocket."
+    CW "Well… the dogs aren’t actually too far of a walk from your dorm building. If we hurry, you can get changed into something warmer and comfier. And you can put your bag down too. That thing does not look light. "
+    Customer_side "That would be nice, actually."
+    CW -sad "Want me to carry it for you?"
+    # fixed in code not in script ("her" to "Marllie's")
+    "It is getting difficult to carry. There is more in the bag than simply the laptop. Marllie's shoulders are already aching from the long week."
+    Customer_side "Are you sure?"
+    CW "Yeah. No problem."
+    "As Blake chatters to Marllie about her week, she realises the tension has already melted away. They reach Marllie’s dorm after a short time. Blake sets the bag down on the floor with a huff while Marllie unlocks the door."
+    scene bg_dorm with fade
+    "She’d spent a couple of hours tidying the night before on a whim, having grown tired of the state of the place. At least it wasn’t her week to clean the bathroom she shared with her neighbour. Despite that, it’s still not up to the standard she’d like for a visitor. She kicks her basket of dirty laundry under her bed when she’s sure Blake isn’t looking."
+    Customer_side "I’m sorry it’s still such a mess."
+    "Blake snorts."
+    CW happy "Are you kidding? This is not a mess. You should’ve seen the apartment when Shay went away for three weeks. Took me an entire day to get it spotless again."
+    "Marllie fumbles around in her wardrobe until she finds the clothes she’s looking for."
+    Customer_side "{b}{i}God, what I wouldn’t give to just go in sweatpants. I have to look somewhat presentable though.{/i}{/b}"
+    Customer_side "It still amazes me sometimes that polar opposites like you and Shay can get along so well."
+    show coworker
+    CW "Yeah, you and everyone else. We’ve been hearing that since high school. Shay was pretty moody. Moodier. I’m… well, me."
+    Customer_side "I mean you’ve only told me about her and I would agree with you."
+    CW "She’s a really good, reliable friend. I also watched her go through her emo phase too, so that’s a lifetime of blackmail material that I have at my disposal."
+    Customer_side "Blake!"
+    CW "What? She has plenty on me too. She saw me when I had a mullet. So we’re just stuck with each other now."
+    menu:
+        "You had a mullet?":
+            CW -happy "It was not by choice. I should never have tried a new hairdresser."
+        "I need to see this right now.":
+            CW -happy "You really don’t. Wasn’t even my choice."
+            Customer_side happy "One day."
+            CW "No."
+    "Marllie pulls a sweater over her head and slips into her long coat. Out of the corner of her eye, she sees Blake’s eyes linger over her figure before looking away again."
+    # TODO PANIC HERE
+    Customer_side -happy "{b}{i}Was that a good thing? Is there something wrong with my outfit?{/i}{/b}"
+    Customer_side "{b}{i}Wait… did she just check me out?{/i}{/b}"
+    Customer_side "{b}{i}No, Marllie. Don’t be ridiculous.{/i}{/b}"
+    CW "There we go. You look much cozier."
+    Customer_side "Always good to get out of clothes that you’ve been wearing all day. Ready to go?"
+    CW "Hell yeah."
+    Customer_side "After you, then."
+    jump j_sceneb7
+    
+    
+    
     
     
     
