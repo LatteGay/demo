@@ -228,17 +228,131 @@ label scene_b5:
     MC "Hi, Marllie!"
     "Marllie’s head turns in the direction of the waving figure at the register. She makes her way over, gracing Maya with a warm smile."
     Customer_side happy "Hey, Maya. Thank you for the photo that Blake sent me on Monday morning. I was freaking out a bit and seeing it made me feel a lot better."
+    show mc happy
     "Maya beams widely at her."
     MC "It’s no problem. Starting something like that is always nerve-wracking. I’m glad that it helped!"
     Customer_side "It really, really did."
-    MC "Good. I was terrified too when I first got this job. But after the first day, it got a lot easier. You’ve done the hardest part."
+    MC -happy "Good. I was terrified too when I first got this job. But after the first day, it got a lot easier. You’ve done the hardest part."
     show mc at left with moveinleft
     show boss at right with moveinright
     "Just then, Jun steps out of the storeroom. She notices the two women conversing, stopping in her tracks once she makes eye-contact with Marllie. Marllie can’t help but notice the bags that lay beneath her eyes."
-    
-    
-    
-    
+    Boss "Good afternoon, Marllie. It’s good to see you here again."
+    Customer_side -happy "Hi Jun! Long day?"
+    Boss "You could say that."
+    "Jun sighs and shakes her head, as if she’s trying to dispel her thoughts. She looks up again with a smile that looks a little too forced to be completely genuine."
+    Boss "Ah, doesn’t matter. Congratulations on starting your new internship though!"
+    Customer_side "Oh, thank you!"
+    Customer_side "Wait, how did you know about it?"
+    Boss "Well, you aren’t coming in at your usual times. And I caught the three of them taking that selfie for you. They told me."
+    Customer_side "It really was very sweet."
+    MC "Well, we’re all happy for you. We’ve all seen how much work you do on that laptop."
+    Boss "We certainly have. I’m sure you’ll do a great job there."
+    Customer_side "Thank you so much. I hope so."
+    Boss "You will."
+    "The phone rings from the office. Jun gives another tired smile."
+    Boss "Duty calls; I have to take that. Congratulations again, Marllie."
+    hide boss with moveoutright
+    show mc at center with moveinright
+    "Jun slips back through the door. Marllie turns to Maya once she’s certain she won’t be heard."
+    Customer_side sad "Not that it’s really my business, but is everything okay? She looks… exhausted. "
+    "Maya just sighs, shoulders drooping. It’s like Marllie’s words flipped a switch for Maya too."
+    MC sad "There’s been a lot more to do since that Espresso Express opened up nearby. A lot more work for less people."
+    Customer_side "It… it’s been emptier around here, hasn’t it? "
+    MC "You’ve noticed, huh? Look, don’t worry. We’ll figure something out."
+    "Her optimism is touching and far more sincere than Marllie had expected. Suddenly, two large hands grasp her shoulders. Marllie startles, then relaxes once she sees a familiar bright smile. For such a big guy, Asher is incredibly stealthy."
+    show mc at left with moveinleft
+    show bestie at right with moveinright
+    Bestie "Hey, pretty lady! Congrats on surviving your first week!"
+    Customer_side -sad "Thank you! Even though I’m technically only there for four days a week. But I do have class on that fifth day. And homework. And more assignments. Oh God, it does sound like a lot when I say it out loud."
+    MC -sad "Ouch. But hey, it’s still a big thing! And it’s weird not seeing you at your usual table. "
+    Bestie "Yeah, and you don’t have to work shifts with a moping Blake because of it."
+    "Maya unsubtly nudges him in the ribs. Asher yelps."
+    Bestie "Hey! What?"
+    "Maya just rolls her eyes. "
+    MC "Ignore him."
+    MC "...But Blake will be back soon. She had to run to the bank before it closed."
+    Customer_side "Oh! Okay, I guess I’ll go sit down then."
+    "Maya roughly elbows Asher again, resulting in a similar reaction from earlier."
+    Bestie "I didn’t say anything!"
+    MC "Just in case."
+    Bestie "Wow."
+    MC "Want a coffee while you wait?"
+    Customer_side "Yes please. And how about one of those pastries? I know it’s only been a few days, but I’ve desperately missed Jun’s baking."
+    MC "You got it."
+    hide bestie with moveoutright
+    hide mc with moveoutleft
+    scene bg_cs_lounge with fade
+    "The chairs go up onto the table as she waits. Marllie has enough time to finish going through her news feed before Blake walks back in. "
+    show coworker at center with fade
+    "Blake’s face splits in a wide grin upon seeing her. Marllie finds herself swept up in a massive hug, almost lifted entirely off her feet. Her arms instinctively wrap around Blake to keep balance, and while Blake has let her down she has not let go."
+    CW "I know it’s only been a few days, but man it’s not been the same here without you at all hours."
+    Customer_side "I bet your breaks have been really boring, huh?"
+    CW "You have no idea. I’ve been stuck talking to Asher."
+    "Asher makes an offended noise from somewhere behind them."
+    Bestie "I am a luxury that few can afford!"
+    "Marllie laughs. Blake flips him off over her shoulder."
+    CW "Can’t wait for you to tell me about your past few days."
+    Customer_side "I already did."
+    CW "Well it’s different when we talk in person. You go off on tangents more."
+    Customer_side "And you like that?"
+    CW "Duh."
+    Customer_side "You’re weird."
+    CW "Shay’s already told me that seven times this morning. It’s not an insult anymore."
+    Customer_side "I didn’t really mean it as one."
+    Bestie "This is some teenage church camp, middle of the night flirting right here."
+    Customer_side "{b}{i}Oh no.{/i}{/b}"
+    "They both jump as Asher slides up next to them."
+    show coworker at left with moveinleft
+    show bestie at right with moveinright
+    CW "Jesus, do you mind? Where did you even come from?"
+    "Asher gestures vaguely around them."
+    Bestie "Yes, actually, I do mind. You’re hugging in the middle of the floor I want to clean. It’s not my fault that you’re too engrossed in your… whatever it is you’re doing to notice."
+    "Marllie looks down and only just notices the wet mop that Asher is holding. The rest of the floor has clearly been cleaned recently except the patch that her and Blake have been standing on."
+    "A few more seconds and she realises that she and Blake never really separated after their hug. Blake’s hands are still loosely clasped around her wrists and they’re standing a little too close to be considered entirely friendly."
+    CW "You could have just said “excuse me” like a reasonable person."
+    "Marllie’s shoes squeak as she springs out of Blake’s personal space.  Blake startles, brows furrowing with concern."
+    CW "Are you okay? "
+    Customer_side sad "{b}{i}Oh no.{/i}{/b}"
+    Customer_side -sad "Y-yes. Yes, I’m fine, I just-"
+    "Marllie stammers as she searches for a decent explanation. Asher looks between them both, eyes narrowed with suspicion. "
+    Bestie "Okay, I have to ask. Are you two a thing now?"
+    "Marllie instantly feels her cheeks and both her ears being set aflame by embarrassment. Blake makes a choking sound next to her."
+    # TODO PANIC
+    CW angry "Oh Jesus Christ, Asher."
+    Customer_side "No!"
+    CW "Of course we’re not!"
+    Customer_side "I don’t know why you’d think that."
+    CW "Yeah! I mean… yeah! Why would you think that?"
+    "Marllie is trying and failing to look calm. She can’t imagine that she’s succeeding."
+    "Asher arches an eyebrow."
+    Bestie happy "Right… try that again, but more convincingly."
+    CW "We’re just friends. God, Asher. Don’t you have dishes to wash instead?"
+    "Asher holds one hand up in surrender and takes the hint to leave them alone. He backs away into the kitchen, wet mop still trailing behind him."
+    Bestie -happy "Alright, alright. Point taken! You can have the floor. "
+    show bestie happy with dissolve
+    "Asher winks exaggeratedly at Blake before he disappears. Blake buries her face in her hands for a second before turning to Marllie."
+    show coworker at center with moveinleft
+    hide bestie with moveoutright
+    CW sad "I’m so sorry about him."
+    Customer_side "It’s… it’s okay."
+    CW "I didn’t mean that you aren’t attractive. I mean… wait…"
+    Customer_side "I… I didn’t make you feel like {i}you{/i} weren’t, did I?"
+    CW "N-no! I know you didn’t mean it like that."
+    Customer_side "Good, because you are. Not that I’m saying-"
+    CW -sad "Good, because you are. Not that I’m saying-"
+    Customer_side "Uh, thanks. You are too. And me either-"
+    CW "Yeah. Of course."
+    Customer_side "Yeah."
+    "Marllie’s face is still burning. There’s a highly awkward silence between them now, Blake twisting the bottom of her apron in her hands over and over again."
+    CW "Erm…"
+    Customer_side "Yeah."
+    CW "So… uh. Should we head off?"
+    Customer_side "We can’t be late for the dogs."
+    CW "Let me just say goodbye to Jun and Maya and grab my things. I’ll be two seconds."
+    hide coworker with moveoutright
+    "Blake scurries off to the back room. Marllie waits until she’s out of sight before she presses her cold hands to her still warm cheeks."
+    # TODO PANIC
+    Customer_side sad "{b}{i}...Oh my God.{/i}{/b}"
     jump j_sceneb6
     
     
