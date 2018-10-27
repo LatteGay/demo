@@ -72,6 +72,7 @@ label scene_a4:
     MC -annoyed hips1 "Good practice, I guess? I think i know what she means. Here, I'll show you."
     CW_side "I wouldn’t object to a few easy ones in the morning though."
     hide mc
+    play sound espresso
     "Luckily, there are no new customers to attend to. It takes two attempts, and both Maya and Blake working together to complete the order properly. The mug of coffee sits on the counter as Blake waits for the bread to come out of the toaster. "
     show mc
     MC "What do you think she does?"
@@ -98,11 +99,13 @@ label scene_a4:
 label scene_a6:
     scene bg_shop with fade
     play music happy loop fadein 3.0
+    play sound bg_coffeeshop
     "Friday morning rolls around quickly. It's been busier today, with more than a few exhausted parents and college students."
     "Blake finds herself watching the clock with growing trepidation, because she knows that girl with the impossible order is going to come in at about 10AM and it's already 9:50AM and what the fuck is it going to be today?"
     "Sure enough, she's just refilling the napkin dispenser when Marrlley trots into the shop. It’s summer, yet somehow Marrlley is sporting a coat and her hair is still down."
     "Apparently, she isn't feeling the heat on quite the same level."
     show customer
+    stop sound fadeout 3.0
     "Blake takes a deep breath."
     CW_side happy "Hi! What can I get you today?"
     "Marrlley brushes her hair out of her eyes and shifts her computer case into her other hand, eyeing the menu. Blake can almost feel the sweat droplets forming on her forehead."
@@ -171,10 +174,12 @@ label scene_a6:
 label scene_a8:
     scene bg_shop with fade
     play music happy loop fadein 2.0
+    play sound bg_coffeeshop
     "It takes another few weeks for Blake and Marllie to establish their own little routine during the quieter hours of the day."
     "As long as someone’s keeping an eye out for potential customers and everything’s tidy and prepared, Jun doesn’t really mind if they stand around for a bit."
     "Work can get boring sometimes. So can studying. They keep other company, it's a good arrangement"
     show customer
+    stop sound fadeout 3.0
     "It’s almost evening now, though, and Marllie is only just slinking in. She looks a bit haggard."
     CW_side neutral "You’re here late."
     Customer "One of my classes got swapped around. And I’m going to be pulling an all-nighter, I think."
@@ -222,6 +227,7 @@ label scene_a8:
     "Marllie looks like a deer in headlights. Her mouth opens and closes several times, trying and failing to find words."
     CW_side "Weren’t you looking for Maya? I didn’t even have to interrupt them."
     MC "Oh? What can I do for you?"
+    stop music fadeout 3.0
     "With Marllie still quiet, Maya pushes herself off the counter and gestures towards the front door."
     MC "We can talk outside if you want? If it’s easier."
     "Marllie nods, looking slightly panicked. She throws a glance at Blake before following Maya out the door."
@@ -232,10 +238,11 @@ label scene_a8:
 label scene_a10:
     scene bg_shop with fade
     play music water loop fadein 1.0
+    play sound bg_coffeeshop
     "Blake is dealing with a customer complaint when Marllie walks in. The other girl raises her eyebrows upon hearing the customer’s tantrum and Blake’s desperate retort."
     show rando
     CW_side happy "Ma’am, no offense, but we primarily serve coffee… I don’t understand-"
-    Rando "But I don’t like coffee! Why would you serve me this? I want a refund. Get me your manager-!"
+    Rando "But I don’t like coffee! Why would you serve me this? I want a refund. Get me your manager-!" with vpunch
     "Blake rapidly counts to ten in her head."
     CW_side "I’ll get my boss."
     hide rando disolve
@@ -243,12 +250,12 @@ label scene_a10:
     show customer
     CW_side neutral "Hi. What can I get you?"
     Customer "What on earth was that about?"
+    stop music fadeout 5.0
     "They glance at Jun talking animatedly with the lady and said lady storming out in a huff… without her refund. Jun looks like she’s just aged ten years in their brief encounter."
     CW_side "She ordered a mocha and insisted it should taste like chocolate, not coffee, because she doesn’t like coffee. "
     Customer "Wow."
     hide customer
     show boss
-    stop music fadeout 4.0
     "Jun walks past them to get back to her own duties, but not before giving them a completely baffled look."
     Boss "I’ve worked far too long in this industry."
     hide boss disolve
@@ -311,12 +318,12 @@ label scene_a12:
     CW_side "No problem, he didn’t seem like he was getting the message."
     Customer "I was obvious enough for you, apparently."
     CW_side "I feel like there was a dig at me in there somewhere."
+    stop music fadeout 5.0
     "Marllie ducks her head and smiles shyly."
     Customer happy "Not at all."
     CW_side "Good. I uh… well, I’m on my break now. I’ll stay with you. You know, in case he comes back."
     Customer folded1 "I’d like that."
     CW_side "Cool, cool."
-    stop music fadeout 5.0
     "Blake sits at the offered chair, glad to be off her feet for the time being. She takes the time to pull off her apron and down half the bottle in one go."
     play music happy fadein 5.0
     Customer neutral "Honestly don’t know how you can stand for that many hours a day, most days of the week. That lunch rush was busier than usual."
@@ -335,7 +342,7 @@ label scene_a12:
     Customer "Most of the time I was just researching. Interviewing people and collecting all that information and all that."
     CW_side "What did you write about?"
     Customer neutral crossed1 "Students who were having difficulties paying their tuition. "
-    CW_side "That’s a heavy topic."
+    CW_side -happy "That’s a heavy topic."
     Customer "Yeah. I was a bit apprehensive when it was assigned to me at first but I think it was a… learning experience. "
     "Blake takes another swig of her bottle."
     CW_side "Why is that?"
@@ -361,6 +368,7 @@ label scene_a12:
     CW_side "How did you know I’m closing today?"
     Customer "Today is Wednesday, isn’t it? I’m here enough to notice."
     CW_side hips1 "Fair point. So I’ll… see you tonight then."
+    stop music fadeout 2.0
     "Marllie smiles widely, cutely twirling her hair around her fingers. Blake tries not to think about that too much, either… even if she wants to."
     Customer "See you tonight."
     scene black with fade

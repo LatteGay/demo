@@ -20,14 +20,22 @@ define audio.park = "music/Park-Avenue.mp3" #sadish song
 define audio.see = "music/See-You-There.mp3"
 define audio.water = "music/Water-Song.mp3"
 define audio.jazz = "music/My-Name-is-Jazz.mp3"
-define audio.city = "music/City-Lights.mp3.mp3"
+define audio.city = "music/City-Lights.mp3"
 define audio.flying = "music/Flying.mp3"
 define audio.theloop = "music/The-Loop.mp3"
+define audio.juxtaposition = "music/juxtaposition.mp3"
+define audio.love_beat = "music/Love-Beat.mp3" # date song
 define audio.alarm = "music/sfx/android-oxygen.mp3"
+define audio.espresso = "music/sfx/Making-Espresso.mp3"
+define audio.bg_coffeeshop = "music/sfx/CoffeeShopNoise.mp3"
 # The game starts here.S
 
+label splashscreen:
+    "This is a release for Yuri Game Jam 2018 and is still a work in progress.  "
+    return
+
 label start:
-    jump scene_b6
+    #jump scene_b5
     label j_scenea1:
     jump scene_a1
     label j_scenea2:

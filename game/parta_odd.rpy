@@ -124,9 +124,8 @@ label scene_a3:
     "Jun flashes a warm smile at her."
     Boss "I’m glad. I’ll be putting these out later. Please let the customers know that it’s new and to try it."
     CW_side -happy " Yes, ma’am."
-
+    hide boss with dis
     "Jun sets down the tray, leaves them with some instructions and heads off into the back. Blake waits until she's out of earshot and turns to Maya."
-    hide boss
     show mc
     CW_side "This is like, the fifth new recipe that’s been introduced since I started here. Does it happen often?"
 
@@ -144,11 +143,10 @@ label scene_a3:
 
     "Time passes uneventfully. Between the two of them, they manage to get the pre-opening duties completed and the store opens. Customers have started to trickle in when Asher finally arrives, looking harried and windswept."
     MC hips1 annoyed "About time."
-    hide mc with dis
     "Asher disappears into the storeroom and emerges a minute later. Blake catches a glimpse of Jun’s unamused face before the storeroom door closes again."
 
-    show bestie at left  with dissolve
-    show mc at right with dissolve
+    show bestie at left with dissolve
+    show mc at right with move
     Bestie "There was an accident at the intersection. I had to get off the bus and walk."
     show mc hips1
     with dis
@@ -260,8 +258,8 @@ label scene_a5:
     CW_side "Don’t you dare talk shit about the Bachelor." #people who watch the bachlor go to the bad place
     "Shay hides her smirk behind another swig of her coffee. She makes to retrieve the book she left earlier, setting it aside neatly beside her laptop."
     Rival happy "Close your door so I don’t have to work over your snoring."
+    stop music fadeout 3.0
     CW_side "Yeah, yeah. Will do. G’night, Shay."
-    stop music fadeout 5.0
     scene black with fade
     jump j_scenea6
 
@@ -425,6 +423,7 @@ label scene_a9:
     "Maya had left early for home not long after, having started an earlier shift anyway that day. She’d seemed… off, Blake thought, but had claimed to be okay and Blake didn’t want to press. Or appear rude for prying."
     "So she decided to do her usual thing at this time when everything else had been taken care of: stare at the clock until she could go home."
     scene bg_busystreet with fade
+    play music juxtaposition
     "Shay met her outside. She was leaning with one foot against the wall, scrolling through her phone. Her eyes flicked upwards, noticing Blake, and she slipped her phone back in her front pocket and fell into step beside her roommate."
     show rival chin1
     CW_side "How was your day?"
@@ -438,10 +437,10 @@ label scene_a9:
     CW_side -happy "Hey, why don’t you go on ahead and I’ll meet you at home. I’ll pick up some food for us instead."
     show rival neutral hips1
     Rival distressed "Everything okay?"
+    stop music fadeout 3.0
     CW_side "Yeah. Everything’s cool. I’ll just see you soon, okay?"
     "Shay looks suspicious, but she bobs her head once. They bicker but she appreciates that Shay backs her up in her own way for things like this."
     Rival "No problem. Don’t be too long."
-    stop music fadeout 3.0
     "\"Or I’ll get worried\" is the unspoken finish. Shay’s out of sight a moment later and Blake does an about face back to the bus stop."
     hide rival disolve
     play music park fadein 3.0
@@ -492,8 +491,11 @@ label scene_a9:
 label scene_a11:
     scene bg_apartment with fade
     play music goodmorning loop fadein 3.0
-    "It’s the following weekend and Blake’s lying on the couch texting. One of her shows is blaring from the television and she takes another bite of a half-eaten sandwich resting on her chest. Shay, having decided to stay home to study, is taking a break. She eyes Blake and seems to consider threatening her if she makes a mess, but Blake picks up the sandwich and somehow shoves the entirety of it into her mouth instead."
+    "It’s the following weekend and Blake’s lying on the couch texting. One of her shows is blaring from the television and she takes another bite of a half-eaten sandwich resting on her chest."
     show rival
+    "Shay, having decided to stay home to study, is taking a break."
+    show rival distressed
+    "She eyes Blake and seems to consider threatening her if she makes a mess, but Blake picks up the sandwich and somehow shoves the entirety of it into her mouth instead."
     Rival distressed "Why."
     "Blake garbles unintelligibly around the food. Shay curls her lip in disgust."
     Rival "Seriously."
@@ -512,18 +514,18 @@ label scene_a11:
     "Blake’s smile disappears immediately."
     CW_side angry "What’re you talking about?"
     Rival "You like her. I remember this from your last ex. It’s the same dopey look."
-    CW_side blush "Psh, what? Nah. It’s actually not. I barely know her."
+    CW_side "Psh, what? Nah. It’s actually not. I barely know her."
     Rival hips1 "It actually is."
     CW_side "Is not."
     Rival "Is too."
     CW_side "Is not."
     Rival -happy "I’m not doing this with you. You’re deflecting."
-    CW_side "She’s a customer! A new friend, nothing more. I’ll admit that she’s… cute. But that’s it."
+    CW_side blush "She’s a customer! A new friend, nothing more. I’ll admit that she’s… cute. But that’s it."
     Rival happy "You’re also blushing."
     CW_side "Am not."
     "Shay rolls her eyes again."
     Rival distressed "Whatever. You should just ask her out if you like her. Save me from the pining from last time. I beg of you. I really don’t need you lying on my floor whimpering about how pretty you think a girl is again."
-    CW_side "Didn’t you listen to a word I just said?"
+    CW_side -blush "Didn’t you listen to a word I just said?"
     Rival happy "I did. And I’m still choosing to believe that you’re an idiot."
     CW_side "Eh, what’s new."
     Rival neutral "Fair point."
@@ -538,6 +540,7 @@ label scene_a11:
     CW_side "I’ll see you in a couple of hours."
     Rival "Or tomorrow morning. I know how your naps are."
     "Blake is sure \‘naps\’ would be in air quotations if Shay could be bothered to put her book down, but she’ll take it."
+    stop music fadeout 3.0
     CW_side "Yeah yeah. See ya."
     hide rival
     scene bg_cobedroom with fade
@@ -595,5 +598,4 @@ label scene_a13:
     "As the vehicle drives away, Blake grips the leads tightly and starts to tug the dogs home. She resists the urge to watch the car turn to the next street."
     CW_side angry blush "{i}Oh Jesus, I am so fucked.{/i}"
     scene black with fade
-
-    jump j_scenea14
+    jump j_sceneb1
