@@ -8,17 +8,21 @@ image bg_cs_lounge = "backgrounds/bg_cs_lounge.png"
 image bg_apartment = "backgrounds/bg_appartment.png"
 image bg_cobedroom = "backgrounds/bg_room.png"
 image bg_fallsidewalk = im.Scale("backgrounds/fallsidewalk.png",1920,1080)
-image bg_busystreet = "backgrounds/busystreet.png"
+image bg_busystreet = "backgrounds/bg_street.png"
 image bg_park = "backgrounds/bg_park.png"
 image bg_dorm = "backgrounds/bg_dorm.png"
 
-define audio.goodmorning = "music/Good-Morning.mp3" #coffe shop theme
-define audio.happy = "music/Happy-Song.mp3"
+define audio.goodmorning = "music/Good-Morning.mp3"
+define audio.happy = "music/Happy-Song.mp3"  #coffee shop theme 1
 define audio.dolphin = "music/I-spoke-to-a-dolphin-and-this-is-what-it-told-me.mp3"
-define audio.nameless = "music/Nameless-Beat.mp3"
-define audio.park = "music/Park-Avenue.mp3"
+define audio.nameless = "music/Nameless-Beat.mp3" #coffee shop theme 2
+define audio.park = "music/Park-Avenue.mp3" #sadish song
 define audio.see = "music/See-You-There.mp3"
 define audio.water = "music/Water-Song.mp3"
+define audio.jazz = "music/My-Name-is-Jazz.mp3"
+define audio.city = "music/City-Lights.mp3.mp3"
+define audio.flying = "music/Flying.mp3"
+define audio.theloop = "music/The-Loop.mp3"
 define audio.alarm = "music/sfx/android-oxygen.mp3"
 # The game starts here.S
 

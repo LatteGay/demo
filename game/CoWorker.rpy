@@ -20,9 +20,7 @@
     # attribute_function Picker([
     # "upset coworker_left_arm_hip coworker_right_arm_up coworker_head_sad"
     # ])
-
 layeredimage coworker:
-
     group base auto:
         attribute outfit1 default
     group left_arm auto:
@@ -32,6 +30,7 @@ layeredimage coworker:
     group head auto:
         attribute neutral default
     group effect auto
+
 #, xoffset=-200, yoffset=-25
 image side coworker_side =  LayeredImageProxy("coworker", Transform(crop=(0, 0, 800, 550), zoom=.8))
 #image side coworker_side = LayeredImageProxy("coworker")
