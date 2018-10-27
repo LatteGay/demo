@@ -10,7 +10,7 @@ layeredimage customer:
         attribute neutral default
     group blush auto
 
-image side customer_side =  LayeredImageProxy("customer", Transform(crop=(0, 0, 800, 550), zoom=0.8))
+image side customer_side =  LayeredImageProxy("customer", Transform(crop=(0, 0, 800, 650), zoom=0.8))
 
 define Customer = Character("Marllie", image= "customer", who_color="#fff2d3")
 define Marrlley = Character("Marrlley", image= "customer", who_color="#fff2d3")
