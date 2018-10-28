@@ -405,6 +405,7 @@ label scene_b6:
     CW "Hell yeah."
     Customer_side "After you, then."
     jump j_sceneb7
+# Scene B7
 label scene_b7:
     scene bg_park with fade
     show coworker outfit2 down2
@@ -458,6 +459,7 @@ label scene_b7:
     Customer_side "This internship is only for six weeks. Five more to go and I’ll be back to bothering you everyday again."
     CW -happy "I can’t wait."
     jump j_sceneb8
+# Scene B8
 label scene_b8:
     scene bg_cs_lounge with fade
     show email2 with easeinbottom
@@ -519,3 +521,67 @@ label scene_b8:
     CW "Hey, your boss said that he’d be sad to see you go. Clearly you’re doing well enough too for him to give you this chance. You got this!"
     Customer_side "You always know what to say. Thank you, Blake."
     CW "Anytime."
+    jump j_sceneb9
+# Scene B10
+label scene_b10:
+    scene bg_apartment with fade
+    show rival
+    "Shay’s in the kitchen when they walk in. She looks over her shoulder at the sound of the door, then fully turns at the sight of Blake."
+    Rival "The fuck happened to you?"
+    "Blake merely grunts at her and flips her off."
+    CW "Marllie, this is Shay. Shay, this is Marllie. Play nice."
+    "With that, Blake sulks off into her room and closes the door."
+    Customer_side "Um… she knocked it over when cleaning up. Got half a mug of coffee down her front."
+    Rival "But it’s her day off today?"
+    Customer_side "Yeah, I needed to see Jun so we met there."
+    "Shay barks out a laugh and shakes her head."
+    Rival happy "Still managed to make a mess though. Typical Blake.  Well, my boring day off has been redeemed because I was able to witness this."
+    "Shay finishes up making her drink. Marllie remains standing near the door. She’s not entirely sure what to do in this situation, with a person she’s heard so much about but never met."
+    Rival "Can I get you anything? I’m afraid we don’t have much right now; it’s Blake’s turn to go shopping this week and she hasn’t yet."
+    Customer_side "No, I’m good. Thank you."
+    Rival "Alright then."
+    "Shay brings her mug over to the sofa and drops down, sipping at it with a satisfied sigh."
+    Rival "You can sit if you want, you know. I’m not going to bite."
+    Customer_side "Um. Okay."
+    "Marllie gingerly sits at the other side. She tries not to sit too far away that it would be obvious that she's uncomfortable, but not too close either. Shay sets her mug down on the table."
+    Rival "So. You're her."
+    "Marllie blinks."
+    Customer_side "I... what? You mean Blake's friend? Yes."
+    "Shay lets out an undignified snort."
+    Rival "Come on, don't play dumb. We both know you want to be way more than 'friends'."
+    "Marllie feels herself going red all the way up to her ears. It had been bad enough with Asher’s teasing, but their denials were technically the truth."
+    Customer_side "{i}It's like she's looking straight into my soul somehow. Ugh.{/i}"
+    Rival "Listen. I'm going to say all this once and I'll know if you're lying to me. Got it?"
+    "Marllie can only nod her head."
+    Rival "Okay. I care about Blake. She's like the sister I never had. An immature and annoying sister who makes me want to tear my hair out, but still my family."
+    Rival "I just want to make sure you care. If it was just sex, whatever, but I can tell Blake wants more than that. She's shit at hiding it."
+    "Marllie's breath catches. She can only latch onto one part of all that."
+    Customer_side "She likes me?"
+    "Shay actually throws her hands in the air in exasperation."
+    Rival "Seriously? Oh, my God. You're both useless at this."
+    Customer_side "I... I do care about her. I don't want just a fling. That's not me. "
+    "Marllie reddens further."
+    Customer_side "And we’re not… you know. Sleeping together."
+    Rival "At this point, I’m begging you to fuck. Please. For my sake. I don’t know how much more of her doe eyes I can handle."
+    "Marllie tries her best to look anywhere but at Shay, finding a sudden interest in the hands that are folded on her lap. She hears Shay sigh."
+    Rival "Ugh, I hate this… she does like you, Marllie. You seem to spend every waking moment texting each other when she isn’t working and she cares about you too. Just ask her. She’ll say yes and I can retain some of my sanity. I just wanted to make sure you weren’t leading her on."
+    Customer_side "N-no. I want more."
+    Customer_side "{i}I do want more. That was… easier to admit out loud than I thought it would be.{/i}"
+    Rival "Okay, we're cool then."
+    Customer_side "Yeah, we are."
+    "There’s a comfortable silence for a few moments as they just sit next to each other."
+    Rival "So… Do you want to see Blake with a mullet and braces?"    
+    jump j_sceneb9
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

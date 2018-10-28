@@ -36,7 +36,7 @@ label splashscreen:
     return
 
 label start:
-    #jump scene_b5
+    jump scene_b10
     label j_scenea1:
     jump scene_a1
     label j_scenea2:
@@ -81,6 +81,7 @@ label start:
     jump scene_b8
     label j_sceneb9:
     label j_sceneb10:
+    jump scene_b10
     label j_sceneb11:
     label j_scene_epilogue:
     label end:
