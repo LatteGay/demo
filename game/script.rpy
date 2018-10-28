@@ -11,6 +11,7 @@ image bg_fallsidewalk = im.Scale("backgrounds/fallsidewalk.png",1920,1080)
 image bg_busystreet = "backgrounds/bg_street.png"
 image bg_park = "backgrounds/bg_park.png"
 image bg_dorm = "backgrounds/bg_dorm.png"
+image email2 =  Transform("emails/email2.PNG", yoffset=-300)
 
 define audio.goodmorning = "music/Good-Morning.mp3"
 define audio.happy = "music/Happy-Song.mp3"  #coffee shop theme 1
@@ -73,9 +74,11 @@ label start:
     label j_sceneb5:
     jump scene_b5
     label j_sceneb6:
-    jump scene_b5
+    jump scene_b6
     label j_sceneb7:
+    jump scene_b7
     label j_sceneb8:
+    jump scene_b8
     label j_sceneb9:
     label j_sceneb10:
     label j_sceneb11:
