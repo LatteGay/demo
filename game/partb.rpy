@@ -467,7 +467,8 @@ label scene_b8:
     call phone_end
     Boss "Hey, I heard you were looking for me?"
     show boss crossed1
-    "The sound of a chair scraping Marllie look up from her phone. Jun drops into the empty chair across the table."
+    # added soem words fo grammar's sake
+    "The sound of a chair scraping causes Marllie to look up from her phone. Jun drops into the empty chair across the table."
     Customer_side "Yes! I, um, wanted to ask if you could help me with something I’m doing for work."
     Boss "Well... I don’t know much about journalism, but I’m happy to help however I can."
     Customer_side "Cool! Alright, so I’ve only a week left for my internship. I got an email from my boss a couple of days ago and he’s been kind enough to give me a half page editor’s choice article. It’s supposed to be about somewhere I really enjoy going."

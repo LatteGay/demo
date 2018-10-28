@@ -36,7 +36,6 @@ label splashscreen:
     return
 
 label start:
-    jump scene_b10
     label j_scenea1:
     jump scene_a1
     label j_scenea2:
