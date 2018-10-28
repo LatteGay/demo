@@ -628,7 +628,8 @@ label scene_b9:
     Boss happy "I’m going to frame this near the counter so everyone can see. Maybe make another copy for my office."
     "Marllie’s face flushes pink. She’s flustered. It’s one thing for strangers to read her article, but another for people she knows and sees every day."
     CW "You haven’t even read it all yet."
-    Boss "I skimmed it. It’s the first review we’re gotten since we re-opened. It’s special! Thank you, Marllie. This means a lot."
+    # fixing spelling here
+    Boss "I skimmed it. It’s the first review we’ve gotten since we re-opened. It’s special! Thank you, Marllie. This means a lot."
     Customer_side "I’m glad it made you smile. I meant everything I said."
     Boss "I’ll get Maya to give you the biggest slice of cake."
     "Before she leaves, her eyes flicker between them again."
