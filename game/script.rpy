@@ -80,10 +80,13 @@ label start:
     label j_sceneb8:
     jump scene_b8
     label j_sceneb9:
+    jump scene_b9
     label j_sceneb10:
     jump scene_b10
     label j_sceneb11:
+    jump scene_b11
     label j_scene_epilogue:
+    jump scene_epilogue
     label end:
     #show CoWorker
 
