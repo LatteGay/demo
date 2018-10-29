@@ -69,7 +69,7 @@ label scene_b1:
 label scene_b2:
     scene bg_shop with fade
     play sound bg_coffeeshop
-    play music namless loop fadein 3.0
+    play music nameless loop fadein 3.0
     "The yawn Marllie lets out cracks her jaw. She winces, rubbing at it as she leans back in her chair."
     "It’s close to lunchtime now, so the cafe is starting to fill up again. It’s not as busy as Marllie is used to, but there’s no shortage of suited businessmen coming in for their fix of complicated caffeine."
     "Marllie cocks her head to one side, cheek propped up against a hand as she watches Blake try to keep up with the flow of people.  She catches Blake’s eye at a break in the line, and she laughs as the other girl shoots her a pleading look."
@@ -132,24 +132,24 @@ label scene_b3:
     "Marllie reaches into her pocket and taps away at her phone."
     call phone_start from _call_phone_start
     call message_start("me", "I’m home safely. Did you get home okay?") from _call_message_start
-    call message("Blake <3", "ytes and no") from _call_message
-    call message("Blake <3", "i got home fine but i left a mess in the kitchen earlier lol") from _call_message_1
-    call message("Blake <3", "shay almost suffocated me with my sock when i walked back in") from _call_message_2
-    call message("Blake <3", "my bad") from _call_message_3
-    call message("Blake <3", "X.X") from _call_message_4
+    call message("Blake(VoᴥoV)", "ytes and no") from _call_message
+    call message("Blake (VoᴥoV)", "i got home fine but i left a mess in the kitchen earlier lol") from _call_message_1
+    call message("Blake(VoᴥoV)", "shay almost suffocated me with my sock when i walked back in") from _call_message_2
+    call message("Blake (VoᴥoV)", "my bad") from _call_message_3
+    call message("Blake (VoᴥoV)", "(X_X)") from _call_message_4
     call message("me", "Oh dear.") from _call_message_5
     call message("me", "Wait, is the kitchen and the sock related?") from _call_message_6
-    call message("Blake <3", "well lets just say that i fdound my missing laundry") from _call_message_7
+    call message("Blake (VoᴥoV)", "well lets just say that i fdound my missing laundry") from _call_message_7
     call message("me", "I’m not even going to ask.") from _call_message_8
-    call message("Blake <3", "i mean i dont have answers lamo") from _call_message_9
-    call message("Blake <3", "lamp") from _call_message_10
-    call message("Blake <3", "lmao") from _call_message_11
-    call message("Blake <3", "fuck") from _call_message_12
+    call message("Blake (VoᴥoV)", "i mean i dont have answers lamo") from _call_message_9
+    call message("Blake (VoᴥoV)", "lamp") from _call_message_10
+    call message("Blake(VoᴥoV)", "lmao") from _call_message_11
+    call message("Blake (VoᴥoV)", "fuck") from _call_message_12
     call message("me", "...Go to bed, Blake. I’ll see you tomorrow morning.") from _call_message_13
-    call message("Blake <3", "ok mom") from _call_message_14
+    call message("Blake (VoᴥoV)", "ok mom") from _call_message_14
     call message("me", "Goodnight!!") from _call_message_15
-    call message("Blake <3", "gniught") from _call_message_16
-    call message("Blake <3", "<3 <3 zzzzZZZ") from _call_message_17
+    call message("Blake (VoᴥoV)", "gniught") from _call_message_16
+    call message("Blake (VoᴥoV)", "( ˘ ³˘)<3  (VoᴥoV) (-__-)zzzZZZ") from _call_message_17
     call phone_end from _call_phone_end
     play music see loop fadein 2.0
     "Marllie smiles at the exchange, despite the typos. And the lack of punctuation. And the six different texts Blake chose to send instead of one with proper sentences. It had been a pet peeve of Marllie’s at first, but now she didn’t mind at all. Even when it meant her phone was going off at all hours of the day."
@@ -199,19 +199,20 @@ label scene_b4:
     call message_start("Blake <3", "hey my dude") from _call_message_start_1
     call message("Blake <3", "i kwnow its ur first dayt at yuor new place today") from _call_message_18
     call message("Blake <3", "just texting to wish u good luck!!! we    believe in you!!!") from _call_message_19
-    call message("Blake <3", ":thumbsup: :fist: :muscle: :dancer:") from _call_message_20
+    #call message("Blake <3", ":thumbsup: :fist: :muscle: :dancer:") from _call_message_20
+    call message("Blake <3", "(•̀ᴗ•́)b") from _call_message_20
     call message("", "Blake is typing…") from _call_message_21
     # TODO CG
-    call message("Blake <3", "(Attached is a photo of Blake, Maya and Asher squashed into the frame. They’re all smiling at the camera with a thumbs up)") from _call_message_22
+    call message("Blake (VoᴥoV)", "(Attached is a photo of Blake, Maya and Asher squashed into the frame. They’re all smiling at the camera with a thumbs up)") from _call_message_22
     call message("me", "Aww, thank you!! I appreciate this a lot this morning. Please let the others know too.") from _call_message_23
-    call message("Blake <3", "its all good friendo") from _call_message_24
-    call message("Blake <3", "i gotta go but") from _call_message_25
-    call message("Blake <3", "seriously tho") from _call_message_26
-    call message("Blake <3", "you got this") from _call_message_27
-    call message("Blake <3", "ur so smart and good at what u do") from _call_message_28
-    call message("Blake <3", "your supervisor is gonna be hella impressed as fuck") from _call_message_29
-    call message("Blake <3", "i believe in you even if u don’t") from _call_message_30
-    call message("Blake <3", "go get em friendo") from _call_message_31
+    call message("Blake (VoᴥoV)", "its all good friendo") from _call_message_24
+    call message("Blake (VoᴥoV)", "i gotta go but") from _call_message_25
+    call message("Blake (VoᴥoV)", "seriously tho") from _call_message_26
+    call message("Blake (VoᴥoV)", "you got this") from _call_message_27
+    call message("Blake (VoᴥoV)", "ur so smart and good at what u do") from _call_message_28
+    call message("Blake (VoᴥoV)", "your supervisor is gonna be hella impressed as fuck") from _call_message_29
+    call message("Blake (VoᴥoV)", "i believe in you even if u don’t") from _call_message_30
+    call message("Blake (VoᴥoV)", "go get em friendo") from _call_message_31
     call message("", "Blake is typing…") from _call_message_32
     call message("", "Blake is typing…") from _call_message_33
     call message("", "Blake is typing…") from _call_message_34
@@ -562,25 +563,25 @@ label scene_b9:
     "*phone ringing*"
     stop sound
     call phone_start from _call_phone_start_4
-    call message_start("Blake <3", "hey u home??") from _call_message_start_2
+    call message_start("Blake (VoᴥoV)", "hey u home??") from _call_message_start_2
     call message("me", "Yes, got back not long ago. I can't believe it's over!") from _call_message_37
-    call message("Blake <3", "you did it!! :grin: :thumbsup: :heart: :heart: im  so prtoyd ofu!!!!!") from _call_message_38
-    call message("Blake <3", "proud!! you kno what i mean") from _call_message_39
+    call message("Blake (VoᴥoV)", "you did it!! :grin: :thumbsup: :heart: :heart: im  so prtoyd ofu!!!!!") from _call_message_38
+    call message("Blake (VoᴥoV)", "proud!! you kno what i mean") from _call_message_39
     call message("me", "Aw thanks. <3 So am I.") from _call_message_40
     call message("", "Blake is typing…") from _call_message_41
-    call message("Blake <3", "u should be") from _call_message_42
+    call message("Blake (VoᴥoV)", "u should be") from _call_message_42
     call message("me", "Aww, thank you!! I appreciate this a lot this morning. Please let the others know too.") from _call_message_43
-    call message("Blake <3", "we shoiwulf  go  out to celebrate :-)") from _call_message_44
+    call message("Blake (VoᴥoV)", "we shoiwulf  go  out to celebrate :-)") from _call_message_44
     call message("me", "I'd love that.") from _call_message_45
-    call message("Blake <3", "u pick where u wanr to go") from _call_message_46
+    call message("Blake(VoᴥoV)", "u pick where u wanr to go") from _call_message_46
     call message("me", "I know it's your workplace, but how about we just go for a coffee? I want to show Jun the article I wrote. I promised. And you're not working today, right?") from _call_message_47
-    call message("Blake <3", "sure!! we can totallu do  that") from _call_message_48
-    call message("Blake <3", "jun will be v happy") from _call_message_49
+    call message("Blake (VoᴥoV)", "sure!! we can totallu do  that") from _call_message_48
+    call message("Blake (VoᴥoV)", "jun will be v happy") from _call_message_49
     call message("me", "Shall I meet you there in an hour? I want to shower and change my clothes.") from _call_message_50
-    call message("Blake <3", "ye thats for the besr im still in bed lmao") from _call_message_51
-    call message("Blake <3", "...It's 4:30.") from _call_message_52
-    call message("Blake <3", "ur not my mom") from _call_message_53
-    call message("Blake <3", "but swwya there!!") from _call_message_54
+    call message("Blake (VoᴥoV)", "ye thats for the besr im still in bed lmao") from _call_message_51
+    call message("Blake (VoᴥoV)", "...It's 4:30.") from _call_message_52
+    call message("Blake (VoᴥoV)", "ur not my mom") from _call_message_53
+    call message("Blake (VoᴥoV)", "but swwya there!!") from _call_message_54
     call phone_end from _call_phone_end_4
     "Marllie spends far too long and makes far too much of a mess going through her wardrobe before she settles on what to wear. Over her internship, she’d only been able to make it to The Daily Grind a small handful of times. She’d seen Blake outside of it even less, considering how tired she usually was after waking so early."
     "Texting had barely made up for it, but Marllie was trying to keep a consistent sleeping pattern."
@@ -842,19 +843,19 @@ label scene_b11:
     scene bg_dorm with fade
     play music see loop fadein 3.0
     call phone_start from _call_phone_start_5
-    call message_start("Blake <3", "hey") from _call_message_start_3
-    call message("Blake <3", "you there?") from _call_message_55
+    call message_start("Blake (VoᴥoV)", "hey") from _call_message_start_3
+    call message("Blake (VoᴥoV)", "you there?") from _call_message_55
     call message("me", "I’m here.") from _call_message_56
     call message("me", "You're punctuating your texts. Everything okay?") from _call_message_57
-    call message("Blake <3", "i") from _call_message_58
-    call message("Blake <3", "uh") from _call_message_59
-    call message("Blake <3", "wanted to ask you a quesiton") from _call_message_60
+    call message("Blake (VoᴥoV)", "i") from _call_message_58
+    call message("Blake (VoᴥoV)", "uh") from _call_message_59
+    call message("Blake (VoᴥoV)", "wanted to ask you a quesiton") from _call_message_60
     call message("me", "Of course. What is it?") from _call_message_61
     call message("", "{i}Blake <3 is typing...{/i}") from _call_message_62
     call message("", "{i}Blake <3 is typing...{/i}") from _call_message_63
-    call message("Blake <3", "are you okay? You were pretty quiet when we last hung out and we haven’t spoken in a few days") from _call_message_64
-    call message("Blake <3", "just wanted to ask if i’d done something") from _call_message_65
-    call message("Blake <3", "and im sorry if i did") from _call_message_66
+    call message("Blake (VoᴥoV)", "are you okay? You were pretty quiet when we last hung out and we haven’t spoken in a few days") from _call_message_64
+    call message("Blake (VoᴥoV)", "just wanted to ask if i’d done something") from _call_message_65
+    call message("Blake (VoᴥoV)", "and im sorry if i did") from _call_message_66
     call phone_end from _call_phone_end_5
     Customer_side sad "{i}Oh, Blake. You haven’t done anything wrong. How am I supposed to say what I’m feeling. What if Shay’s wrong?{/i}"
     "{i}What if she isn’t?{/i}"
@@ -868,23 +869,23 @@ label choice2:
     call message("me", "It’s nothing you’ve done. At all. Please never think that.") from _call_message_68
     call message("Blake <3", "promise?") from _call_message_69
     call message("me", "Promise. <3") from _call_message_70
-    call message("Blake <3", "good") from _call_message_71
-    call message("Blake <3", "<3") from _call_message_72
-    call message("Blake <3", "anythgjng i can help with?") from _call_message_73
+    call message("Blake (VoᴥoV)", "good") from _call_message_71
+    call message("Blake (VoᴥoV)", "<3") from _call_message_72
+    call message("Blake (VoᴥoV)", "anythgjng i can help with?") from _call_message_73
     call message("me", "Maybe. I’ll let you know?") from _call_message_74
-    call message("Blake <3", "im always here for you") from _call_message_75
-    call message("Blake <3", "so what kinda pizza dop u want") from _call_message_76
-    call message("me <3", "What?") from _call_message_77
-    call message("Blake <3", "i wdnted to see if uw anna hang otu :-)") from _call_message_78
+    call message("Blake (VoᴥoV)", "im always here for you") from _call_message_75
+    call message("Blake (VoᴥoV)", "so what kinda pizza dop u want") from _call_message_76
+    call message("me", "What?") from _call_message_77
+    call message("Blake (VoᴥoV)", "i wdnted to see if uw anna hang otu :-)") from _call_message_78
     call phone_end from _call_phone_end_6
     Customer_side happy "{i}Aww, Blake...{/i}"
     call phone_start from _call_phone_start_7
     call message("me", "Hawaiian is my favourite.") from _call_message_79
     call message("me", "Would you like to come to mine? I can find us a movie.") from _call_message_80
-    call message("Blake <3", "sure thgin") from _call_message_81
-    call message("Blake <3", "shays been stomping around the apt bc bad gorup memebers for her assignment") from _call_message_82
+    call message("Blake (VoᴥoV)", "sure thgin") from _call_message_81
+    call message("Blake (VoᴥoV)", "shays been stomping around the apt bc bad gorup memebers for her assignment") from _call_message_82
     call message("me", "Ouch") from _call_message_83
-    call message("Blake <3", "i’ll pcik up the pizza on my way over") from _call_message_84
+    call message("Blake (VoᴥoV)", "i’ll pcik up the pizza on my way over") from _call_message_84
     call message("me", "Sounds good. I’ll see you soon!") from _call_message_85
     call phone_end from _call_phone_end_7
     stop music fadeout 1.0
@@ -984,11 +985,11 @@ label scene_epilogue:
     play sound bg_coffeeshop loop
     play music nameless loop fadein 3.0
     "Two weeks later"
-    show customer
+    show customer folded1
     "Marllie has to weave through a crowd of people to get to her usual table. Today seems to be another busy day for the cafe. "
     "Since that night, Blake has stayed at Marllie’s dorm more often than not -- much to Shay’s happiness. “Fucking finally,” was all she had said when they went to Blake’s apartment the next day. They hadn’t even said a word yet. Apparently she just knew. "
     scene bg_cs_lounge with fade
-    show customer
+    show customer folded1
     "From her table, Marllie can see right through to behind the counter. It’s so busy that Asher has manned the second machine, and Marllie knows that it hasn’t needed to see much use over the past few months. "
     "Blake is also on machine duty, completely focused on the tickets in front of her as she churns out the coffee to the customers. She’s rolled her short sleeves up all the way and Marllie takes a moment to appreciate her girlfriend’s profile."
     Customer "{i}Come on Marllie, you have all night to stare at her. Your exam notes won’t do themselves.{/i}"

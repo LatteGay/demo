@@ -45,11 +45,13 @@ init 5:
 
     style phone_message_who is phone_message:
         color "#ecf0f1"
-        size 25
+        size 20
+        font "gui/SF-Cartoonist-Hand/NotoSans-Condensed.ttf"
 
     style phone_message_what is phone_message:
         color "#ffffff"
-        size 24
+        size 18
+        font "gui/SF-Cartoonist-Hand/NotoSans-Condensed.ttf"
     style phone_reply is default:
         size 18
         xalign 0.5
@@ -1814,7 +1816,7 @@ screen credits():
         vbox xalign 0.5 yalign 0.5: #This puts the elements in a vertical box, you could use an hbox or a grid or a fixed, etc.
             text "Credits"
             text "Story/Writer: {a=http://shepardtsoni.tumblr.com/}shepardtsoni{/a},  {a=http://elystias.tumblr.com/}elystias{/a}"
-            text "Programming: {a=http://hiddenbootyz.tumblr.com/}hiddenbootyz{/a}, {a=http://hiddenexample.tumblr.com/}hiddenexample{/a}"
+            text "Programming: {a=http://hiddenbooty.tumblr.com/}hiddenbootyz{/a}, {a=http://hiddenexample.tumblr.com/}hiddenexample{/a}"
             text "Character design & sprites: {a=http://magicalzebra.tumblr.com/}magicalzebra{/a}"
             text "Characters colored by: {a=http://fiori-ed-orrori.tumblr.com/}fiori-ed-orrori{/a}"
             text "Backgrounds by {a=http://sarahanne-art.tumblr.com/}sarahannebirch{/a}"

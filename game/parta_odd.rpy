@@ -38,11 +38,11 @@ label scene_a1:
                 if snooze < 2:
                     $snooze += 1
                     scene black with fade
-                    pause
+                    pause 2.0
                     jump .alarm2
                 else:
                     scene black with fade
-                    pause
+                    pause 2.0
                     jump .get_up
 
     label .get_up:
@@ -146,15 +146,16 @@ label scene_a3:
     MC hips1 annoyed "About time."
     "Asher disappears into the storeroom and emerges a minute later. Blake catches a glimpse of Jun’s unamused face before the storeroom door closes again."
 
-    show bestie at left with dissolve
     show mc at right with move
+    show bestie at left with easeinleft
+
     Bestie "There was an accident at the intersection. I had to get off the bus and walk."
     show mc hips1
     with dis
     MC "That’s okay. Just get to grinding the coffee beans, I’m still on newbie duty."
     Bestie "No problem. You holding up okay, Blake?"
     CW_side "Getting the hang of it I hope."
-    MC "You're doing fine."
+    MC neutral "You're doing fine."
     Bestie "Yeah, you’re keeping up with that one girl who orders something new and ridiculous everyday."
 
     "Blake groans."
@@ -177,9 +178,8 @@ label scene_a3:
     "Asher merely bites his lip and winks at her. Maya makes another disgusted noise."
 
     MC annoyedclosed "Stop scarring me and the newbie and go and do your job."
-    hide bestie with dissolve
-    hide mc
-    show mc annoyedclosed hips1
+    hide bestie with easeoutleft
+    show mc annoyedclosed hips1 at center with move
     "Asher laughs as he disappears into the storeroom. Maya rubs her eyes tiredly."
     CW_side "This conversation took a turn I wasn’t prepared for."
     stop music fadeout 3.0
@@ -231,7 +231,7 @@ label scene_a5:
     Rival "I need some kale. We’ve had so much sugar that my tongue is sticking to the roof of my mouth."
     CW_side "I’m probably going to crash in like, half an hour."
     Rival "Joy of joys."
-    CW_side "Hey, my package, my rules."
+    CW_side happy "Hey, my package, my rules."
     "Shay rolls her eyes and stands from her chair. The coffee machine whirs to life. Shay leans on the counter while she waits."
     Rival hips1 "Have you told him about your new job?"
     "Blake makes an affirmative noise around yet another mouthful of candy."
@@ -250,17 +250,17 @@ label scene_a5:
     CW_side -happy "Are you still working on your group assignment?"
     "Shay wordlessly lifts her mug in assent."
     Rival angry "I had to duck out of work early to deal with someone not pulling their weight. We were supposed to have three sections done by today."
-    CW_side "Ugh."
+    CW_side sad "Ugh."
     Rival "We still have plenty of time. It’s just frustrating that the person said they’d have it completed but they didn’t."
-    CW_side "Are you being graded as a group?"
+    CW_side -sad "Are you being graded as a group?" #thoughtfullface TODO
     Rival "No. Or I’d be far more pissed off."
     CW_side "I’ll bring us something home tomorrow so you can at least suffer with something nice."
     Rival -angry "I might even put up with your crappy reality TV if you do."
-    CW_side "Don’t you dare talk shit about the Bachelor." #people who watch the bachlor go to the bad place
+    CW_side angry "Don’t you dare talk shit about the Bachelor." #people who watch the bachlor go to the bad place
     "Shay hides her smirk behind another swig of her coffee. She makes to retrieve the book she left earlier, setting it aside neatly beside her laptop."
     Rival happy "Close your door so I don’t have to work over your snoring."
     stop music fadeout 3.0
-    CW_side "Yeah, yeah. Will do. G’night, Shay."
+    CW_side neutral "Yeah, yeah. Will do. G’night, Shay."
     scene black with fade
     jump j_scenea6
 
@@ -269,7 +269,7 @@ label scene_a7:
     "Later that afternoon, the coffee shop is particularly quiet. There has only been a handful of customers in the past several hours and Blake is frankly bored out of her mind. She almost wishes Marllie would order something just to give her something to do."
 
     CW_side "Almost."
-    play music dolphin loop fadein 5.0
+    play music juxtaposition loop fadein 5.0
     $ bClean1 = True
     $ bClean2 = True
     $ bClean3 = True
@@ -297,7 +297,7 @@ label scene_a7:
 
     "She’s been working here a few weeks now and despite how much time she’s technically been in Marllie’s company, it occurs to her she has no idea what the regular is actually doing. She does vaguely recall speculating with Maya a few times. She has to admit she’s curious."
 
-    CW_side "{i}Huh, I wonder if I can sneak a look. Never did find out what she’s doing while in here.{/i}"
+    CW_side "{i}Huh, I wonder if I can sneak a look. Never did find out what she’s doing while in here.{/i}" #THOUGHTFUL FACE TODO
 
     "Blake makes her way as nonchalantly as she can to the table behind Marllie. She feels a bit like a creep but she sprays the table a couple of times anyway and starts casually cleaning."
 
@@ -309,7 +309,7 @@ label scene_a7:
 
     "Blake just about jumps out of her skin and knocks the bottle on the floor. She stammers some incoherent apologies as Marllie leans back in her chair to stare at her."
     CW_side "{i}Asher better get back from his break soon. That jumping off a bridge idea is so fucking tempting right now. He can clean the coffee machine in my place and I can die guilt-free. I know Shay would delete my internet history.{/i}"
-
+    #panic face TODO
     Customer "You’re not very stealthy."
     CW_side "Oh, my God."
     Customer "You were almost leaning over my shoulder."
@@ -431,7 +431,7 @@ label scene_a9:
     Rival angry "I got stuck training the newbies. Plural. They progressed to making cold drinks today so it was pretty chaotic."
     CW_side "Eh, go easy on them. I can’t imagine that people getting coffee at a big chain store are any less picky."
     Rival distressed "Ugh, don’t remind me."
-    scene bg_fallsidewalk with fade
+    scene bg_fallsidewalknight with fade
     "Blake is making a list of takeout places that they can get dinner from in her head when they pass a bus stop. A colourful advertisement that flashes across a screen catches her eye."
     CW_side happy "{i}Thai. Gonna get some Thai food for dinner. Hell yeah.{/i}"
     "She turns her head to tell Shay, ask her if she wants anything too, but a familiar silhouette makes her stop dead."
@@ -468,12 +468,12 @@ label scene_a9:
     "The reassurance seems to help a little. Marllie leans into the embrace, apparently grateful for it to Blake’s relief."
     CW_side "Can I help? Do you need anything? Would a Triple, Venti, Half Sweet, Non-Fat, Caramel Macchiato make you feel better? "
     "A quiet snort escapes Marllie. There’s even a small smile. Blake counts it as a win."
-    Customer -sad "You’d just make it wrong."
+    Customer happy "You’d just make it wrong."
     CW_side "You wound me."
     "There’s another laugh. Marllie sniffles and swipes at her cheeks again."
-    Customer "Really though, I should get home to finish off my paper. But, uh… thank you. For talking to me."
+    Customer sad "Really though, I should get home to finish off my paper. But, uh… thank you. For talking to me."
     CW_side "It’s not a problem. Let me give you my number. Text me when you get home so I know you made it safely. And, you know, I’ve got no plans tonight and no work tomorrow, so shoot me a message if you need to talk to someone."
-    Customer "I'll let you know. And um, I’ll probably want to be on my own for now… get over the embarrassment."
+    Customer neutral "I'll let you know. And um, I’ll probably want to be on my own for now… get over the embarrassment."
     "She manages a smile."
     Customer happy "But… thanks."
     CW_side happy "Anytime."

@@ -63,6 +63,9 @@ define gui.name_text_font = "gui/SF-Cartoonist-Hand/SF_Cartoonist_Hand.ttf"
 ## The font used for out-of-game text.
 define gui.interface_text_font = "gui/SF-Cartoonist-Hand/SF_Cartoonist_Hand.ttf"
 
+## The font used for cellphone text.
+define gui.cellphone_text_font = "gui/SF-Cartoonist-Hand/mikachan.ttf"
+
 ## The size of normal dialogue text.
 define gui.text_size = 33
 
