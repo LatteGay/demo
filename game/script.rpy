@@ -40,38 +40,38 @@ label splashscreen:
     return
 
 label start:
-    # label j_scenea1:
-    # jump scene_a1
-    # label j_scenea2:
-    # jump scene_a2
-    # label j_scenea3:
-    # jump scene_a3
-    # label j_scenea4:
-    # jump scene_a4
-    # label j_scenea5:
-    # jump scene_a5
-    # label j_scenea6:
-    # jump scene_a6
-    # label j_scenea7:
-    # jump scene_a7
-    # label j_scenea8:
-    # jump scene_a8
-    # label j_scenea9:
-    # jump scene_a9
-    # label j_scenea10:
-    # jump scene_a10
-    # label j_scenea11:
-    # jump scene_a11
-    # label j_scenea12:
-    # jump scene_a12
-    # label j_scenea13:
-    # jump scene_a13
-    # label j_sceneb1:
-    # jump scene_b1
-    # label j_sceneb2:
-    # jump scene_b2
-    # label j_sceneb3:
-    # jump scene_b3
+    label j_scenea1:
+    jump scene_a1
+    label j_scenea2:
+    jump scene_a2
+    label j_scenea3:
+    jump scene_a3
+    label j_scenea4:
+    jump scene_a4
+    label j_scenea5:
+    jump scene_a5
+    label j_scenea6:
+    jump scene_a6
+    label j_scenea7:
+    jump scene_a7
+    label j_scenea8:
+    jump scene_a8
+    label j_scenea9:
+    jump scene_a9
+    label j_scenea10:
+    jump scene_a10
+    label j_scenea11:
+    jump scene_a11
+    label j_scenea12:
+    jump scene_a12
+    label j_scenea13:
+    jump scene_a13
+    label j_sceneb1:
+    jump scene_b1
+    label j_sceneb2:
+    jump scene_b2
+    label j_sceneb3:
+    jump scene_b3
     label j_sceneb4:
     jump scene_b4
     label j_sceneb5:
