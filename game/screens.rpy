@@ -46,12 +46,12 @@ init 5:
     style phone_message_who is phone_message:
         color "#ecf0f1"
         size 20
-        font "gui/SF-Cartoonist-Hand/NotoSans-Condensed.ttf"
+        font "gui/SF-Cartoonist-Hand/NotoSans-SemiCondensed.ttf"
 
     style phone_message_what is phone_message:
         color "#ffffff"
         size 18
-        font "gui/SF-Cartoonist-Hand/NotoSans-Condensed.ttf"
+        font "gui/SF-Cartoonist-Hand/NotoSans-SemiCondensed.ttf"
     style phone_reply is default:
         size 18
         xalign 0.5
