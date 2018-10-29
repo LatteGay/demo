@@ -91,6 +91,7 @@ label start:
     label j_scene_epilogue:
     jump scene_epilogue
     label end:
+
     #show CoWorker
 
     # These display lines of dialogue.

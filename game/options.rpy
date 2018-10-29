@@ -23,13 +23,17 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "1.103"
+define config.version = "1.50"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
-define gui.about = _("")
+define gui.about = _("""\
+Created by {a=https://lattegaygame.tumblr.com/theteam}LatteGayGames{/a}
+
+cellphone code from {a=https://nadianova.itch.io/phone-message-system-for-renpy}nadianova{/a}
+""")
 
 
 ## A short name for the game used for executables and directories in the built

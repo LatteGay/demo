@@ -658,6 +658,8 @@ screen navigation():
 
         textbutton _("About") action ShowMenu("about")
 
+        textbutton _("Credits") action ShowMenu("credits")
+
         if renpy.variant("pc"):
 
             ## Help isn't necessary or relevant to mobile devices.
@@ -691,6 +693,8 @@ screen main_menu():
     style_prefix "main_menu"
 
     add gui.main_menu_background
+    add gui.main_menu_logo xalign 0.5 yalign 0.2
+    add gui.main_menu_subtext xalign 0.40 yalign 0.42
 
     ## This empty frame darkens the main menu.
     frame:
@@ -699,11 +703,14 @@ screen main_menu():
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
     #use navigation
-    vbox xalign 0.5 yalign 0.75:
-            imagebutton auto "images/gui/mainmenu/newgame_%s.png" action Start()
-            imagebutton auto "images/gui/mainmenu/loadgame_%s.png" action ShowMenu("load")
-            imagebutton auto "images/gui/mainmenu/options_%s.png" action ShowMenu("preferences")
-            imagebutton auto "images/gui/mainmenu/extras_%s.png" action ShowMenu("about")
+    vbox xalign 0.5 yalign 0.85:
+            #imagebutton auto "images/gui/mainmenu/newgame_%s.png" action Start()
+            textbutton _("Start") action Start() text_size 50
+            textbutton _("Load") action ShowMenu("load") text_size 50
+            textbutton _("Preferences") action ShowMenu("preferences") text_size 50
+            textbutton _("About") action ShowMenu("about") text_size 50
+            textbutton _("Credits") action ShowMenu("credits") text_size 50
+            textbutton _("Quit") action Quit(confirm=not main_menu) text_size 50
 
     if gui.show_name:
 
@@ -1799,3 +1806,21 @@ style slider_pref_vbox:
 style slider_pref_slider:
     variant "small"
     xsize 600
+
+screen credits():
+    tag menu
+    use game_menu(_("Credits"), scroll="viewport"):
+
+        vbox xalign 0.5 yalign 0.5: #This puts the elements in a vertical box, you could use an hbox or a grid or a fixed, etc.
+            text "Credits"
+            text "Story/Writer: {a=http://shepardtsoni.tumblr.com/}shepardtsoni{/a},  {a=http://elystias.tumblr.com/}elystias{/a}"
+            text "Programming: {a=http://hiddenbootyz.tumblr.com/}hiddenbootyz{/a}, {a=http://hiddenexample.tumblr.com/}hiddenexample{/a}"
+            text "Character design & sprites: {a=http://magicalzebra.tumblr.com/}magicalzebra{/a}"
+            text "Characters colored by: {a=http://fiori-ed-orrori.tumblr.com/}fiori-ed-orrori{/a}"
+            text "Backgrounds by {a=http://sarahanne-art.tumblr.com/}sarahannebirch{/a}"
+            text " "
+            text  "Music: TazLazuli"
+            text   _("{a=https://soundcloud.com/tazlazuli}@tazlazuli{/a}(SC)") size 24
+            text   _("twitter.com/tazlazuli") size 24
+            text   _("For business inquiries email about music: tazlazuli@gmail.com") size 24
+            text   _("Attribution 3.0 Unported (CC BY 3.0)") size 24
