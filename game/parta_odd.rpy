@@ -1,5 +1,6 @@
 #Scene 1 a
 label scene_a1:
+    stop music
     $ snooze = 0
 
     scene black

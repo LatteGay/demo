@@ -16,7 +16,7 @@ label scene_a2:
     Rival angry "Rude."
     CW_side happy "Uh huh."
     hide rival
-    play sound "music/sfx/ambience_busy_street_road.mp3"
+    play sound bg_car
     scene bg_busystreet with fade
     "They stop at a busy road. Shay's workplace is even closer and Blake can just make it out now behind all the passing cars."
     show rival

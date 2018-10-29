@@ -1,9 +1,11 @@
 # Scene B1
 label scene_b1:
     scene bg_fallsidewalk with fade
+    show snow
     "The first snow comes early and unexpectedly this year. Marllie draws herself further into her scarf as the wind picks up, cold air ruffling her loose hair. She regrets leaving her beanie at home. "
     "She picks up her pace, hoping the snow doesn’t get worse. It’s a route she knows well by now, having taken it nearly every day for the past eight months."
     scene bg_shop with fade
+    play music happy loop fadein 3.0
     "Marllie sighs in relief as she steps into the coffee shop’s warm interior. It’s relatively quiet, a few patrons scattered around the tables. No surprise really, considering the weather and how early it is in the morning. Still, it’s routine now, and she likes to take advantage of the free wifi and cozy atmosphere."
     Customer_side "{i}Well, I might have one more reason than that...{/i}"
     "She makes a beeline straight for the counter. Blake’s leaning on the countertop looking half-asleep, but she perks up once Marllie approaches."
@@ -26,12 +28,12 @@ label scene_b1:
     Customer_side "If you’re offering."
     "Blake tsks, a slow grin forming on her mouth as she keys in the order."
     CW happy "Wow, can’t believe you would make me actually have to turn around and bend down to reach the other fridge to get the milk. So much extra work."
-    Boss "What else am I paying you for, Blake?"
-    CW "Looking pretty?"
+    Boss happy crossed1 "What else am I paying you for, Blake?"
+    CW  happy "Looking pretty?"
     "Jun rolls her eyes fondly."
-    Boss "I’ll have to give you a raise then. Come on, hop to it."
+    Boss -happy "I’ll have to give you a raise then. Come on, hop to it."
     "Blake offers her a lazy salute."
-    CW "Yes, ma’am!"
+    CW -happy "Yes, ma’am!"
     hide boss with moveoutright
     show coworker at center with moveinright
     "Marllie leans against the counter while Blake works. The article she’s supposed to be finishing lingers at the back of her mind. She has a ton of research to do and the time to do so feels as though its rapidly diminishing."
@@ -58,6 +60,7 @@ label scene_b1:
     "Marllie picks up her coffee, eager to take her first sip but the foam on top catches her eye."
     "Blake’s replaced the usual generic coffee art for a simple dog. It’s a little lopsided, one floppy ear bigger than the other but it’s adorable. There’s even a sprinkle of chocolate powder around the dog, presumably representing a small flurry of snow."
     "A familiar warmth unfurls in her chest. Marllie cracks a smile, putting the mug back down to capture a quick photo. She glances up briefly, watches as Blake’s gaze snaps away to the opposite side of the shop."
+    stop music fadeout 3.0
     Customer_side "{i}She’s so cute.{/i}"
     Customer_side "{i}The dog. The dog’s cute.{/i}"
     Customer_side sad "{i}...Who am I even kidding?{/i}"
@@ -65,6 +68,8 @@ label scene_b1:
 # Scene B2
 label scene_b2:
     scene bg_shop with fade
+    play sound bg_coffeeshop
+    play music namless loop fadein 3.0
     "The yawn Marllie lets out cracks her jaw. She winces, rubbing at it as she leans back in her chair."
     "It’s close to lunchtime now, so the cafe is starting to fill up again. It’s not as busy as Marllie is used to, but there’s no shortage of suited businessmen coming in for their fix of complicated caffeine."
     "Marllie cocks her head to one side, cheek propped up against a hand as she watches Blake try to keep up with the flow of people.  She catches Blake’s eye at a break in the line, and she laughs as the other girl shoots her a pleading look."
@@ -93,13 +98,13 @@ label scene_b2:
     CW "Don’t worry about paying. My treat."
     Customer_side "Aww, you didn’t have to do that."
     "Blake waves her hand dismissively."
-    CW "Wanted to. How’s work going?"
+    CW happy "Wanted to. How’s work going?"
     Customer_side "Good, I think. I got an email back about the internship. I start next week."
     "Marllie immediately finds herself embraced in a warm hug. She stiffens for a second, the contact sudden but not… unwelcome. She can’t help herself -- she sinks into it, winding her arms around Blake’s waist."
     "Blake is so much taller anyway, and the fact she’s standing and Marllie is still sitting makes the hug a little awkward. Still, she can smell the coffee on Blake’s uniform, and the shampoo she uses as long hair tickles her cheek."
     "Blake is the one who breaks it, far sooner than Marllie would have liked. Blake clears her throat."
     # TODO PANIC
-    CW "S-sorry! I should have asked first. I’m just so happy for you. And proud of you."
+    CW -happy "S-sorry! I should have asked first. I’m just so happy for you. And proud of you."
     Customer_side "Thank you, Blake. That means a lot."
     CW "I know how hard you’ve been working. You deserve it."
     # TODO BLUSH
@@ -107,13 +112,15 @@ label scene_b2:
     CW "D’you wanna help me walk the dogs again later? We can get some dinner before too if you’re up for it."
     "Marllie’s glad for the change of topic and even happier for the offer. Spending time with some dogs and Blake is a perfect way to celebrate.  She beams."
     Customer_side "Of course I would. Same time as usual?"
+    stop music fadeout 3.0
     CW "Same time as usual."
     Customer_side "I can’t wait!"
     hide coworker
     jump j_sceneb3
 # Scene B3
 label scene_b3:
-    scene bg_fallsidewalk with fade
+    scene bg_fallsidewalknight with fade
+    show snow
     "It’s pitch black by the time Marllie finally arrives home. She honestly hadn’t meant to stay out so late, but it’s easy to lose track of time with the company she had. Shivering slightly, Marllie fumbles with her keys, and then for the lightswitch once she opens the door."
     scene bg_dorm with fade
     "The dorm still looks new, apart from the papers littered about her living space and the desk that hosts a pile of leftover food she’s been too tired to put away."
@@ -144,6 +151,7 @@ label scene_b3:
     call message("Blake <3", "gniught")
     call message("Blake <3", "<3 <3 zzzzZZZ")
     call phone_end
+    play music see loop fadein 2.0
     "Marllie smiles at the exchange, despite the typos. And the lack of punctuation. And the six different texts Blake chose to send instead of one with proper sentences. It had been a pet peeve of Marllie’s at first, but now she didn’t mind at all. Even when it meant her phone was going off at all hours of the day."
     "Okay. Or maybe she liked her phone going off at all hours of the day."
     "It had been… lonely, moving to a new town. Not that… well, not that she had many people to leave behind in the first place."
@@ -157,6 +165,7 @@ label scene_b3:
     "She’s moving forward, but that doesn’t mean everything is going to be different."
     "She looks at at the texts again, her lips twitching upwards."
     Customer_side happy "{i}Goodnight, Blake.{/i}"
+    stop music fadeout 2.0
     jump j_sceneb4
 # Scene B4
 label scene_b4:
@@ -172,16 +181,20 @@ label scene_b4:
     scene bg_dorm with fade
     stop sound
     "She forces herself up before she can change her mind, slipping into the bathroom to brush her teeth. She winces at the dark circles under her eyes. Her sleep, disrupted by anxiety, has not been the most restful."
-    scene bg_fallsidewalk with fade
     "Twenty minutes later, Marllie steps out of the shower still feeling subhuman. Breakfast is the same robotic process. Marllie is too focused on her feeling of impending doom to focus properly on what she’s doing. The bus ride there goes by in a blur."
     scene bg_busystreet with fade
+    show snow
+    play sound bg_car loop
     "Always punctual, Marllie arrives at the building fifteen minutes early. She stares up at it, taking in its imposing size and willing the nervous twisting in her stomach to calm."
     Customer_side "{i}What if I can’t do this?{/i}"
     "Marllie has always done well in her classes, sure, but this is a completely different beast. Her parents encouraging words from last night, which had made her feel better at the time, feel hollow right now in the face of the fear locking her limbs."
-    Customer_side "{i}I’m going to fuck this up and fail this year. I don’t want to repeat it again. I -{/i}"
+    Customer_side sad "{i}I’m going to fuck this up and fail this year. I don’t want to repeat it again. I -{/i}"
+    #PANIC TODO
+    play sound phonevibratelong
     "The vibrations from her phone going off in her pocket interrupt Marllie from her increasingly panicked thoughts. She digs it out, silently grateful for the momentary distraction..."
     "{i}Blake <3\n(3) new messages{/i}"
     "Her eyes widen. She hurriedly pulls off a glove to unlock her phone."
+    stop sound
     call phone_start
     call message_start("Blake <3", "hey my dude")
     call message("Blake <3", "i kwnow its ur first dayt at yuor new place today")
@@ -204,21 +217,27 @@ label scene_b4:
     call message("", "Blake is typing…")
     call message("Blake <3", "<3")
     # TODO PUT FLASH HERE???
-    call message("me", "(Flashing of a heart emoji in the message box as Marllie inputs and deletes it repeatedly)")
+    call phone_end
+    #call message("me", "(Flashing of a heart emoji in the message box as Marllie inputs and deletes it repeatedly)")
+    Customer_side "..." #blush/concerned
+    call phone_start
     call message("me", "<3")
     call phone_end
     "Marllie puffs out a breath, the cold air leaving a visible mist. She reads through the texts again, staring at the photo."
     "Her heart is still thrumming wildly in her chest. The panic still has a vice grip around her heart, but it’s enough for a brief surge of confidence. Her phone goes back into her pocket, though she keeps a tight grip around it. The image sent to her stays in her mind."
+    stop sound
     "She inhales, straightens, and steps inside."
     jump j_sceneb5
 # Scene B5
 label scene_b5:
     scene bg_fallsidewalk
+    show snow
     "Marllie steps off the bus, drawing her coat tighter around her as the sudden cold makes her shiver. It’s enough to chase away the tendrils of weariness building behind her eyes."
     "It’s finally the weekend. Though the first week of her internship has been much more enjoyable than expected, she’s relieved to return to familiarity."
     Customer_side "{i}See the guys at the coffee shop, see Blake, walk some dogs, eat some dinner, and binge a whole season of a show. I’m so glad it’s Friday.{/i}"
     "Her feet take her to the shop on autopilot. There’s a smile on her face as she steps inside, wiping her shoes on the mat at the door"
     scene bg_shop with fade
+    play music juxtaposition fadein 3.0
     "It’s getting close to closing, but it’s already empty. There should be more people milling about. Maya, who is manning the front on her own, looks bored as she wipes down the counter slowly."
     Customer_side "{i}Things have really changed, haven’t they?{/i}"
     "Not always in a bad way, though. It had been an awkward week on Marllie’s end after Maya had said no. Luckily, only Maya and Blake know, so she’s been saved some embarrassment."
@@ -235,7 +254,7 @@ label scene_b5:
     Customer_side "It really, really did."
     MC -happy "Good. I was terrified too when I first got this job. But after the first day, it got a lot easier. You’ve done the hardest part."
     show mc at left with moveinleft
-    show boss at right with moveinright
+    show boss crossed1 at right with moveinright
     "Just then, Jun steps out of the storeroom. She notices the two women conversing, stopping in her tracks once she makes eye-contact with Marllie. Marllie can’t help but notice the bags that lay beneath her eyes."
     Boss "Good afternoon, Marllie. It’s good to see you here again."
     Customer_side -happy "Hi Jun! Long day?"
@@ -261,34 +280,38 @@ label scene_b5:
     Customer_side "It… it’s been emptier around here, hasn’t it? "
     MC "You’ve noticed, huh? Look, don’t worry. We’ll figure something out."
     "Her optimism is touching and far more sincere than Marllie had expected. Suddenly, two large hands grasp her shoulders. Marllie startles, then relaxes once she sees a familiar bright smile. For such a big guy, Asher is incredibly stealthy."
-    show mc at left with moveinleft
+    show mc -sad at left with moveinleft
     show bestie at right with moveinright
     Bestie "Hey, pretty lady! Congrats on surviving your first week!"
     Customer_side -sad "Thank you! Even though I’m technically only there for four days a week. But I do have class on that fifth day. And homework. And more assignments. Oh God, it does sound like a lot when I say it out loud."
     MC -sad "Ouch. But hey, it’s still a big thing! And it’s weird not seeing you at your usual table. "
     Bestie "Yeah, and you don’t have to work shifts with a moping Blake because of it."
+    show mc annoyed at center with moveinleft
+    show mc at left with moveinright
     "Maya unsubtly nudges him in the ribs. Asher yelps."
     Bestie "Hey! What?"
     "Maya just rolls her eyes. "
-    MC "Ignore him."
-    MC "...But Blake will be back soon. She had to run to the bank before it closed."
-    Customer_side "Oh! Okay, I guess I’ll go sit down then."
+    MC annoyedclosed "Ignore him."
+    MC -annoyedclosed "...But Blake will be back soon. She had to run to the bank before it closed."
+    Customer_side happy "Oh! Okay, I guess I’ll go sit down then."
     "Maya roughly elbows Asher again, resulting in a similar reaction from earlier."
     Bestie "I didn’t say anything!"
     MC "Just in case."
     Bestie "Wow."
-    MC "Want a coffee while you wait?"
+    MC order1 "Want a coffee while you wait?"
+    stop music fadeout 3.0
     Customer_side "Yes please. And how about one of those pastries? I know it’s only been a few days, but I’ve desperately missed Jun’s baking."
     MC "You got it."
     hide bestie with moveoutright
     hide mc with moveoutleft
     scene bg_cs_lounge with fade
+    play music happy fadein 3.0
     "The chairs go up onto the table as she waits. Marllie has enough time to finish going through her news feed before Blake walks back in. "
-    show coworker at center with fade
+    show coworker happy at center with fade
     "Blake’s face splits in a wide grin upon seeing her. Marllie finds herself swept up in a massive hug, almost lifted entirely off her feet. Her arms instinctively wrap around Blake to keep balance, and while Blake has let her down she has not let go."
     CW "I know it’s only been a few days, but man it’s not been the same here without you at all hours."
     Customer_side "I bet your breaks have been really boring, huh?"
-    CW "You have no idea. I’ve been stuck talking to Asher."
+    CW -happy "You have no idea. I’ve been stuck talking to Asher."
     "Asher makes an offended noise from somewhere behind them."
     Bestie "I am a luxury that few can afford!"
     "Marllie laughs. Blake flips him off over her shoulder."
@@ -350,6 +373,7 @@ label scene_b5:
     CW "So… uh. Should we head off?"
     Customer_side "We can’t be late for the dogs."
     CW "Let me just say goodbye to Jun and Maya and grab my things. I’ll be two seconds."
+    stop music fadeout 2.0
     hide coworker with moveoutright
     "Blake scurries off to the back room. Marllie waits until she’s out of sight before she presses her cold hands to her still warm cheeks."
     # TODO PANIC
@@ -361,16 +385,17 @@ label scene_b6:
     "The awkward tension in the air still hovers around them like a thick fog. Marllie shivers as she steps out, wrapping her arms about herself. Despite the burning humiliation, there's a part of her that wishes Blake was still - "
     Customer_side -sad "{i}Nope. Stop that right now. Don’t embarrass yourself further.{/i}"
     show coworker outfit2 down2
+    play music theloop loop fadein 3.0
     CW "You cold?"
     Customer_side "Yeah. I don’t think I’m wearing the right jacket for tonight. They like it pretty warm in that office."
     show coworker sad
     "Blake frowns and pulls her phone out. She checks the time briefly before slipping it back into her pocket."
     CW "Well… the dogs aren’t actually too far of a walk from your dorm building. If we hurry, you can get changed into something warmer and comfier. And you can put your bag down too. That thing does not look light. "
-    Customer_side "That would be nice, actually."
+    Customer_side happy "That would be nice, actually."
     CW -sad "Want me to carry it for you?"
     # fixed in code not in script ("her"to "Marllie's")
     "It is getting difficult to carry. There is more in the bag than simply the laptop. Marllie's shoulders are already aching from the long week."
-    Customer_side "Are you sure?"
+    Customer_side -happy "Are you sure?"
     CW "Yeah. No problem."
     "As Blake chatters to Marllie about her week, she realises the tension has already melted away. They reach Marllie’s dorm after a short time. Blake sets the bag down on the floor with a huff while Marllie unlocks the door."
     scene bg_dorm with fade
@@ -402,12 +427,14 @@ label scene_b6:
     Customer_side "{i}No, Marllie. Don’t be ridiculous.{/i}"
     CW "There we go. You look much cozier."
     Customer_side "Always good to get out of clothes that you’ve been wearing all day. Ready to go?"
+    stop music fadeout 3.0
     CW "Hell yeah."
     Customer_side "After you, then."
     jump j_sceneb7
 # Scene B7
 label scene_b7:
     scene bg_park with fade
+    play music theloop loop fadein 3.0
     show coworker outfit2 down2
     CW "I might have to walk these guys earlier in the day. It’s getting super dark and super cold, super early."
     Customer_side "Makes sense. Wouldn’t want anyone to catch a cold."
@@ -437,31 +464,35 @@ label scene_b7:
     Customer_side "{i}I wonder if there’s something I can do to help.{/i}"
     CW"I wanted to help brainstorm but all I could think of was getting one of those wacky inflatable tubes things in front of car dealerships. Or like, wearing one of those hotdog costumes, but a coffee cup."
     Customer_side "Who’d be the one wearing the costume?"
-    CW "Me, probably. Everyone else would be the most serious coffee cups ever."
+    CW happy up2 "Me, probably. Everyone else would be the most serious coffee cups ever."
     Customer_side "Asher wouldn’t."
-    show coworker happy
+    show coworker happy hips2
+    stop music fadeout 3.0
     "Blake snorts."
     CW "There’s not enough room in a suit for Asher and his ego."
     Customer_side "Well, if it would make you feel better, I would totally be convinced to visit the shop if you were outside in a costume. "
-    CW hips2 "It’s a shame it wasn’t warmer. I could’ve stood outside in gym clothes and flexed. We could rebrand as a gay-friendly coffee shop."
+    CW  -happy hips2 "It’s a shame it wasn’t warmer. I could’ve stood outside in gym clothes and flexed. We could rebrand as a gay-friendly coffee shop."
     Customer_side "Well, I would also be convinced by that."
     Customer_side "{i}What.{/i}"
     "Blake wiggles her eyebrows at her. Marllie reddens and resists the urge to bury her face in her hands."
     Customer_side "{i}WHAT.{/i}"
     Customer_side "I didn’t say anything."
-    CW "I gotta say, I’m flattered."
+    CW happy "I gotta say, I’m flattered."
     Customer_side "{i}Please no. I’ve already had enough embarrassment for one day.{/i}"
     Customer_side "Must’ve been the wind you heard."
-    CW "Uh huh. Of course! Silly me."
+    play music love_beat loop fadein 3.0
+    CW -happy "Uh huh. Of course! Silly me."
     "Blake seems to hesitate, and Marllie can tell she wants to say something else. She waits while Blake finds the words."
     CW "You know, I’ve really missed you being there. It’s not the same at all without you. I know most of the time we can’t actually talk, but..."
     "Blake trails off. Marllie can feel her stomach fluttering. She shifts a little closer to Blake and links their arms together as they walk, feeling brave suddenly."
     Customer_side "This internship is only for six weeks. Five more to go and I’ll be back to bothering you everyday again."
     CW -happy "I can’t wait."
+    stop music fadeout 1.0
     jump j_sceneb8
 # Scene B8
 label scene_b8:
     scene bg_cs_lounge with fade
+    play music happy fadein 3.0
     call phone_start
     call message_img("r.warwick","","emails/email2.PNG")
     call phone_end
@@ -519,12 +550,17 @@ label scene_b8:
     Customer_side "Yep! All done. I kind of have an idea of how I want it to go now too. Which is good, since I’ve got like, a week to write, edit and get it approved."
     CW "You nervous?"
     Customer_side "Of course I am. When am I not nervous?"
+    stop music fadeout 1.0
     CW "Hey, your boss said that he’d be sad to see you go. Clearly you’re doing well enough too for him to give you this chance. You got this!"
     Customer_side "You always know what to say. Thank you, Blake."
     CW "Anytime."
     jump j_sceneb9
 label scene_b9:
     scene bg_dorm with fade
+    pause
+    play sound phonevibratelong
+    "*phone ringing*"
+    stop sound
     call phone_start
     call message_start("Blake <3", "hey u home??")
     call message("me", "Yes, got back not long ago. I can't believe it's over!")
@@ -546,12 +582,12 @@ label scene_b9:
     call message("Blake <3", "ur not my mom")
     call message("Blake <3", "but swwya there!!")
     call phone_end
-
     "Marllie spends far too long and makes far too much of a mess going through her wardrobe before she settles on what to wear. Over her internship, she’d only been able to make it to The Daily Grind a small handful of times. She’d seen Blake outside of it even less, considering how tired she usually was after waking so early."
     "Texting had barely made up for it, but Marllie was trying to keep a consistent sleeping pattern."
     "So she wants to make a good impression."
     scene bg_busystreet with fade
-    show coworker outfit2 up2
+    play music theloop loop fadein 3.0
+    show coworker outfit2 hips2
     "She spots Blake waiting outside as she arrives. She quickly checks herself over."
     CW happy "Hey there."
     Customer_side "Blake! It’s good to see you."
@@ -565,9 +601,11 @@ label scene_b9:
     CW "I’m glad. I - er, we didn’t think it felt the same. But now balance has been restored! All is right again."
     "Marllie giggles."
     CW "Shall we go inside?"
+    stop music fadeout 3.0
     "Marllie answers in the affirmative. Blake’s hand brushes the small of her back, but it’s so brief she isn’t sure if she imagined it."
     CW hips2 "After you."
     scene bg_shop with fade
+    play music nameless
     "It’s past 5PM, so many have just finished work themselves. There are a few people milling around in suits but it’s not ridiculously crowded. Maya is tending to the small line at the counter as Jun works her magic behind the machine. Marllie sucks in a deep breath as the familiar homey atmosphere washes over her."
     "It’s good to be back to normal."
     show coworker outfit2 down2
@@ -576,48 +614,51 @@ label scene_b9:
     CW "Do you want to get our table and I’ll get something for us? I know what you like, after all."
     Customer_side "Okay. I can say hi to both of them when she isn’t serving customers."
     "She people-watches until Blake returns with two mugs in hand."
-    CW "Your non-fat, extra hot caramel macchiato is here, m’lady."
+    CW happy hips2 "Your non-fat, extra hot caramel macchiato is here, m’lady."
     Customer_side "“M’lady?” Really?"
     CW "I am but thy humble servant."
     Customer_side "Stop it."
     CW "Doth thee not appreciateth mine efforts-"
     Customer_side "Oh, my God."
     "Blake snorts and sets the mugs down with a small bow. Marllie buries her face in her hands, trying not to laugh."
-    CW happy "Alright, I’ll stop."
+    CW happy -happy down2 "Alright, I’ll stop."
     Customer_side "Thank God."
     CW -happy "So, how did your last week go?"
     Customer_side "Well..."
+    stop music fadeout 1.0
     "Marllie is talking when she notices a customer watching them from the end of the queue. The woman squints, staring, and then suddenly makes a beeline for their table."
+    play music water fadein 1.0
     "Specifically Blake."
     show rando at right with moveinright
     show coworker at left with move
     Rando "Hi, can I please get a triple shot, non-fat, soy milk cappuccino to go? Oh, please make it lukewarm too. About 61 degrees. No hotter, no cooler."
-    CW "Er… ma’am, I’m not working today. I’m not even in uniform?"
+    CW sad "Er… ma’am, I’m not working today. I’m not even in uniform?"
     "Blake’s eyes flit to Marllie, screaming for help."
     Rando "Oh, make it a large too. Make it snappy, my bus arrives in seven minutes."
     "Blake opens her mouth again, seemingly ready to clarify again before the lady slams her money down on the table. Both Marllie and Blake almost jump out of their seats. Blake glares at her."
-    CW "Look, I’m not on shift. I’m not working.  There is another person at the counter, who is actually shifted on right now, and they’ll be very happy to help you."
+    CW angry "Look, I’m not on shift. I’m not working.  There is another person at the counter, who is actually shifted on right now, and they’ll be very happy to help you."
     "The customer actually growls, enraged."
     Rando "I’ve seen you serving people before! You have to help me! Do your job! My bus is coming soon and I can’t wait in this line!"with hpunch
     Customer_side "Ma’am, she’s really not-"
     "The customer rounds on her, face blotchy red with anger. Before she can do anything, Blake stands from her seat abruptly. Her chair scrapes loudly against the floor at it skitters back and the lady turns back to her. Blake looks furious."
     CW angry"Listen, lady --"
-    show boss at right with moveinright
+    show boss crossed1 at right with moveinright
     "Luckily, Jun swoops in, swiftly putting herself between Blake and the irate woman."
-    Boss "Okay. that’s enough. I was going to direct you to the counter, but now I’m just going to ask you to leave."
+    Boss angry  "Okay. that’s enough. I was going to direct you to the counter, but now I’m just going to ask you to leave."
     Rando "How dare you! I’m never taking my hard earned money here again!"with vpunch
     hide rando with moveoutright
     "She storms off and out of the shop. Jun rolls her eyes and slaps a hand over her forehead."
-    Boss "That’s literally what I just said."
+    Boss closed "That’s literally what I just said."
     "Blake slowly sits back down. She’s still glowering at the door."
-    Boss "Sorry about that. Are you two okay?"
+    Boss -closed "Sorry about that. Are you two okay?"
     Customer_side "Yes. Thank you, Jun. I don’t know what that was about."
     CW "Should’ve kicked her up the ass instead of kicking her out."
+    show boss happy
     "Jun smirks."
     Boss "I was tempted."
     "She glances between the pair, her lips twitching up faintly."
     show coworker -angry
-    Boss "Let me know if you girls need anything else. I’ll have Maya fetch out a slice of cake for you both. Consider it compensation."
+    Boss -happy "Let me know if you girls need anything else. I’ll have Maya fetch out a slice of cake for you both. Consider it compensation."
     #B & M, together: Thanks.
     BandM happy "Thanks."
     Boss "And is there a reason why you’re here on your day off too?"
@@ -629,6 +670,7 @@ label scene_b9:
     "Marllie’s face flushes pink. She’s flustered. It’s one thing for strangers to read her article, but another for people she knows and sees every day."
     CW "You haven’t even read it all yet."
     # fixing spelling here
+    stop music fadeout 3.0
     Boss "I skimmed it. It’s the first review we’ve gotten since we re-opened. It’s special! Thank you, Marllie. This means a lot."
     Customer_side "I’m glad it made you smile. I meant everything I said."
     Boss "I’ll get Maya to give you the biggest slice of cake."
@@ -637,7 +679,8 @@ label scene_b9:
     hide boss with moveoutright
     show coworker at center with move
     "Jun leaves, clutching the paper tightly in her hand. She waves it at a curious Maya as she trots back to the counter."
-    CW "That went well!"
+    play music happy fadein 3.0
+    CW happy "That went well!"
     Customer_side "I think it did too. Except for the… you know. Rude lady."
     CW angry "What a bitch, honestly."
     Customer_side "You looked like you were ready to throw punches."
@@ -649,21 +692,34 @@ label scene_b9:
     CW "M’lady, I would -"
     Customer_side angry "NO."
     #---- TIME SKIP
+    scene bg_cs_lounge with fade
+    show coworker outfit2 down2
     "Asher steps out of the stockroom a while after they arrive. He stops dead in his tracks as he spots them, eyes widening, and then he jogs over to their table. Marllie winces internally as she recalls the last time Asher had made comments about her and Blake."
+    show coworker at left with move
+    show bestie at right with easeinright
     Customer_side sad "{i}Oh no.{/i}"
     Bestie "Well, well, well.  Fancy seeing you two here. Together. Do I finally get to be fifty bucks richer?"
+    show coworker angry
     "Blake hisses something that sounds like a barely audible threat."
     CW "Don’t you dare start singing the Little Mermaid songs or I’ll-"
+    show bestie at center with easeinright
+    show mc annoyedclosed at right with easeinright
     "Maya appears, grabbing Asher by the sleeve of his shirt. Judging by her expression, she'd absolutely drag him back to the register by his ear if he wasn't so tall."
+    show mc hips1
+    show bestie distressed
     "Asher lets out a noise that sounds suspiciously like a whine."
     Bestie "Aw, come on, Maya. They're so cu-"
+    show coworker happy
     "He yelps as Maya pinches him."
-    MC "Sorry about this, you two. You know how it is when you're babysitting. All it takes is a few seconds."
+    MC annoyed "Sorry about this, you two. You know how it is when you're babysitting. All it takes is a few seconds."
     CW "I think you need a raise. Kids are hard work."
     MC "Tell me about it."
     "She yanks a loudly complaining Asher away. Marllie giggles at the ridiculous sight of it despite everything, noting Blake barely fighting back a grin herself."
+    hide mc with moveoutright
+    hide bestie with moveoutright
+    show coworker at center with move
     CW "I guess Maya took my title of Valiant Knight."
-    Customer_side -angry "You can both have the glory."
+    Customer_side neutral "You can both have the glory."
     CW "You honor me with your words. Does the dashing Knight get a reward?"
     menu:
         "The girl?":
@@ -686,28 +742,38 @@ label scene_b9:
 
     #[connect back to this. This next scene happens regardless of choice]
     "Marllie is distinctly aware of the fact that both Asher and Maya are spying on them. Asher’s head is in his hands. She can only barely make out what they’re saying."
-    Bestie "I can’t look away from this trainwreck."
-    MC "We need to do clean up and close down."
-    Bestie "Okay, well you go first."
+    scene bg_shop with fade
+    show mc annoyedclosed hips1 at left
+    show bestie at right
+    Bestie distressed "I can’t look away from this trainwreck."
+    MC up1 "We need to do clean up and close down."
+    Bestie -distressed "Okay, well you go first."
     MC "No, I can’t. It’s too awkward to look away from."
     Bestie "Shovel them out then. Markus has been sending me pictures of him flexing in the mirror all day, I gotta go home."
-    MC "Your boyfriend sending you pictures is why you’ve been popping in and out of the bathroom all day? Gross!"
-    Bestie "Well you wouldn’t blame me if you saw them!"
-    MC "Please stop talking."
+    MC hips1 annoyed "Your boyfriend sending you pictures is why you’ve been popping in and out of the bathroom all day? Gross!"
+    Bestie happy "Well you wouldn’t blame me if you saw them!"
+    MC annoyedclosed "Please stop talking."
     "Maya’s voice, louder now, snaps Marllie out of her panic."
-    MC "Hey, guys, we have to start cleaning up for the night soon."
-    Bestie "Yes, save them from themselves."
+    MC annoyed "Hey, guys, we have to start cleaning up for the night soon."
+    Bestie -happy "Yes, save them from themselves."
     "Maya shoots him a glare. He snorts and makes a zipping motion across his mouth."
+    scene bg_cs_lounge with fade
+    show coworker outfit2 down2
     Customer_side "Oh. It is getting late, isn’t it?"
     CW "It’s okay, I’ll get these to the kitchen."
     "Blake makes to grab their drinks and instead knocks hers. The mug slips off the saucer it’s sitting on. Marllie watches, almost in slow motion, as the mug tips sideways and its contents fly towards Blake, covering the entirety of the front of her shirt."
     "No one says a word. Blake is still frozen in her position, slowly but steadily dripping coffee onto the floor. Marllie claps one hand to her mouth."
+    show mc annoyedclosed hips1 at left with easeinleft
     MC "...You’re so lucky I haven’t mopped yet."
-    CW "Well, guess we have to go now."
+    CW sad "Well, guess we have to go now."
+    scene bg_shop with fade
+    show bestie distressed
     "Asher’s at the counter, burying his face in his hands helplessly."
     Bestie "I’m going to lose my fifty bucks."
+    scene bg_cs_lounge with fade
+    show coworker outfit2 down2 #coffeestained version
     Customer_side "Are you okay?"
-    CW "It’s just coffee. It’s cold. I can’t speak for my shirt, though."
+    CW sad "It’s just coffee. It’s cold. I can’t speak for my shirt, though."
     MC "I think more of it went on you than the floor, actually."
     Customer_side "I’ll walk with you, Blake."
     "Blake grabs a handful of napkins and attempts to wipe her front the best she can."
@@ -715,14 +781,16 @@ label scene_b9:
     Customer_side "Well given what you just did, I want to make sure you don’t trip over your own feet and die."
     CW "Wow? Such little faith?"
     Bestie "I don’t blame her!"
-    CW "No one asked you!"
+    CW angry "No one asked you!"
+    stop music fadeout 1.0
     jump j_sceneb10
 # Scene B10
 label scene_b10:
     scene bg_apartment with fade
-    show rival
+    play music goodmorning fadein 3.0
+    show rival distressed
     "Shay’s in the kitchen when they walk in. She looks over her shoulder at the sound of the door, then fully turns at the sight of Blake."
-    Rival "The fuck happened to you?"
+    Rival  "The fuck happened to you?"
     "Blake merely grunts at her and flips her off."
     CW "Marllie, this is Shay. Shay, this is Marllie. Play nice."
     "With that, Blake sulks off into her room and closes the door."
@@ -732,9 +800,11 @@ label scene_b10:
     "Shay barks out a laugh and shakes her head."
     Rival happy "Still managed to make a mess though. Typical Blake.  Well, my boring day off has been redeemed because I was able to witness this."
     "Shay finishes up making her drink. Marllie remains standing near the door. She’s not entirely sure what to do in this situation, with a person she’s heard so much about but never met."
+    stop music fadeout 2.0
     Rival "Can I get you anything? I’m afraid we don’t have much right now; it’s Blake’s turn to go shopping this week and she hasn’t yet."
     Customer_side "No, I’m good. Thank you."
     Rival "Alright then."
+    play music city fadein 3.0
     "Shay brings her mug over to the sofa and drops down, sipping at it with a satisfied sigh."
     Rival "You can sit if you want, you know. I’m not going to bite."
     Customer_side "Um. Okay."
@@ -748,7 +818,7 @@ label scene_b10:
     Customer_side "{i}It's like she's looking straight into my soul somehow. Ugh.{/i}"
     Rival "Listen. I'm going to say all this once and I'll know if you're lying to me. Got it?"
     "Marllie can only nod her head."
-    Rival "Okay. I care about Blake. She's like the sister I never had. An immature and annoying sister who makes me want to tear my hair out, but still my family."
+    Rival hips1 angry "Okay. I care about Blake. She's like the sister I never had. An immature and annoying sister who makes me want to tear my hair out, but still my family."
     Rival "I just want to make sure you care. If it was just sex, whatever, but I can tell Blake wants more than that. She's shit at hiding it."
     "Marllie's breath catches. She can only latch onto one part of all that."
     Customer_side "She likes me?"
@@ -765,10 +835,12 @@ label scene_b10:
     Rival "Okay, we're cool then."
     Customer_side "Yeah, we are."
     "There’s a comfortable silence for a few moments as they just sit next to each other."
-    Rival "So… Do you want to see Blake with a mullet and braces?"
+    Rival happy "So… Do you want to see Blake with a mullet and braces?"
+    stop music fadeout 1.0
     jump j_sceneb11
 label scene_b11:
-    scene bg_dorm
+    scene bg_dorm with fade
+    play music see loop fadein 3.0
     call phone_start
     call message_start("Blake <3", "hey")
     call message("Blake <3", "you there?")
@@ -815,9 +887,10 @@ label choice2:
     call message("Blake <3", "i’ll pcik up the pizza on my way over")
     call message("me", "Sounds good. I’ll see you soon!")
     call phone_end
+    stop music fadeout 1.0
     Customer_side sad "{i}What have I gotten myself into?{/i}"
-    "{b}TIME SKIP{/b}"
-    scene bg_dorm
+    scene bg_dorm with fade
+    play music park fadein 2.0
     Customer_side "Hey, Blake, can I ask you something?"
     show coworker outfit2 down2
     "Blake tries to answer once with a mouthful of pizza, realises it’s futile, swallows and tries again."
@@ -854,6 +927,7 @@ label choice2:
     Customer_side "{i}This is ridiculous.{/i}"
     Customer_side happy "I can’t do this anymore."
     CW "What? Is there something wrong with the pizza? It tastes fine to me-"
+    stop music fadeout 2.0
     Customer_side "{i}This would be comical if I didn’t have to live it.{/i}"
     Customer_side "{i}Tell.{/i}"
     Customer_side "{i}Her.{/i}"
@@ -868,6 +942,7 @@ label choice2:
     Customer_side sad "I’m so scared of ruining this friendship we have. I’ve never been so awkward with anyone in my life and still not minded."
     CW "Unless you’re secretly a mob boss or you're about to tell me that you voted for Ronald Dump, we're cool. We're fine. It’s okay. Everything is fine-"
     "Marllie stops her. She takes a deep breath."
+    play music love_beat loop fadein 3.0
     Customer_side "Blake."
     Customer_side "Do… do you remember when we first started talking, and there was that guy who wouldn’t leave me alone, and you… you pretended to be my girlfriend? "
     "Blake is still not saying anything, her eyes wide. Marllie ploughs on."
@@ -894,6 +969,7 @@ label choice2:
     CW "I think that's a good idea. And by the way..."
     "Blake kisses her, featherlight and all too brief; a promise of what’s to come."
     CW "I lied. I do find you very pretty. "
+    stop music fadeout 5.0
     scene black with fade
     #Fade to black:
     #[Have the background fade away to a black screen with just the text boxes and then:]
@@ -904,38 +980,68 @@ label choice2:
     CW "Crazy for you! Hey, that was smooth for me. High-five! ...No?"
     jump j_scene_epilogue
 label scene_epilogue:
-    scene bg_shop
+    scene bg_shop with fade
+    play sound bg_coffeeshop loop
+    play music nameless loop fadein 3.0
     "Two weeks later"
+    show customer
     "Marllie has to weave through a crowd of people to get to her usual table. Today seems to be another busy day for the cafe. "
     "Since that night, Blake has stayed at Marllie’s dorm more often than not -- much to Shay’s happiness. “Fucking finally,” was all she had said when they went to Blake’s apartment the next day. They hadn’t even said a word yet. Apparently she just knew. "
+    scene bg_cs_lounge with fade
+    show customer
     "From her table, Marllie can see right through to behind the counter. It’s so busy that Asher has manned the second machine, and Marllie knows that it hasn’t needed to see much use over the past few months. "
     "Blake is also on machine duty, completely focused on the tickets in front of her as she churns out the coffee to the customers. She’s rolled her short sleeves up all the way and Marllie takes a moment to appreciate her girlfriend’s profile."
     Customer "{i}Come on Marllie, you have all night to stare at her. Your exam notes won’t do themselves.{/i}"
     "Casting one more look over, she flexes her hands and gets to work. The sound of the coffee shop and her music blend together in the background as she types the hours away. "
     "She doesn’t resurface until a touch to her shoulder makes her look up."
     "She finds herself in a soft, sweet kiss. Marllie hums and her hand comes up to stroke Blake’s jaw. Blake pulls back far too soon, palms still pressed against the table. She has a shy smile that reflects what Marllie thinks hers must look like."
+    show customer happy at right with move
+    show coworker happy at left with easeinleft
     CW "Hi there."
-    "Blake leans in again but a loud crash makes both of them whip around. Asher is standing in front of the kitchen door, an empty tray hanging loosely from his grip as metal jugs and utensils lay scattered around his feet. The expression on his face is positively gleeful."
-    CW "Oh here we go."
+    "Blake leans in again but a loud crash makes both of them whip around. Asher is standing in front of the kitchen door, an empty tray hanging loosely from his grip as metal jugs and utensils lay scattered around his feet. The expression on his face is positively gleeful." with vpunch
+    CW sad "Oh here we go."
+    hide customer
+    hide coworker
+    show bestie happy
     Bestie happy "Maya! Maya I won! You owe me fifty bucks!"
+    scene bg_shop
+    show boss closed crossed1
     "Jun, who is counting the register, rolls her eyes."
     Boss closed "Good. Now you can pay for the surgery I’ll require to repair my eardrums. "
+    scene bg_cs_lounge
+    show bestie distressed
     "Asher actually looks a little sheepish as he casts a glance around the mess he’s made."
     Bestie "Yeah, uh. Oops?"
+    show bestie at left with move
+    show mc at right with easeinright
     MC happy "Oops. And you’re actually one day late. You owe me fifty bucks. "
     Bestie distressed "No."
-    MC "Yep. Cough up."
+    MC hips1 "Yep. Cough up."
     Bestie "No!"
     "Blake shakes her head as Maya and Asher argue. Jun ignores them entirely, used to their antics by now. She gestures to Blake."
-    Boss -closed "Come on, Blake. The sooner you clean up, the sooner you two can get back to… erm. Whatever you two are doing. But I’m glad you finally did something I told you to do."
+    show bestie at center with move
+    show boss crossed1 closed at left with easeinleft
+    Boss closed "Come on, Blake. The sooner you clean up, the sooner you two can get back to… erm. Whatever you two are doing. But I’m glad you finally did something I told you to do."
     Bestie happy "Oh, they did it alright."
+    hide boss
+    hide mc
+    hide bestie
+    show customer happy
+    show coworker at left
     "Marllie feels a brief surge of bravery; time to get her own back, she decides. Blake still within arm distance, she stands and reaches around her girlfriend’s waist and tugs her a little closer."
     Customer "More than once."
+    show coworker #panicked
     "Blake chokes on air. Asher gapes, shocked, then barks a loud laugh."
-    Bestie "Holy shit."
-    MC "Oh, Shay would have a field day with this."
-    CW "I hate all of you."
+    hide customer with easeoutright
+    show coworker at center with move
+    show bestie at left with easeinleft
+    show mc at right with easeinright
+    Bestie happy "Holy shit."
+    MC happy "Oh, Shay would have a field day with this."
+    CW angry "I hate all of you."
     "Marllie watches with a fond smile as they bicker and heckle Blake. Jun chuckles, giving Marllie a quick wink before she heads off into the back office."
     "The Daily Grind is doing so well now. All of the staff’s hard work is paying off. Her article hangs proudly at the counter, along with the picture her friends and now girlfriend had sent on the first day of her internship. Jun still regularly says it’s her favourite picture."
     "They’re both busy with their work, but Marllie knows she’ll walk home with Blake tonight -- and every other night after this. And it’s still a very new relationship where they’re learning more and more about each other."
     "She can’t wait."
+    stop music fadeout 3.0
+    scene black with fade

@@ -7,11 +7,13 @@ image bg_shop = "backgrounds/bg_cs_main.png"
 image bg_cs_lounge = "backgrounds/bg_cs_lounge.png"
 image bg_apartment = "backgrounds/bg_appartment.png"
 image bg_cobedroom = "backgrounds/bg_room.png"
+image bg_fallsidewalknight =im.Scale( im.MatrixColor("backgrounds/fallsidewalk.png", im.matrix.desaturate() * im.matrix.tint(0.9, 0.9, 1.0)),1920,1080)
 image bg_fallsidewalk = im.Scale("backgrounds/fallsidewalk.png",1920,1080)
 image bg_busystreet = "backgrounds/bg_street.png"
 image bg_park = "backgrounds/bg_park.png"
 image bg_dorm = "backgrounds/bg_dorm.png"
 image email2 =  Transform("emails/email2.PNG", yoffset=-300)
+image snow = Snow("backgrounds/snow.png")
 
 define audio.goodmorning = "music/Good-Morning.mp3"
 define audio.happy = "music/Happy-Song.mp3"  #coffee shop theme 1
@@ -29,10 +31,12 @@ define audio.love_beat = "music/Love-Beat.mp3" # date song
 define audio.alarm = "music/sfx/android-oxygen.mp3"
 define audio.espresso = "music/sfx/Making-Espresso.mp3"
 define audio.bg_coffeeshop = "music/sfx/CoffeeShopNoise.mp3"
-# The game starts here.S
+define audio.phonevibratelong= "music/sfx/Phone_Vibrating-Sound_Explorer.mp3"
+define audio.bg_car = "music/sfx/ambience_busy_street_road.mp3"
+# The game starts here.
 
 label splashscreen:
-    "This is a release for Yuri Game Jam 2018 and is still a work in progress.  "
+    "This is a release for Yuri Game Jam 2018 and is still a work in progress. We are working on a more polished version that is going to be released in about a month"
     return
 
 label start:
