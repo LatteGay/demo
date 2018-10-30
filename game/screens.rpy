@@ -345,6 +345,22 @@ init python:
             return int(self.xpos), int(self.ypos), st, self.image
 ###########################snowflake code ends #################################
 
+
+########################### wiggle code #################################
+    import math
+    def wiggle_function(obj, st, _):
+        rampup = 2.0
+        max_offset = 15.0
+        if st < rampup:
+            max_offset = st * max_offset / rampup
+        obj.xoffset = max_offset * math.sin(5 * math.pi * st)
+        return 0
+init:
+    transform wiggle(start_xalign):
+        xalign start_xalign
+        function wiggle_function
+########################### wiggle code #################################
+
 ################################################################################
 ## Styles
 ################################################################################

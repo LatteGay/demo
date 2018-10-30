@@ -31,6 +31,15 @@ layeredimage coworker:
         attribute neutral default
     group effect auto
 
+layeredimage blakephone:
+    group screen auto:
+        attribute phonepic03 default
+    group base auto:
+        attribute cell default
+
+
+
+
 #, xoffset=-200, yoffset=-25
 image side coworker_side =  LayeredImageProxy("coworker", Transform(crop=(0, 0, 800, 550), zoom=.8))
 #image side coworker_side = LayeredImageProxy("coworker")

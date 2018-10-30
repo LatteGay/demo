@@ -372,43 +372,34 @@ label scene_a7:
     Customer "You used to tutor?"
     CW_side  "Yeah, biology and maths."
     Customer "Are you in school too?"
-
     "Blake shakes her head."
-
     CW_side "I’m taking a break for a semester or two. I think. I don’t really know what I wanna do but I don’t want to move all the way back in with my mom yet in case I change my mind, so I’m just here."
-
     "She sighs a little wistfully."
-
     CW_side "I do miss the dogs, though. And my family too, of course."
-
     "Marllie’s entire being perks up."
     show customer hips1 happy with dissolve
     Customer "You have dogs?"
-
+    show customer at left with easeinright
+    show blakephone with easeinbottom
     "Blake is already reaching for her phone before the question is even fully posed to her. She clicks through her phone and into the library of images she has stored away."
-
     CW_side happy "Yeah, three."
-
     "She pulls up a picture with all three sitting in the living room and points each one out."
-
     CW_side "The big one is Ein. The oldest one too. Astro is the Shiba, and David’s the Pomeranian mix. We got him not long before I moved out."
-
     "Marllie’s eyes light up as she looks at them. She cups a hand over her mouth."
     show customer happy with dis
     Customer "They’re so adorable!"
     CW_side "I know, right? I’m thinking about getting another. I miss having a dog around and I know my roommate would be more than okay with it. Just waiting until the right time when I have some money saved. I’m walking other people's’ dogs right now for a bit of side money and it helps fill the hole a bit."
     Customer "If you do, I’d love to meet them. I’ve never had a pet before."
     CW_side -happy "Really? Never?"
+    hide blakephone with easeoutbottom
+    show customer at center with easeoutright
     Customer sad "Yeah… my parents didn’t really have time to take care of them and they don't really trust me to take care of one on my own. Maybe someday. Studying takes up a lot of time."
     show customer -sad
     "Blake flashes her a smile."
-
     show customer happy with dis
     CW_side happy "Yeah, you’ll want to be able to spoil them. If or when I do get one, I promise I’ll bring them in so you can meet them."
     Customer happy "I’d love that."
-
     "Blake notices Asher gesturing to her from the register, back from his break. She offers Marllie an apologetic grin."
-
     CW_side "Back to the grind, I guess. Good luck with your studying."
     Customer "Thanks. I might need a new coffee soon to keep awake."
 
@@ -556,10 +547,16 @@ label scene_a13:
     "Blake is waiting near the gate when Marllie arrives. One of the two dogs is whining and tugging at his lead, almost strangling himself in his attempt to enter the park faster. Blake gently scolds him and demands he sit, which he does… albeit very reluctantly. The other smaller dog, at least, waits patiently."
     show customer
     Customer "Sorry I’m late! You know how traffic is at this time of the week."
+    show customer at left with move
+    show alfredo with dissolve
+    show cookie open at right with dissolve
     "She notices the dogs and squeals."
     Customer happy "They’re so cute! What are their names? Would they be okay with me petting them?"
     CW_side outfit2 down2 happy "The big one is Cookie and the well-behaved one is Alfredo. They’re friendly."
+    show cookie closed at center with easeinleft
+    show alfredo at right with easeoutright
     "As if to emphasise it, Cookie is no longer trying to get into the park but instead pulling to get to Marllie. Alfredo’s tail beats against the pavement at the sight of a new friend."
+    show cookie open
     "Marllie crouches down to fuss them both equally, Cookie’s affectionate licks making her giggle. Alfredo whoofs as if demanding he gets a turn, too, so Marllie leans down further to scratch behind the smaller dog’s ears."
     CW_side "Sorry, I know Cookie can be a bit overwhelming. He almost knocked me down when I showed up to walk him for the first time."
     Customer "I love them. It’s already making me want a dog of my own."
@@ -567,6 +564,7 @@ label scene_a13:
     Customer "I enjoyed your company at the restaurant last night. I know I can talk a lot when it’s something I’m interested in…"
     CW_side "I didn’t mind. I can tell you’re passionate about your studies. That’s a good thing."
     "Marllie looks bashful."
+    show cookie closed
     Customer "That’s sweet of you to say..."
     "They chatter some more about their respective days, Blake regaling (what is probably) an exaggerated story of a ridiculously demanding customer. Marrlie has tears in her eyes from laughing so hard."
     CW_side -happy "So I had to add sixteen more pumps of caramel with what I’d already added and she was still insisting it wasn’t sweet enough. I watched her, with my own two eyes, add more of that artificial sweetener that we keep on the tables. Who needs that much sugar? Just because she had almond milk, doesn’t make it \"healthy\"."
@@ -583,20 +581,25 @@ label scene_a13:
     CW_side "Wow."
     Customer "Don’t be like that. I… like it."
     CW_side happy "You like it, huh?"
+    show customer angry
+    show customer blush with dis
     "Marllie blushes. She quickly changes the subject and soon they’re talking away again, and soon an hour’s passed and the little dog is trailing along at a slower, tired speed. Blake leans down to ruffle his fur."
+    show customer -blush with dis
     CW_side -happy "Aw, are you getting sleepy, buddy?"
-    Customer "You’d better get him home. I’d better get going, too, actually..."
+    show alfredo open with dis
+    Customer -angry "You’d better get him home. I’d better get going, too, actually..."
     "She whips out her phone and calls a cab. There’s one close by, so Blake heads off to wait with her."
     CW_side "You know… as long as I’m with them, you’re more than welcome to come along when I’m walking some dogs. I wouldn’t mind the company."
     show customer happy
+    show alfredo closed with dis
     "Marllie pauses as she approaches the car, a slow, beaming smile spreading across her lips. Blake isn’t sure if she’s mistaking the faint sheen of colour on the other girl’s face."
     Customer "That would be wonderful."
     "Marllie leans down to give both dogs a goodbye scratch. She straightens up again, hesitates for a second before wrapping her arms around Blake’s shoulders for a quick hug. The sudden, unexpected contact and hands too full of dog leashes stops Blake from hugging back."
     "It’s brief, but Blake’s heart is pounding out of her chest anyway. Marllie has to lean up on her tiptoes and she's so warm and her perfume smells so nice and-"
     "Blake bites back an embarrassing noise of protest when Marllie pulls away. There’s a lump stuck in her throat as Marllie waves, pink-faced, and climbs into the waiting cab."
-    hide customer disolve
+    hide customer with dissolve
     stop music fadeout 2.0
     "As the vehicle drives away, Blake grips the leads tightly and starts to tug the dogs home. She resists the urge to watch the car turn to the next street."
-    CW_side angry blush "{i}Oh Jesus, I am so fucked.{/i}"
+    CW_side angry blush "{i}Oh Jesus, I am so fucked.{/i}" #panic face
     scene black with fade
     jump j_sceneb1

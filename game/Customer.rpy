@@ -8,9 +8,10 @@ layeredimage customer:
         attribute crossed1 default
     group head auto:
         attribute neutral default
-    group blush auto
+    group effect auto
 
 image side customer_side =  LayeredImageProxy("customer", Transform(crop=(0, 0, 800, 650), zoom=0.8))
+image customer_back = "sprites/customer/MARLLIE.png"
 
 define Customer = Character("Marllie", image= "customer", who_color="#fff2d3")
 define Marrlley = Character("Marrlley", image= "customer", who_color="#fff2d3")

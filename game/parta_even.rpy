@@ -142,13 +142,16 @@ label scene_a6:
     "Blake grumbles under her breath. The milk is finally ready. Blake is ready for this to be over."
     "Finally, the order is done. She wipes her sweaty hands on her apron and snaps a lid onto the cup."
     CW_side happy "Order for Marrlley!"
-    show customer neutral
+    show customer neutral with dissolve
     "Marrlley is up at the counter in a flash. She takes the coffee with another thank you and glides away. She sweeps her hair over on shoulder as she retreats, and it uncovers the back of the jacket."
+    hide customer with dissolve
+    show customer_back
     "{b}MARLLIE{/b}"
+    hide customer_back with dissolve
     "Blake’s eyes widen before she remembers what she had written on the cup. "
     "{b}Marrlley{/b}"
     "She has a dramatic flashback to every other time she’s written Marllie’s name and she’s more than certain none of them were correct."
-    CW_side "{i}Her name was right there. God damn it. That’s embarrassing.{/i}"
+    CW_side "{i}Her name was right there. God damn it. That’s embarrassing.{/i}" #panic face TODO
     "She leans on the countertop and covers her face with her hands just as Asher walks back out."
     hide customer with dissolve
     show bestie with dissolve

@@ -75,7 +75,11 @@ label scene_b2:
     "Marllie cocks her head to one side, cheek propped up against a hand as she watches Blake try to keep up with the flow of people.  She catches Blake’s eye at a break in the line, and she laughs as the other girl shoots her a pleading look."
     "Marllie has time to shoot her a thumbs up before the next customer comes up to the counter. As Blake gets back to work, Marllie turns her attention back to her laptop."
     Customer_side "{i}Hmm, maybe my internship supervisor should have replied by now. I did send the first message two days ago. {/i}"
-    # TODO EMAIL HERE
+    play sound phonevibratelong
+    call phone_start
+    stop sound
+    call message_img("r.warwick","","emails/re_intern.PNG")
+    call phone_end
     "This is actually going to happen! She shoots another quick email thanking them and confirming she’ll be there and sinks into her seat."
     "This time next week, she’ll have already started her internship."
     "There’s a huge weight off her shoulders but at the same time, the familiar dread settles into the pit of her stomach as the reality of the internship truly sinks in."
@@ -111,7 +115,7 @@ label scene_b2:
     "Marllie isn’t used to receiving such a barrage of compliments. She stares bashfully into her mug of coffee."
     CW "D’you wanna help me walk the dogs again later? We can get some dinner before too if you’re up for it."
     "Marllie’s glad for the change of topic and even happier for the offer. Spending time with some dogs and Blake is a perfect way to celebrate.  She beams."
-    Customer_side "Of course I would. Same time as usual?"
+    Customer_side blush "Of course I would. Same time as usual?"
     stop music fadeout 3.0
     CW "Same time as usual."
     Customer_side "I can’t wait!"
@@ -132,24 +136,24 @@ label scene_b3:
     "Marllie reaches into her pocket and taps away at her phone."
     call phone_start from _call_phone_start
     call message_start("me", "I’m home safely. Did you get home okay?") from _call_message_start
-    call message("Blake(VoᴥoV)", "ytes and no") from _call_message
-    call message("Blake (VoᴥoV)", "i got home fine but i left a mess in the kitchen earlier lol") from _call_message_1
-    call message("Blake(VoᴥoV)", "shay almost suffocated me with my sock when i walked back in") from _call_message_2
-    call message("Blake (VoᴥoV)", "my bad") from _call_message_3
-    call message("Blake (VoᴥoV)", "(X_X)") from _call_message_4
+    call message("Blake(V•́ᴥ•́V)", "ytes and no") from _call_message
+    call message("Blake (V•́ᴥ•́V)", "i got home fine but i left a mess in the kitchen earlier lol") from _call_message_1
+    call message("Blake(V•́ᴥ•́V)", "shay almost suffocated me with my sock when i walked back in") from _call_message_2
+    call message("Blake (V•́ᴥ•́V)", "my bad") from _call_message_3
+    call message("Blake (V•́ᴥ•́V)", "(X_X)") from _call_message_4
     call message("me", "Oh dear.") from _call_message_5
     call message("me", "Wait, is the kitchen and the sock related?") from _call_message_6
-    call message("Blake (VoᴥoV)", "well lets just say that i fdound my missing laundry") from _call_message_7
+    call message("Blake (V•́ᴥ•́V)", "well lets just say that i fdound my missing laundry") from _call_message_7
     call message("me", "I’m not even going to ask.") from _call_message_8
-    call message("Blake (VoᴥoV)", "i mean i dont have answers lamo") from _call_message_9
-    call message("Blake (VoᴥoV)", "lamp") from _call_message_10
-    call message("Blake(VoᴥoV)", "lmao") from _call_message_11
-    call message("Blake (VoᴥoV)", "fuck") from _call_message_12
+    call message("Blake (V•́ᴥ•́V)", "i mean i dont have answers lamo") from _call_message_9
+    call message("Blake (V•́ᴥ•́V)", "lamp") from _call_message_10
+    call message("Blake(V•́ᴥ•́V)", "lmao") from _call_message_11
+    call message("Blake (V•́ᴥ•́V)", "fuck") from _call_message_12
     call message("me", "...Go to bed, Blake. I’ll see you tomorrow morning.") from _call_message_13
-    call message("Blake (VoᴥoV)", "ok mom") from _call_message_14
+    call message("Blake (V•́ᴥ•́V)", "ok mom") from _call_message_14
     call message("me", "Goodnight!!") from _call_message_15
-    call message("Blake (VoᴥoV)", "gniught") from _call_message_16
-    call message("Blake (VoᴥoV)", "( ˘ ³˘)<3  (VoᴥoV) (-__-)zzzZZZ") from _call_message_17
+    call message("Blake (V•́ᴥ•́V)", "gniught") from _call_message_16
+    call message("Blake (V•́ᴥ•́V)", "( ˘ ³˘)<3  (V•́ᴥ•́V) (-__-)zzzZZZ") from _call_message_17
     call phone_end from _call_phone_end
     play music see loop fadein 2.0
     "Marllie smiles at the exchange, despite the typos. And the lack of punctuation. And the six different texts Blake chose to send instead of one with proper sentences. It had been a pet peeve of Marllie’s at first, but now she didn’t mind at all. Even when it meant her phone was going off at all hours of the day."
@@ -177,6 +181,7 @@ label scene_b4:
     "{i}. . .{/i}"
     Customer_side "{i}Well, today’s the day.{/i}"
     "Marllie lets herself lie still for a second. She closes her eyes against her pillow as the nervousness begins to creep its way into her already. She groans."
+    play music lovebeat loop fadein 2.0
     Customer_side "{i}What if I run away? Move to some eastern European fishing village and become a fisherman. I can even learn to bake my own bread and I’ll ride a bike everywhere. It’ll be lovely.{/i}"
     scene bg_dorm with fade
     stop sound
@@ -196,23 +201,23 @@ label scene_b4:
     "Her eyes widen. She hurriedly pulls off a glove to unlock her phone."
     stop sound
     call phone_start from _call_phone_start_1
-    call message_start("Blake <3", "hey my dude") from _call_message_start_1
-    call message("Blake <3", "i kwnow its ur first dayt at yuor new place today") from _call_message_18
-    call message("Blake <3", "just texting to wish u good luck!!! we    believe in you!!!") from _call_message_19
+    call message_start("Blake (V•́ᴥ•́V)", "hey my dude") from _call_message_start_1
+    call message("Blake (V•́ᴥ•́V)", "i kwnow its ur first dayt at yuor new place today") from _call_message_18
+    call message("Blake (V•́ᴥ•́V)", "just texting to wish u good luck!!! we    believe in you!!!") from _call_message_19
     #call message("Blake <3", ":thumbsup: :fist: :muscle: :dancer:") from _call_message_20
-    call message("Blake <3", "(•̀ᴗ•́)b") from _call_message_20
+    call message("Blake (V•́ᴥ•́V)", "(•̀ᴗ•́)b") from _call_message_20
     call message("", "Blake is typing…") from _call_message_21
     # TODO CG
-    call message("Blake (VoᴥoV)", "(Attached is a photo of Blake, Maya and Asher squashed into the frame. They’re all smiling at the camera with a thumbs up)") from _call_message_22
+    call message_img("Blake (V•́ᴥ•́V)", "", "cg/phonepic02_downsize.png") from _call_message_22
     call message("me", "Aww, thank you!! I appreciate this a lot this morning. Please let the others know too.") from _call_message_23
-    call message("Blake (VoᴥoV)", "its all good friendo") from _call_message_24
-    call message("Blake (VoᴥoV)", "i gotta go but") from _call_message_25
-    call message("Blake (VoᴥoV)", "seriously tho") from _call_message_26
-    call message("Blake (VoᴥoV)", "you got this") from _call_message_27
-    call message("Blake (VoᴥoV)", "ur so smart and good at what u do") from _call_message_28
-    call message("Blake (VoᴥoV)", "your supervisor is gonna be hella impressed as fuck") from _call_message_29
-    call message("Blake (VoᴥoV)", "i believe in you even if u don’t") from _call_message_30
-    call message("Blake (VoᴥoV)", "go get em friendo") from _call_message_31
+    call message("Blake (V•́ᴥ•́V)", "its all good friendo") from _call_message_24
+    call message("Blake (V•́ᴥ•́V)", "i gotta go but") from _call_message_25
+    call message("Blake (V•́ᴥ•́V)", "seriously tho") from _call_message_26
+    call message("Blake (V•́ᴥ•́V)", "you got this") from _call_message_27
+    call message("Blake (V•́ᴥ•́V)", "ur so smart and good at what u do") from _call_message_28
+    call message("Blake (V•́ᴥ•́V)", "your supervisor is gonna be hella impressed as fuck") from _call_message_29
+    call message("Blake (V•́ᴥ•́V)", "i believe in you even if u don’t") from _call_message_30
+    call message("Blake (V•́ᴥ•́V)", "go get em friendo") from _call_message_31
     call message("", "Blake is typing…") from _call_message_32
     call message("", "Blake is typing…") from _call_message_33
     call message("", "Blake is typing…") from _call_message_34
@@ -220,18 +225,20 @@ label scene_b4:
     # TODO PUT FLASH HERE???
     call phone_end from _call_phone_end_1
     #call message("me", "(Flashing of a heart emoji in the message box as Marllie inputs and deletes it repeatedly)")
-    Customer_side "..." #blush/concerned
+    Customer_side neutral "..." #blush/concerned
     call phone_start from _call_phone_start_2
     call message("me", "<3") from _call_message_36
     call phone_end from _call_phone_end_2
     "Marllie puffs out a breath, the cold air leaving a visible mist. She reads through the texts again, staring at the photo."
     "Her heart is still thrumming wildly in her chest. The panic still has a vice grip around her heart, but it’s enough for a brief surge of confidence. Her phone goes back into her pocket, though she keeps a tight grip around it. The image sent to her stays in her mind."
+    stop music fadeout 2.0
     stop sound
     "She inhales, straightens, and steps inside."
+    scene black with fade
     jump j_sceneb5
 # Scene B5
 label scene_b5:
-    scene bg_fallsidewalk
+    scene bg_fallsidewalk with fade
     show snow
     "Marllie steps off the bus, drawing her coat tighter around her as the sudden cold makes her shiver. It’s enough to chase away the tendrils of weariness building behind her eyes."
     "It’s finally the weekend. Though the first week of her internship has been much more enjoyable than expected, she’s relieved to return to familiarity."
@@ -255,20 +262,23 @@ label scene_b5:
     Customer_side "It really, really did."
     MC -happy "Good. I was terrified too when I first got this job. But after the first day, it got a lot easier. You’ve done the hardest part."
     show mc at left with moveinleft
-    show boss crossed1 at right with moveinright
+    show boss neutralalt crossed1 at right with moveinright
     "Just then, Jun steps out of the storeroom. She notices the two women conversing, stopping in her tracks once she makes eye-contact with Marllie. Marllie can’t help but notice the bags that lay beneath her eyes."
-    Boss "Good afternoon, Marllie. It’s good to see you here again."
+    show boss up1 with dis
+    Boss happyalt "Good afternoon, Marllie. It’s good to see you here again."
+    show boss crossed1 with dis
     Customer_side -happy "Hi Jun! Long day?"
-    Boss "You could say that."
+    Boss closedalt "You could say that."
+    show boss happyalt with dis
     "Jun sighs and shakes her head, as if she’s trying to dispel her thoughts. She looks up again with a smile that looks a little too forced to be completely genuine."
     Boss "Ah, doesn’t matter. Congratulations on starting your new internship though!"
     Customer_side "Oh, thank you!"
     Customer_side "Wait, how did you know about it?"
     Boss "Well, you aren’t coming in at your usual times. And I caught the three of them taking that selfie for you. They told me."
-    Customer_side "It really was very sweet."
+    Customer_side happy "It really was very sweet."
     MC "Well, we’re all happy for you. We’ve all seen how much work you do on that laptop."
-    Boss "We certainly have. I’m sure you’ll do a great job there."
-    Customer_side "Thank you so much. I hope so."
+    Boss neutralalt "We certainly have. I’m sure you’ll do a great job there."
+    Customer_side -happy "Thank you so much. I hope so."
     Boss "You will."
     "The phone rings from the office. Jun gives another tired smile."
     Boss "Duty calls; I have to take that. Congratulations again, Marllie."
@@ -436,11 +446,17 @@ label scene_b6:
 label scene_b7:
     scene bg_park with fade
     play music theloop loop fadein 3.0
-    show coworker outfit2 down2
+    show coworker outfit2 down2 at left
+    show cookie open at center
+    show alfredo at right
     CW "I might have to walk these guys earlier in the day. It’s getting super dark and super cold, super early."
     Customer_side "Makes sense. Wouldn’t want anyone to catch a cold."
     CW "Tell that to them. You saw what happened when I told them we were going for walkies."
+    show cookie at wiggle(0.5)
+    show alfredo open at wiggle(1.0)
     "The dogs are both tugging incessantly on their leads, attempting to sniff at every tree they pass. They’d ran excitedly around the house the second Blake had said the magic word, both barking and yelping and climbing over each other in a fight to get out the door first."
+    show cookie open at center
+    show alfredo at right
     Customer_side "At least they’re happy. And warm in those thick coats. But if they keep this level of energy up, we’ll have to carry Alfredo back again."
     CW "Yeah. He’ll definitely sleep well tonight."
     Customer_side "I’m definitely feeling that. Pretty sure I’m just going to spend tomorrow lounging in bed."
@@ -455,8 +471,10 @@ label scene_b7:
     "Blake sighs. Cookie starts to pull harder, once again attempting to chase after the same flock of birds. Blake wrestles him back."
     CW"Well, you know that Espresso Express on the corner? Pretty sure people are going there instead. Big, mainstream franchise. Cheaper too. A lot of the college students are going there now, that’s for sure."
     Customer_side "That’s a lot of lost customers."
-    CW"Luckily the office workers are still coming."
+    CW "Luckily the office workers are still coming."
     Customer_side "Are they enough though?"
+    show cookie -open
+    show alfredo -open
     CW"I dunno. It’ll be okay though, Jun and Maya have come up with some ideas to try and promote us a bit. Get more customers coming through the door."
     Customer_side "Stuff like what?"
     "Blake winks at her."
@@ -498,7 +516,7 @@ label scene_b8:
     call message_img("r.warwick","","emails/email2.PNG") from _call_message_img
     call phone_end from _call_phone_end_3
     Boss "Hey, I heard you were looking for me?"
-    show boss crossed1
+    show boss neutralalt crossed1
     # added soem words fo grammar's sake
     "The sound of a chair scraping causes Marllie to look up from her phone. Jun drops into the empty chair across the table."
     Customer_side "Yes! I, um, wanted to ask if you could help me with something I’m doing for work."
@@ -507,25 +525,27 @@ label scene_b8:
     "Jun’s left eyebrow almost disappears into her hairline."
     Boss crossed1 "And you want to write about this place?"
     Customer_side "Yeah! I love it here. And.. well. I know that you guys are having a bit of a rough time with customers right now. I know I don’t actually work here, but I still want to help out in any way that I can."
+    show boss happyalt with dis
+    show boss neutralalt with dis
     "Jun’s mouth opens and closes a few times, almost as if she’s at a loss for words."
     Boss "I- yes! Okay. What do I need to do?"
     Customer_side "I was thinking of doing a little interview with my opinion piece. One of the biggest reasons I come here is because the atmosphere is… warm and welcoming. And really, that’s because of you. So I thought the best way to capture that would be letting you say how you feel."
-    Boss "That’s always how I’d hoped it would feel."
+    Boss happyalt "That’s always how I’d hoped it would feel."
     Customer_side "Are you available now? I’m waiting for Blake anyway so I have some free time."
-    Boss "Yes."
+    Boss neutralalt "Yes."
     Customer_side "Okay! Great! It won’t take long anyway."
     "It takes them a good twenty minutes to get through the small list of questions, and it’s easy to see how much Jun cares. She talks animatedly throughout, pausing sometimes to choose her words more carefully. Marllie records it all on her phone, and after their talk, she knows exactly how she wants to frame her part."
     "Jun pushes herself up from her chair once they’re done. She still looks tired, but Marllie hopes this lifts some of that heavy weight from her shoulders. It’s another little push that might help The Daily Grind."
     Boss "And Marllie? Thank you. I really mean that."
     Customer_side "You don’t need to thank me. I told you, I love it here."
-    Boss "I’m not usually a hugging person but can I give you a hug?"
+    Boss happyalt "I’m not usually a hugging person but can I give you a hug?"
     Customer_side "Oh! Um- of course!"
     "Jun does, squeezing Marlie tightly. Marllie returns it because the truth is this place has been a second home to her since she moved here, far away from all her family."
     Customer_side "{i}I hope this helps. I don't want it to end.{/i}"
     "Blake walks back in from her lunch. And she's one of the reasons this is so important to Marllie, isn't she? Even if nothing ever becomes of..."
     "Marllie doesn't want to finish that thought. Blake's one of the very few close friends she's ever had. Whether they're ever more doesn't matter, but it's another example of the fact they've all found something important here."
     "Jun releases her, and that's when they both notice the others staring at them curiously. Jun pays them no mind."
-    Boss "You'll tell me as soon as the article is out, won't you? No matter what happens, I want it framed behind the counter. And in the back office."
+    Boss neutralalt down1 "You'll tell me as soon as the article is out, won't you? No matter what happens, I want it framed behind the counter. And in the back office."
     "Marllie smiles softly and nods."
     Customer_side "Of course I will."
     Boss "Good."
@@ -563,25 +583,25 @@ label scene_b9:
     "*phone ringing*"
     stop sound
     call phone_start from _call_phone_start_4
-    call message_start("Blake (VoᴥoV)", "hey u home??") from _call_message_start_2
+    call message_start("Blake (V•́ᴥ•́V)", "hey u home??") from _call_message_start_2
     call message("me", "Yes, got back not long ago. I can't believe it's over!") from _call_message_37
-    call message("Blake (VoᴥoV)", "you did it!! :grin: :thumbsup: :heart: :heart: im  so prtoyd ofu!!!!!") from _call_message_38
-    call message("Blake (VoᴥoV)", "proud!! you kno what i mean") from _call_message_39
+    call message("Blake (V•́ᴥ•́V)", "you did it!! :grin: :thumbsup: :heart: :heart: im  so prtoyd ofu!!!!!") from _call_message_38
+    call message("Blake (V•́ᴥ•́V)", "proud!! you kno what i mean") from _call_message_39
     call message("me", "Aw thanks. <3 So am I.") from _call_message_40
     call message("", "Blake is typing…") from _call_message_41
-    call message("Blake (VoᴥoV)", "u should be") from _call_message_42
+    call message("Blake (V•́ᴥ•́V)", "u should be") from _call_message_42
     call message("me", "Aww, thank you!! I appreciate this a lot this morning. Please let the others know too.") from _call_message_43
-    call message("Blake (VoᴥoV)", "we shoiwulf  go  out to celebrate :-)") from _call_message_44
+    call message("Blake (V•́ᴥ•́V)", "we shoiwulf  go  out to celebrate :-)") from _call_message_44
     call message("me", "I'd love that.") from _call_message_45
-    call message("Blake(VoᴥoV)", "u pick where u wanr to go") from _call_message_46
+    call message("Blake (V•́ᴥ•́V)", "u pick where u wanr to go") from _call_message_46
     call message("me", "I know it's your workplace, but how about we just go for a coffee? I want to show Jun the article I wrote. I promised. And you're not working today, right?") from _call_message_47
-    call message("Blake (VoᴥoV)", "sure!! we can totallu do  that") from _call_message_48
-    call message("Blake (VoᴥoV)", "jun will be v happy") from _call_message_49
+    call message("Blake (V•́ᴥ•́V)", "sure!! we can totallu do  that") from _call_message_48
+    call message("Blake (V•́ᴥ•́V)", "jun will be v happy") from _call_message_49
     call message("me", "Shall I meet you there in an hour? I want to shower and change my clothes.") from _call_message_50
-    call message("Blake (VoᴥoV)", "ye thats for the besr im still in bed lmao") from _call_message_51
-    call message("Blake (VoᴥoV)", "...It's 4:30.") from _call_message_52
-    call message("Blake (VoᴥoV)", "ur not my mom") from _call_message_53
-    call message("Blake (VoᴥoV)", "but swwya there!!") from _call_message_54
+    call message("Blake (V•́ᴥ•́V)", "ye thats for the besr im still in bed lmao") from _call_message_51
+    call message("Blake (V•́ᴥ•́V)", "...It's 4:30.") from _call_message_52
+    call message("Blake (V•́ᴥ•́V)", "ur not my mom") from _call_message_53
+    call message("Blake (V•́ᴥ•́V)", "but swwya there!!") from _call_message_54
     call phone_end from _call_phone_end_4
     "Marllie spends far too long and makes far too much of a mess going through her wardrobe before she settles on what to wear. Over her internship, she’d only been able to make it to The Daily Grind a small handful of times. She’d seen Blake outside of it even less, considering how tired she usually was after waking so early."
     "Texting had barely made up for it, but Marllie was trying to keep a consistent sleeping pattern."
@@ -643,23 +663,23 @@ label scene_b9:
     Customer_side "Ma’am, she’s really not-"
     "The customer rounds on her, face blotchy red with anger. Before she can do anything, Blake stands from her seat abruptly. Her chair scrapes loudly against the floor at it skitters back and the lady turns back to her. Blake looks furious."
     CW angry"Listen, lady --"
-    show boss crossed1 at right with moveinright
+    show boss neutralalt crossed1 at right with moveinright
     "Luckily, Jun swoops in, swiftly putting herself between Blake and the irate woman."
-    Boss angry  "Okay. that’s enough. I was going to direct you to the counter, but now I’m just going to ask you to leave."
+    Boss angryalt  "Okay. that’s enough. I was going to direct you to the counter, but now I’m just going to ask you to leave."
     Rando "How dare you! I’m never taking my hard earned money here again!"with vpunch
     hide rando with moveoutright
     "She storms off and out of the shop. Jun rolls her eyes and slaps a hand over her forehead."
-    Boss closed "That’s literally what I just said."
+    Boss closedalt "That’s literally what I just said."
     "Blake slowly sits back down. She’s still glowering at the door."
-    Boss -closed "Sorry about that. Are you two okay?"
+    Boss neutralalt "Sorry about that. Are you two okay?"
     Customer_side "Yes. Thank you, Jun. I don’t know what that was about."
     CW "Should’ve kicked her up the ass instead of kicking her out."
-    show boss happy
+    show boss happyalt
     "Jun smirks."
     Boss "I was tempted."
     "She glances between the pair, her lips twitching up faintly."
     show coworker -angry
-    Boss -happy "Let me know if you girls need anything else. I’ll have Maya fetch out a slice of cake for you both. Consider it compensation."
+    Boss neutralalt "Let me know if you girls need anything else. I’ll have Maya fetch out a slice of cake for you both. Consider it compensation."
     #B & M, together: Thanks.
     BandM happy "Thanks."
     Boss "And is there a reason why you’re here on your day off too?"
@@ -667,13 +687,13 @@ label scene_b9:
     "Marllie carefully extracts the piece of paper from her bag. She hands it to Jun proudly, who takes it gently."
     Customer_side "I think they’ll tweak the photo and layout a bit when it comes time to actually publish it. But this is what they gave me before I left. I hope you like it."
     "Jun glances over it, her smile growing with each word. She hugs it to her chest, careful not to crumple it in any way."
-    Boss happy "I’m going to frame this near the counter so everyone can see. Maybe make another copy for my office."
+    Boss happyalt "I’m going to frame this near the counter so everyone can see. Maybe make another copy for my office."
     "Marllie’s face flushes pink. She’s flustered. It’s one thing for strangers to read her article, but another for people she knows and sees every day."
     CW "You haven’t even read it all yet."
     # fixing spelling here
     stop music fadeout 3.0
     Boss "I skimmed it. It’s the first review we’ve gotten since we re-opened. It’s special! Thank you, Marllie. This means a lot."
-    Customer_side "I’m glad it made you smile. I meant everything I said."
+    Customer_side blush "I’m glad it made you smile. I meant everything I said."
     Boss "I’ll get Maya to give you the biggest slice of cake."
     "Before she leaves, her eyes flicker between them again."
     Boss "I’ll leave you two to it then. Thank you again for this."
@@ -682,7 +702,7 @@ label scene_b9:
     "Jun leaves, clutching the paper tightly in her hand. She waves it at a curious Maya as she trots back to the counter."
     play music happy fadein 3.0
     CW happy "That went well!"
-    Customer_side "I think it did too. Except for the… you know. Rude lady."
+    Customer_side -blush "I think it did too. Except for the… you know. Rude lady."
     CW angry "What a bitch, honestly."
     Customer_side "You looked like you were ready to throw punches."
     CW "Duh, she was being rude as fuck to you."
@@ -721,13 +741,13 @@ label scene_b9:
     show coworker at center with move
     CW "I guess Maya took my title of Valiant Knight."
     Customer_side neutral "You can both have the glory."
-    CW "You honor me with your words. Does the dashing Knight get a reward?"
+    CW -happy "You honor me with your words. Does the dashing Knight get a reward?"
     menu:
         "The girl?":
             Customer_side "The girl?"
             Customer_side "{i}WHAT. CLOSE YOUR MOUTH RIGHT NOW. STOP HAVING IT BE OPEN.{/i}"
             "Blake wiggles her eyebrows."
-            CW "Alriiiight, not bad. Not bad at all."
+            CW happy hips2 "Alriiiight, not bad. Not bad at all."
             Customer_side "{i}Jesus Christ. Act casual. Save this and then shut up and never speak again.{/i}"
             Customer_side "I mean that’s usually what happens, right? Happily ever after?"
         "You’re calling yourself dashing now?":
@@ -759,9 +779,10 @@ label scene_b9:
     Bestie -happy "Yes, save them from themselves."
     "Maya shoots him a glare. He snorts and makes a zipping motion across his mouth."
     scene bg_cs_lounge with fade
-    show coworker outfit2 down2
+    show coworker outfit2 hips2
     Customer_side "Oh. It is getting late, isn’t it?"
     CW "It’s okay, I’ll get these to the kitchen."
+    show coworker sad outfit3 down2 with dis
     "Blake makes to grab their drinks and instead knocks hers. The mug slips off the saucer it’s sitting on. Marllie watches, almost in slow motion, as the mug tips sideways and its contents fly towards Blake, covering the entirety of the front of her shirt."
     "No one says a word. Blake is still frozen in her position, slowly but steadily dripping coffee onto the floor. Marllie claps one hand to her mouth."
     show mc annoyedclosed hips1 at left with easeinleft
@@ -772,13 +793,13 @@ label scene_b9:
     "Asher’s at the counter, burying his face in his hands helplessly."
     Bestie "I’m going to lose my fifty bucks."
     scene bg_cs_lounge with fade
-    show coworker outfit2 down2 #coffeestained version
+    show coworker outfit3 down2 #coffeestained version
     Customer_side "Are you okay?"
     CW sad "It’s just coffee. It’s cold. I can’t speak for my shirt, though."
     MC "I think more of it went on you than the floor, actually."
     Customer_side "I’ll walk with you, Blake."
     "Blake grabs a handful of napkins and attempts to wipe her front the best she can."
-    CW "Thanks. You sure?"
+    CW -sad "Thanks. You sure?"
     Customer_side "Well given what you just did, I want to make sure you don’t trip over your own feet and die."
     CW "Wow? Such little faith?"
     Bestie "I don’t blame her!"
@@ -792,8 +813,12 @@ label scene_b10:
     show rival distressed
     "Shay’s in the kitchen when they walk in. She looks over her shoulder at the sound of the door, then fully turns at the sight of Blake."
     Rival  "The fuck happened to you?"
+    show rival at right with move
+    show coworker angry outfit3 down2 with dissolve
     "Blake merely grunts at her and flips her off."
     CW "Marllie, this is Shay. Shay, this is Marllie. Play nice."
+    hide coworker with dissolve
+    show rival at center with move
     "With that, Blake sulks off into her room and closes the door."
     Customer_side "Um… she knocked it over when cleaning up. Got half a mug of coffee down her front."
     Rival "But it’s her day off today?"
@@ -801,13 +826,13 @@ label scene_b10:
     "Shay barks out a laugh and shakes her head."
     Rival happy "Still managed to make a mess though. Typical Blake.  Well, my boring day off has been redeemed because I was able to witness this."
     "Shay finishes up making her drink. Marllie remains standing near the door. She’s not entirely sure what to do in this situation, with a person she’s heard so much about but never met."
-    stop music fadeout 2.0
-    Rival "Can I get you anything? I’m afraid we don’t have much right now; it’s Blake’s turn to go shopping this week and she hasn’t yet."
+    stop music fadeout 5.0
+    Rival distressed chin1 "Can I get you anything? I’m afraid we don’t have much right now; it’s Blake’s turn to go shopping this week and she hasn’t yet."
     Customer_side "No, I’m good. Thank you."
-    Rival "Alright then."
+    Rival -distressed "Alright then."
     play music city fadein 3.0
     "Shay brings her mug over to the sofa and drops down, sipping at it with a satisfied sigh."
-    Rival "You can sit if you want, you know. I’m not going to bite."
+    Rival hips1 "You can sit if you want, you know. I’m not going to bite."
     Customer_side "Um. Okay."
     "Marllie gingerly sits at the other side. She tries not to sit too far away that it would be obvious that she's uncomfortable, but not too close either. Shay sets her mug down on the table."
     Rival "So. You're her."
@@ -822,17 +847,17 @@ label scene_b10:
     Rival hips1 angry "Okay. I care about Blake. She's like the sister I never had. An immature and annoying sister who makes me want to tear my hair out, but still my family."
     Rival "I just want to make sure you care. If it was just sex, whatever, but I can tell Blake wants more than that. She's shit at hiding it."
     "Marllie's breath catches. She can only latch onto one part of all that."
-    Customer_side "She likes me?"
+    Customer_side happy blush "She likes me?" with dissolve
     "Shay actually throws her hands in the air in exasperation."
     Rival distressed "Seriously? Oh, my God. You're both useless at this."
-    Customer_side "I... I do care about her. I don't want just a fling. That's not me. "
+    Customer_side neutral "I... I do care about her. I don't want just a fling. That's not me. "
     "Marllie reddens further."
-    Customer_side "And we’re not… you know. Sleeping together."
+    Customer_side angry "And we’re not… you know. Sleeping together."
     Rival "At this point, I’m begging you to fuck. Please. For my sake. I don’t know how much more of her doe eyes I can handle."
     "Marllie tries her best to look anywhere but at Shay, finding a sudden interest in the hands that are folded on her lap. She hears Shay sigh."
     Rival "Ugh, I hate this… she does like you, Marllie. You seem to spend every waking moment texting each other when she isn’t working and she cares about you too. Just ask her. She’ll say yes and I can retain some of my sanity. I just wanted to make sure you weren’t leading her on."
     Customer_side "N-no. I want more."
-    Customer_side "{i}I do want more. That was… easier to admit out loud than I thought it would be.{/i}"
+    Customer_side neutral -blush "{i}I do want more. That was… easier to admit out loud than I thought it would be.{/i}"
     Rival "Okay, we're cool then."
     Customer_side "Yeah, we are."
     "There’s a comfortable silence for a few moments as they just sit next to each other."
@@ -843,19 +868,19 @@ label scene_b11:
     scene bg_dorm with fade
     play music see loop fadein 3.0
     call phone_start from _call_phone_start_5
-    call message_start("Blake (VoᴥoV)", "hey") from _call_message_start_3
-    call message("Blake (VoᴥoV)", "you there?") from _call_message_55
+    call message_start("Blake (V•́ᴥ•́V)", "hey") from _call_message_start_3
+    call message("Blake (V•́ᴥ•́V)", "you there?") from _call_message_55
     call message("me", "I’m here.") from _call_message_56
     call message("me", "You're punctuating your texts. Everything okay?") from _call_message_57
-    call message("Blake (VoᴥoV)", "i") from _call_message_58
-    call message("Blake (VoᴥoV)", "uh") from _call_message_59
-    call message("Blake (VoᴥoV)", "wanted to ask you a quesiton") from _call_message_60
+    call message("Blake (V•́ᴥ•́V)", "i") from _call_message_58
+    call message("Blake (V•́ᴥ•́V)", "uh") from _call_message_59
+    call message("Blake (V•́ᴥ•́V)", "wanted to ask you a quesiton") from _call_message_60
     call message("me", "Of course. What is it?") from _call_message_61
     call message("", "{i}Blake <3 is typing...{/i}") from _call_message_62
     call message("", "{i}Blake <3 is typing...{/i}") from _call_message_63
-    call message("Blake (VoᴥoV)", "are you okay? You were pretty quiet when we last hung out and we haven’t spoken in a few days") from _call_message_64
-    call message("Blake (VoᴥoV)", "just wanted to ask if i’d done something") from _call_message_65
-    call message("Blake (VoᴥoV)", "and im sorry if i did") from _call_message_66
+    call message("Blake (V•́ᴥ•́V)", "are you okay? You were pretty quiet when we last hung out and we haven’t spoken in a few days") from _call_message_64
+    call message("Blake (V•́ᴥ•́V)", "just wanted to ask if i’d done something") from _call_message_65
+    call message("Blake (V•́ᴥ•́V)", "and im sorry if i did") from _call_message_66
     call phone_end from _call_phone_end_5
     Customer_side sad "{i}Oh, Blake. You haven’t done anything wrong. How am I supposed to say what I’m feeling. What if Shay’s wrong?{/i}"
     "{i}What if she isn’t?{/i}"
@@ -867,25 +892,25 @@ label choice2:
     call phone_after_menu from _call_phone_after_menu_1
     call message("me", "{i}Marllie is typing…{/i}") from _call_message_67
     call message("me", "It’s nothing you’ve done. At all. Please never think that.") from _call_message_68
-    call message("Blake <3", "promise?") from _call_message_69
+    call message("Blake (V•́ᴥ•́V)", "promise?") from _call_message_69
     call message("me", "Promise. <3") from _call_message_70
-    call message("Blake (VoᴥoV)", "good") from _call_message_71
-    call message("Blake (VoᴥoV)", "<3") from _call_message_72
-    call message("Blake (VoᴥoV)", "anythgjng i can help with?") from _call_message_73
+    call message("Blake (V•́ᴥ•́V)", "good") from _call_message_71
+    call message("Blake (V•́ᴥ•́V)", "<3") from _call_message_72
+    call message("Blake (V•́ᴥ•́V)", "anythgjng i can help with?") from _call_message_73
     call message("me", "Maybe. I’ll let you know?") from _call_message_74
-    call message("Blake (VoᴥoV)", "im always here for you") from _call_message_75
-    call message("Blake (VoᴥoV)", "so what kinda pizza dop u want") from _call_message_76
+    call message("Blake (V•́ᴥ•́V)", "im always here for you") from _call_message_75
+    call message("Blake (V•́ᴥ•́V)", "so what kinda pizza dop u want") from _call_message_76
     call message("me", "What?") from _call_message_77
-    call message("Blake (VoᴥoV)", "i wdnted to see if uw anna hang otu :-)") from _call_message_78
+    call message("Blake (V•́ᴥ•́V)", "i wdnted to see if uw anna hang otu :-)") from _call_message_78
     call phone_end from _call_phone_end_6
     Customer_side happy "{i}Aww, Blake...{/i}"
     call phone_start from _call_phone_start_7
     call message("me", "Hawaiian is my favourite.") from _call_message_79
     call message("me", "Would you like to come to mine? I can find us a movie.") from _call_message_80
-    call message("Blake (VoᴥoV)", "sure thgin") from _call_message_81
-    call message("Blake (VoᴥoV)", "shays been stomping around the apt bc bad gorup memebers for her assignment") from _call_message_82
+    call message("Blake (V•́ᴥ•́V)", "sure thgin") from _call_message_81
+    call message("Blake (V•́ᴥ•́V)", "shays been stomping around the apt bc bad gorup memebers for her assignment") from _call_message_82
     call message("me", "Ouch") from _call_message_83
-    call message("Blake (VoᴥoV)", "i’ll pcik up the pizza on my way over") from _call_message_84
+    call message("Blake (V•́ᴥ•́V)", "i’ll pcik up the pizza on my way over") from _call_message_84
     call message("me", "Sounds good. I’ll see you soon!") from _call_message_85
     call phone_end from _call_phone_end_7
     stop music fadeout 1.0
@@ -912,36 +937,37 @@ label choice2:
     CW -sad "Aww. I can go home if you want. We can always hang out another day."
     Customer_side "N-no! I like you. Here. Don’t go."
     "Marllie winces inwardly."
-    Customer_side "{i} Did you have to say it like that?{/i}"
-    Customer_side "{i} I suppose it would be suspicious if I tried to escape my own living space. God, why can’t I just ask her? Be brave, Marllie.{/i}"
-    Customer_side "Do you…"
+    Customer_side angry "{i} Did you have to say it like that?{/i}"
+    Customer_side angry blush "{i} I suppose it would be suspicious if I tried to escape my own living space. God, why can’t I just ask her? Be brave, Marllie.{/i}"
+    Customer_side -angry "Do you…"
     Customer_side "…"
-    Customer_side "{i}Damn it!{/i}"
+    Customer_side angry "{i}Damn it!{/i}"
     "Blake slaps her forehead."
     CW "I forgot to grab those! Shit. Let me get ‘em."
     "Blake shoves the rest of the pizza in her mouth and almost tumbles off the couch with the amount of cushions she has piled up around her. Marllie waits until she's busy pulling the drinks out of her tiny fridge before she pinches the bridge of her nose"
     Customer_side "{i}Be more awkward, Marllie. I dare you. Get it together! It's just Blake!{/i}"
     "Her hands are sweaty as Blake ambles back over, two full glasses of soda in her hands. She perches them precariously next to the boxes and sits back down heavily."
-    "If I'd known that we'd demolish the garlic bread like that, I would've bought more."
+    CW hips2 happy "If I'd known that we'd demolish the garlic bread like that, I would've bought more."
     Customer_side "{i}I want you to dem- NOPE.{/i}"
     Customer_side happy "Ha, y-yeah..."
     Customer_side "{i}This is ridiculous.{/i}"
     Customer_side happy "I can’t do this anymore."
-    CW "What? Is there something wrong with the pizza? It tastes fine to me-"
+    CW "What? Is there something wrong with the pizza? It tastes fine to me-" #concerned TODO
     stop music fadeout 2.0
     Customer_side "{i}This would be comical if I didn’t have to live it.{/i}"
     Customer_side "{i}Tell.{/i}"
     Customer_side "{i}Her.{/i}"
-    Customer_side "I talked to Shay and-"
-    "Blake immediately turns ghost-white and starts choking on her food."
-    Customer_side "{i}Please don't choke to death on my couch before I can say the words. It'll be just my luck.{/i}"
-    CW "Oh my God? Whatever she said, she's lying and I’m going to murder her. I knew I shouldn’t have left her alone with you."
+    Customer_side angry "I talked to Shay and-"
+    "Blake immediately turns ghost-white and starts choking on her food." #panic TODO
+    Customer_side neutral "{i}Please don't choke to death on my couch before I can say the words. It'll be just my luck.{/i}" #PANIC
+    CW angry down2 "Oh my God? Whatever she said, she's lying and I’m going to murder her. I knew I shouldn’t have left her alone with you."
     Customer_side "I hope she wasn't lying about this one though."
     CW "Oh Christ. Okay, I am in prime position to fully leap out of your window in embarrassment. Go ahead. I- wait… you hope she wasn’t?"
+    #show coworker face TODO
     "Blake’s staring at her now. There’s a smudge of sauce on her cheek and Marllie thinks about simply kissing her anyway. Words have never been their forte."
     "But Shay could still be wrong, and she has to know first."
     Customer_side sad "I’m so scared of ruining this friendship we have. I’ve never been so awkward with anyone in my life and still not minded."
-    CW "Unless you’re secretly a mob boss or you're about to tell me that you voted for Ronald Dump, we're cool. We're fine. It’s okay. Everything is fine-"
+    CW neutral "Unless you’re secretly a mob boss or you're about to tell me that you voted for Ronald Dump, we're cool. We're fine. It’s okay. Everything is fine-"
     "Marllie stops her. She takes a deep breath."
     play music love_beat loop fadein 3.0
     Customer_side "Blake."
