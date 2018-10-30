@@ -181,7 +181,7 @@ label scene_b4:
     "{i}. . .{/i}"
     Customer_side "{i}Well, today’s the day.{/i}"
     "Marllie lets herself lie still for a second. She closes her eyes against her pillow as the nervousness begins to creep its way into her already. She groans."
-    play music lovebeat loop fadein 2.0
+    play music love_beat loop fadein 2.0
     Customer_side "{i}What if I run away? Move to some eastern European fishing village and become a fisherman. I can even learn to bake my own bread and I’ll ride a bike everywhere. It’ll be lovely.{/i}"
     scene bg_dorm with fade
     stop sound
