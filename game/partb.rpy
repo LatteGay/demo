@@ -36,6 +36,7 @@ label scene_b1:
     CW -happy "Yes, ma’am!"
     hide boss with moveoutright
     show coworker at center with moveinright
+    play sound espresso
     "Marllie leans against the counter while Blake works. The article she’s supposed to be finishing lingers at the back of her mind. She has a ton of research to do and the time to do so feels as though its rapidly diminishing."
     "But still she lingers a the counter, unwilling to take her seat just yet. Marllie watches as Blake makes her drink. There’s a bright blue bandage on Blake’s left thumb that wasn’t there yesterday."
     Customer_side "Did you burn yourself already this morning?"

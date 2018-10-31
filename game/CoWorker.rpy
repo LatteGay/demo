@@ -33,7 +33,7 @@ layeredimage coworker:
 
 layeredimage blakephone:
     group screen auto:
-        attribute phonepic03 default
+        attribute phonepic01 default
     group base auto:
         attribute cell default
 

@@ -44,7 +44,7 @@ label scene_a4:
     "The morning has been going well so far. A little trouble, but Maya has been here to help each time. Blake's even managed to sell most of the banana bread. Jun will be happy."
     "She's actually starting to feel more confident."
     "The bell above the door rings and Blake’s head snaps up, ready to greet the new customer. Her newfound confidence evaporates when she sees who it is. "
-    CW_side "Oh my God, I forgot to check the clock. Fuck, she’s here again. Please help." #panic TODO
+    CW_side panicked_closed panic "Oh my God, I forgot to check the clock. Fuck, she’s here again. Please help." #panic TODO
     show mc annoyed with dissolve
     MC "What are you-"
     hide mc
@@ -52,7 +52,7 @@ label scene_a4:
     CW_side happy "Good morning! What can I get for you this morning?"
     show customer
     Marrlley "Can I please get a quad, non-fat, extra hot caramel macchiato, upside down?"
-    CW_side "{i}What... the... Fuck?{/i}" #panic TODO
+    CW_side panicked_closed "{i}What... the... Fuck?{/i}" #panic TODO
     CW_side "{i}Upside down???? Who is this girl?{/i}"
     "Blake keys the order into the register and repeats it. Marrlley nods in confirmation."
     CW_side happy "Sure thing. Anything else? We’ve just put out some new banana bread. It’s made with a different recipe. "
@@ -62,38 +62,43 @@ label scene_a4:
     "Marrlley pays and heads off to her usual table. Blake waits until she’s busy taking out her things before turning to Maya."
     hide customer
     show mc order1 neutral
-    CW_side sad "You gotta help me."
+    CW_side panicked_open "You gotta help me."
     "Maya finishes rinsing out some equipment and turns to Blake."
     MC "Of course. Something with the order?"
     "Blake holds up the ticket in lieu of an explanation. She watches as Maya’s expression shifts from neutral to confused, both eyebrows furrowing."
     MC annoyed "Uh okay, that’s new."
-    CW_side "All her orders are like this, I swear."
+    CW_side panicked_closed "All her orders are like this, I swear."
     "Maya scratches her chin in thoughtfulness. She takes the ticket and picks up one of the milk frothing jugs."
     MC -annoyed hips1 "Good practice, I guess? I think i know what she means. Here, I'll show you."
-    CW_side "I wouldn’t object to a few easy ones in the morning though."
+    CW_side -panic "I wouldn’t object to a few easy ones in the morning though."
     hide mc
     play sound espresso
     "Luckily, there are no new customers to attend to. It takes two attempts, and both Maya and Blake working together to complete the order properly. The mug of coffee sits on the counter as Blake waits for the bread to come out of the toaster. "
-    show mc
+    show mc order1
     MC "What do you think she does?"
     CW_side neutral "What do you mean?"
-    MC "Well, she’s here almost every day and for a couple of hours. Always on her computer. "
+    MC hips1 "Well, she’s here almost every day and for a couple of hours. Always on her computer. "
     CW_side "I dunno. Student, maybe? It's quiet here. I know I’d work better without the distractions at home. My video games would be crying out to me."
     MC "Maybe, but her clothes look too fancy. She might be working for one of those corporations in those offices close by. "
     CW_side "She looks a bit young, though. Maybe just baby-faced. "
-    MC "Maybe she just graduated then."
+    MC -hips1 "Maybe she just graduated then."
     CW_side "Do you usually do this? Like... people watch, I mean?"
     MC "It passes time. She is one of the regulars though; she's been coming here every day since we re-opened. "
     "A few seconds later and the bread is done. Blake sets it nicely on a plate with a knife and butter, and then sets it aside for a moment to grab a pen. She furrows brows."
     "MARRLLEY"
+    show mc annoyed
     "She calls out the name and misses her coworker cocking an eyebrow at her spelling, though Maya doesn't say anything."
+    hide mc with dissolve
+    show customer angry with dissolve
     "Marrlley leaves her laptop at the table. She looks at her drink, looks at Blake, at Maya, back at Blake, and Blake's never felt so scrutinized in her life even though she lives with Shay. She finally leaves, seemingly satisfied"
+    hide customer angry with dissolve
     "Blake lets out a breath she didn't know she was holding."
     stop music fadeout 3.0
-    MC happy hips1 "See. We got it."
+    show mc happy hips1 with dissolve
+    MC "See. We got it."
     CW_side happy "Yeah. We did."
     "Maya offers a high five. Blake slaps her hand against her’s gratefully."
-    hide mc
+    hide mc with dissolve
     pause 2.0
     jump j_scenea5
 label scene_a6:
@@ -107,35 +112,36 @@ label scene_a6:
     show customer
     stop sound fadeout 3.0
     "Blake takes a deep breath."
-    CW_side happy "Hi! What can I get you today?"
+    CW_side happy panic "Hi! What can I get you today?"
     "Marrlley brushes her hair out of her eyes and shifts her computer case into her other hand, eyeing the menu. Blake can almost feel the sweat droplets forming on her forehead."
     Marrlley "Hm, I’ll have a extra large latte, four shots."
     "Blake exhales, disbelieving. Four shots is a little much, but this order is so simple and straightforward that there has to be a catch."
-    CW_side "Of course. Will that be all?"
+    CW_side -panic "Of course. Will that be all?"
     Marrlley "Actually…"
-    CW_side sad"{i}No, please. Why did I ask? A normal order for once, please.{/i}"
+    CW_side panicked_closed "{i}No, please. Why did I ask? A normal order for once, please.{/i}"
     show customer sad
     "Marrlley actually looks a tiny bit apologetic."
     Marrlley -sad "Actually, can you put two decaf shots at the bottom, milk, two normal shots on top and minimal foam? Also extra hot milk."
     "Blake fights to keep her expression neutral. She can feel the herculean effort she’s exerting to stop her left eye from twitching." #panicface TODO
-    CW_side neutral "You betcha. Extra large latte, four shots with milk as hot as it will go without it exploding in my face, coming right up."
+    CW_side neutral panic "You betcha. Extra large latte, four shots with milk as hot as it will go without it exploding in my face, coming right up."
     show customer happy
     "Marrlley smiles, looking relieved."
     Marrlley "As long as it’s not too much trouble."
+    show customer -happy with dissolve
     CW_side happy "…None at all."
     "Marrlley watches her as Blake scribbles her name onto the cup, money ready in hand."
     "The rest of the transaction thankfully goes smoothly, and Marrlley shoots her another small smile before she turns to head to her favourite table."
     hide customer with dissolve
-    CW_side "{i}Maybe I can dunk my face in the sink and drown. Or maybe the milk actually will explode. Grant me mercy.{/i}"
+    CW_side panic sad"{i}Maybe I can dunk my face in the sink and drown. Or maybe the milk actually will explode. Grant me mercy.{/i}"
     "She can only hope."
     "The first two shots of decaf are in the cup when Asher slides up to her, a tray of dirty cups in his hands."
     show bestie with dissolve
     Bestie "What is it today?"
     "Blake merely grunts and tilts her head towards the ticket, eyes not leaving the thermometer so she doesn’t actually get a faceful of boiling milk. Asher peers at the ticket, letting out a snort."
     Bestie "I swear it’s always just you."
-    CW_side sad "GOD, I know! It’s like she enjoys watching my suffering."
+    CW_side sad -panic "GOD, I know! It’s like she enjoys watching my suffering."
     Bestie "Well…"
-    CW_side "Go away, I didn’t ask you."
+    CW_side angry "Go away, I didn’t ask you."
     "Asher laughs before he continues into the kitchen."
     Bestie happy "Just think of it as field experience!"
     hide bestie with dissolve
@@ -143,7 +149,7 @@ label scene_a6:
     "Finally, the order is done. She wipes her sweaty hands on her apron and snaps a lid onto the cup."
     CW_side happy "Order for Marrlley!"
     show customer neutral with dissolve
-    "Marrlley is up at the counter in a flash. She takes the coffee with another thank you and glides away. She sweeps her hair over on shoulder as she retreats, and it uncovers the back of the jacket."
+    "Marrlley is up at the counter in a flash. She takes the coffee with another thank you and glides away. The silver glittering letters on the back of her jacket catches Blake’s eye."
     hide customer with dissolve
     show customer_back
     "{b}MARLLIE{/b}"
@@ -151,17 +157,17 @@ label scene_a6:
     "Blake’s eyes widen before she remembers what she had written on the cup. "
     "{b}Marrlley{/b}"
     "She has a dramatic flashback to every other time she’s written Marllie’s name and she’s more than certain none of them were correct."
-    CW_side "{i}Her name was right there. God damn it. That’s embarrassing.{/i}" #panic face TODO
+    CW_side panicked_open panic"{i}Her name was right there. God damn it. That’s embarrassing.{/i}" #panic face TODO
     "She leans on the countertop and covers her face with her hands just as Asher walks back out."
     hide customer with dissolve
     show bestie with dissolve
     "Asher makes a sympathetic noise while Blake just lets out a long groan."
     Bestie happy "Aw, did you have to it again?"
-    CW_side sad "No, worse."
+    CW_side panicked_closed "No, worse."
     Bestie -happy "What do you mean?"
-    CW_side "I’ve kind of sort of been spelling her name wrong the entire time that I’ve worked here. So like, I’m going to take my break now so I can throw myself off the bridge."
+    CW_side -panic "I’ve kind of sort of been spelling her name wrong the entire time that I’ve worked here. So like, I’m going to take my break now so I can throw myself off the bridge."
     Bestie "You can’t do that. It’s too busy."
-    CW_side "Wow, thanks for the sympathy. "
+    CW_side angry "Wow, thanks for the sympathy. "
     show bestie happy
     "Asher flashes her a charming smile."
     Bestie "You’re welcome! "
@@ -214,26 +220,29 @@ label scene_a8:
     Customer "God. And I said you weren’t stealthy. I’m useless at this."
     CW_side "Hey now. Be nice. I don’t need to live that embarrassment again."
     Customer sad "Sorry."
-    CW_side "{i}What the hell is going on?{/i}" #confused face TODO
+    CW_side panicked_closed "{i}What the hell is going on?{/i}" #confused face TODO
     Customer angry "I’m… going to go to my table. I have to work on an assignment. You know how it is. I’ll just-"
     "The door to the back room opens. Maya, looking tired and disheveled, trudges out and sighs."
     hide customer with dissolve
     show mc order1 annoyedclosed
     MC "You know, I didn’t think I’d be doing taxes when I joined up."
     "Maya leans against the counter tiredly. Blake half-shrugs, a mug in hand that she’s now cleaning."
-    CW_side "You’re the one who offered to help."
+    CW_side -panicked_closed "You’re the one who offered to help."
     MC annoyed "Please don’t remind me."
-    show mc happy with dis
+    show mc happy with dissolve
     "Maya notices the customer. She offers her her patented Customer Service Worker smile, slipping back into the role easily."
     show mc at right with moveinright
-    show customer at left with moveinleft #panic TODO
+    show customer panicked panic at left with moveinleft #panic TODO
     MC "Oh, hey Marllie! You’re here late."
+    show customer angryopen with dissolve
     "Marllie looks like a deer in headlights. Her mouth opens and closes several times, trying and failing to find words."
+    show customer angry with dissolve
     CW_side "Weren’t you looking for Maya? I didn’t even have to interrupt them."
     MC "Oh? What can I do for you?"
     stop music fadeout 3.0
     "With Marllie still quiet, Maya pushes herself off the counter and gestures towards the front door."
     MC "We can talk outside if you want? If it’s easier."
+    show customer panicked
     "Marllie nods, looking slightly panicked. She throws a glance at Blake before following Maya out the door."
     hide mc with dissolve
     hide customer with dissolve
@@ -245,21 +254,21 @@ label scene_a10:
     play sound bg_coffeeshop
     "Blake is dealing with a customer complaint when Marllie walks in. The other girl raises her eyebrows upon hearing the customer’s tantrum and Blake’s desperate retort."
     show rando
-    CW_side happy "Ma’am, no offense, but we primarily serve coffee… I don’t understand-"
+    CW_side panic happy "Ma’am, no offense, but we primarily serve coffee… I don’t understand-"
     Rando "But I don’t like coffee! Why would you serve me this? I want a refund. Get me your manager-!" with vpunch
     "Blake rapidly counts to ten in her head."
     CW_side "I’ll get my boss."
     hide rando disolve
     "Blake pinches her nose once her back is to the customer and heads off into the back, aware of the customer’s eyes staring daggers into the back of her head and Marllie watching sympathetically. She comes back with Jun a moment later and leaves her to deal with it while she takes her place back behind the counter."
     show customer
-    CW_side neutral "Hi. What can I get you?"
+    CW_side neutral -panic "Hi. What can I get you?"
     Customer "What on earth was that about?"
     stop music fadeout 5.0
     "They glance at Jun talking animatedly with the lady and said lady storming out in a huff… without her refund. Jun looks like she’s just aged ten years in their brief encounter."
     CW_side "She ordered a mocha and insisted it should taste like chocolate, not coffee, because she doesn’t like coffee. "
     Customer "Wow."
     hide customer
-    show boss
+    show boss neutralalt
     "Jun walks past them to get back to her own duties, but not before giving them a completely baffled look."
     Boss "I’ve worked far too long in this industry."
     hide boss disolve
@@ -269,7 +278,7 @@ label scene_a10:
     CW_side happy "So what can I get you? Jun made some amazing new muffins if you’d like to try one. Salted caramel. I’d highly recommend them."
     Customer "I’d love one. And you’ve been through enough. Just give me a latte."
     "Marllie scrunches her face up and puts on a poor imitation of the lady’s posh accent, splaying a hand on her hip."
-    Customer angryopen "And can you, like, make it not taste like coffee? I can’t stand coffee!"
+    Customer angryopen hips1 "And can you, like, make it not taste like coffee? I can’t stand coffee!"
     CW_side "Not you too. That’ll be $6.25. I’ll have your not-coffee ready ASAP."
     "The regular giggles."
     Customer happy "Really though, thank you. I know my orders can be a little much on occasion but you’ve always made them drinkable."
@@ -279,13 +288,13 @@ label scene_a10:
     Customer "I’m not doing a very good job at saying this, am I?"
     CW_side "Luckily for you, I’m regularly even more awkward than you are so I get what you’re trying to say."
     "It takes a moment for Blake to realise how that sounds when said out loud. A look of horror clouds over her face"
-    CW_side "{i}No no no no{/i}" #panic
-    CW_side sad "N-not that I’m saying you’re awkward, I mean- "
+    CW_side panicked_open panic "{i}No no no no{/i}" #panic
+    CW_side neutral "N-not that I’m saying you’re awkward, I mean- "
     Customer neutral "Point taken."
     "Marllie doesn’t seem too offended."
     CW_side "I’ll go and get your order ready before I can put my foot further in my mouth now. "
     Customer happy "Thanks. Remember, I don’t want it to taste like coffee."
-    CW_side "Sorry, I suddenly don’t speak english."
+    CW_side happy "Sorry, I suddenly don’t speak english."
     stop music fadeout 5.0
     "Marllie laughs and retreats to her usual table, setting her laptop case on the table and already retrieving her books. Blake finds herself smiling as she gets to work."
     jump j_scenea11

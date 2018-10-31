@@ -54,12 +54,12 @@ label scene_a1:
             "There's a heavy series of knocks against the door."
             show rival
             play music goodmorning fadein 2.0
-            show rival hips1 with dis
+            show rival hips1 with dissolve
             Rival hips1 "Hey, Blake, are you getting up or do I have to yank the covers off you again?"
             CW_side "Yeah, yeah. I'm coming out."
             Rival happy "We had that talk years ago."
             CW_side angry "You asshole. You know what I mean!"
-            show rival -hips1 -happy with dis
+            show rival -hips1 -happy with dissolve
             Rival "Just hurry up"
             hide rival with dissolve
             "Blake forces herself up and sighs. She already misses her bed, but she takes the clothes haphazardly lying over the back of the chair and starts getting dressed. It's a better option than Shay barking at her. And threatening her with cold water."
@@ -78,7 +78,7 @@ label scene_a1:
             CW_side -happy "...You put salt in your coffee."
             Rival "Touche."
 
-            show rival -hips1 -distressed  with dis
+            show rival -hips1 -distressed  with dissolve
             "The two friends finish their breakfast in contented silence, save Shay sometimes making noises at her phone. She waits until Blake finishes her toast before standing. She slings her bag over her shoulder and opens the door."
 
             Rival "Ready to go?"
@@ -86,12 +86,12 @@ label scene_a1:
 
         else:
             "In her sleepy haze, Blake doesn’t notice the sound of her bedroom door opening. She does, however, notice when the covers are flung off her."
-            CW_side angry "Argh!" with hpunch
+            CW_side panicked_open "Argh!" with hpunch
             scene bg_cobedroom with fade
             show rival angry hips1
             play music goodmorning fadein 2.0
             Rival "Up." #[Angry]
-            CW_side -angry "Five minutes?"
+            CW_side panicked_closed "Five minutes?"
             Rival "How many times have you said that to yourself this morning?"
             CW_side sad "It’s too early for you to call me out like that."
             Rival "Your shift is in half an hour.  You're going to be late. Get up or I'll throw ice water on you and then leave without you anyway."
@@ -168,7 +168,7 @@ label scene_a3:
     CW_side -sad "What."
     MC annoyedclosed "My fourth day."
     Bestie "People are dumb. You’ll become numb to it soon, I promise. Come and join us in the “dead inside at work” club!"
-    CW_side "You guys are the worst at being reassuring. You’re like an awkward dad trying to reassure his teenager’s angst."
+    CW_side angry "You guys are the worst at being reassuring. You’re like an awkward dad trying to reassure his teenager’s angst."
     Bestie happy "Well, they don’t call me daddy for nothing."
 
     "Maya makes a noise of disgust."
@@ -181,7 +181,7 @@ label scene_a3:
     hide bestie with easeoutleft
     show mc annoyedclosed hips1 at center with move
     "Asher laughs as he disappears into the storeroom. Maya rubs her eyes tiredly."
-    CW_side "This conversation took a turn I wasn’t prepared for."
+    CW_side neutral "This conversation took a turn I wasn’t prepared for."
     stop music fadeout 3.0
     MC annoyedclosed "Welcome to the family. You’ll get used to it soon."
 
@@ -196,12 +196,12 @@ label scene_a5:
     "Shay still doesn’t look up from her book."
     show rival with dis
     Rival distressed hips1 "Do you require medical attention?"
-    CW_side "Aren’t you going to care? Ask me about my day?"
+    CW_side sad "Aren’t you going to care? Ask me about my day?"
     "Shay lets out a long-suffering sigh and sets her book page-down on the chair arm."
     Rival -distressed "Go on. Let it out."
-    CW_side "Work was fine. How are you?"
+    CW_side happy "Work was fine. How are you?"
     Rival distressed -hips1 "That’s it? You interrupted my reading for this? I was expecting some drama or tragedy."
-    CW_side "The tragedy is that I had to get out of bed this morning, but alas it must happen."
+    CW_side -happy "The tragedy is that I had to get out of bed this morning, but alas it must happen."
     Rival happy "I consider getting you up to be my morning workout at this point."
     show rival distressed
     "Blake sits up and wiggles her eyebrows at Shay suggestively. Shay makes a noise of disgust and throws a nearby cushion at her face."
@@ -225,11 +225,11 @@ label scene_a5:
     Rival happy "If you’re offering."
     CW_side "Of course."
     "Shay sits while Blake ruffles through the selection. Probably would help if any of the packaging was written in English, but it’s always cool to try new things, Blake thinks. She finds a letter, scans it quickly, then refolds it and shoves it into her back pocket for later."
-    CW_side "There’s a cute bear on this one. Let’s start with that."
+    CW_side happy "There’s a cute bear on this one. Let’s start with that."
     "They tear into them and half an hour later they’ve tried at least half the new foods."
     show rival -happy -chin1 with dis
     Rival "I need some kale. We’ve had so much sugar that my tongue is sticking to the roof of my mouth."
-    CW_side "I’m probably going to crash in like, half an hour."
+    CW_side -happy "I’m probably going to crash in like, half an hour."
     Rival "Joy of joys."
     CW_side happy "Hey, my package, my rules."
     "Shay rolls her eyes and stands from her chair. The coffee machine whirs to life. Shay leans on the counter while she waits."
@@ -302,18 +302,18 @@ label scene_a7:
     "Blake makes her way as nonchalantly as she can to the table behind Marllie. She feels a bit like a creep but she sprays the table a couple of times anyway and starts casually cleaning."
 
     "Unfortunately, she can't see around Marley's head-"
-    CW_side "{i}Damn it. Maybe if I shift this way...{/i}"
+    CW_side angry "{i}Damn it. Maybe if I shift this way...{/i}"
     show customer with dissolve
     Customer "You know, you could just ask me what I'm doing."
-    CW_side "Oh fuck oh shit oh fuck!"
+    CW_side panicked_open panic "Oh fuck oh shit oh fuck!"
 
     "Blake just about jumps out of her skin and knocks the bottle on the floor. She stammers some incoherent apologies as Marllie leans back in her chair to stare at her."
-    CW_side "{i}Asher better get back from his break soon. That jumping off a bridge idea is so fucking tempting right now. He can clean the coffee machine in my place and I can die guilt-free. I know Shay would delete my internet history.{/i}"
+    CW_side  "{i}Asher better get back from his break soon. That jumping off a bridge idea is so fucking tempting right now. He can clean the coffee machine in my place and I can die guilt-free. I know Shay would delete my internet history.{/i}"
     #panic face TODO
     Customer "You’re not very stealthy."
-    CW_side "Oh, my God."
+    CW_side panicked_closed "Oh, my God."
     Customer "You were almost leaning over my shoulder."
-    CW_side sad up1 "I’m so sorry."
+    CW_side panic happy up1 "I’m so sorry."
 
     show customer happy
     "Marllie bursts into a fit of giggles. Blake is dumbfounded, but… she figures Marllie isn’t actually mad, then? Man, is she bad at being discreet."
@@ -368,14 +368,14 @@ label scene_a7:
     "There’s a bit of an awkward pause. Blake internally cringes at how bad she is at small talk."
 
     Customer "What about you? You haven’t been here that long."
-    CW_side "I just moved in with a friend from high school not that long ago. I used to tutor too, but I’m kinda too far away from my students now."
+    CW_side happy up1 "I just moved in with a friend from high school not that long ago. I used to tutor too, but I’m kinda too far away from my students now."
     Customer "You used to tutor?"
-    CW_side  "Yeah, biology and maths."
+    CW_side -happy -up1 "Yeah, biology and maths."
     Customer "Are you in school too?"
     "Blake shakes her head."
     CW_side "I’m taking a break for a semester or two. I think. I don’t really know what I wanna do but I don’t want to move all the way back in with my mom yet in case I change my mind, so I’m just here."
     "She sighs a little wistfully."
-    CW_side "I do miss the dogs, though. And my family too, of course."
+    CW_side -panic "I do miss the dogs, though. And my family too, of course."
     "Marllie’s entire being perks up."
     show customer hips1 happy with dissolve
     Customer "You have dogs?"
@@ -437,29 +437,31 @@ label scene_a9:
     hide rival disolve
     play music park fadein 3.0
     CW_side "Marllie?"
-    show customer sad
+    show customer sad blush
     "The other girl startles. Blake catches a glimpse of her wet cheeks and red eyes before Marllie whips her head back around."
     Customer "Uh, hey! What are you doing here?"
-    CW_side "I was on my way home. Are you okay?"
+    CW_side sad "I was on my way home. Are you okay?"
     "Marllie hesitates, then puffs out a sigh and shakes her head. She roughly scrubs at her eyes with the back of her hand."
     Customer "I will be. It was... stupid. Stupid feelings."
-    CW_side "What-"
+    CW_side -neutral "What-"
     "The sudden realisation makes Blake want to slap herself. She’s equally as incoherent around girls she likes, after all. And Maya leaving early… oops, Maya never leaves early."
-    CW_side sad "Shit. I’m an idiot."
+    CW_side panicked_closed "Shit. I’m an idiot."
     "Marllie looks confused for a second."
     Customer sad "What, no! You didn’t do anything wrong."
     CW_side "I put you on the spot. I’m sorry."
     Customer "You didn’t know. And it would have happened eventually anyway. I was going to bail so you actually did me a favour. At least this ripped the bandaid off."
-    CW_side "I’m still sorry. Sorry you’re hurting, I mean. "
+    CW_side sad "I’m still sorry. Sorry you’re hurting, I mean. "
     Customer "I’m not… sad. Well I am, but it wasn’t that serious. I’m more embarrassed than anything. I come in everyday… so that’s going to be awkward now."
-    CW_side "Maya’s professional. It won’t affect her service."
+    CW_side neutral "Maya’s professional. It won’t affect her service."
     Customer "I hope not. It’s still going to feel weird for a while."
     "She sniffles once. Blake precariously snakes an arm around Marllie’s shoulders, unsure if the contact would be welcomed. To her relief, Marllie doesn’t mind."
     CW_side -sad "Maybe. But not forever."
     "The reassurance seems to help a little. Marllie leans into the embrace, apparently grateful for it to Blake’s relief."
     CW_side "Can I help? Do you need anything? Would a Triple, Venti, Half Sweet, Non-Fat, Caramel Macchiato make you feel better? "
     "A quiet snort escapes Marllie. There’s even a small smile. Blake counts it as a win."
-    Customer happy "You’d just make it wrong."
+    show customer -blush with dissolve
+    show customer happy
+    Customer "You’d just make it wrong."
     CW_side "You wound me."
     "There’s another laugh. Marllie sniffles and swipes at her cheeks again."
     Customer sad "Really though, I should get home to finish off my paper. But, uh… thank you. For talking to me."
@@ -559,7 +561,7 @@ label scene_a13:
     show cookie open
     "Marllie crouches down to fuss them both equally, Cookie’s affectionate licks making her giggle. Alfredo whoofs as if demanding he gets a turn, too, so Marllie leans down further to scratch behind the smaller dog’s ears."
     CW_side "Sorry, I know Cookie can be a bit overwhelming. He almost knocked me down when I showed up to walk him for the first time."
-    Customer "I love them. It’s already making me want a dog of my own."
+    Customer folded1 "I love them. It’s already making me want a dog of my own."
     "She stands after giving them both an extra scratch. It’s evening, so there are plenty of people walking their pets after work or school. It’s also a particularly lovely day outside. They start walking together."
     Customer "I enjoyed your company at the restaurant last night. I know I can talk a lot when it’s something I’m interested in…"
     CW_side "I didn’t mind. I can tell you’re passionate about your studies. That’s a good thing."
@@ -569,29 +571,30 @@ label scene_a13:
     "They chatter some more about their respective days, Blake regaling (what is probably) an exaggerated story of a ridiculously demanding customer. Marrlie has tears in her eyes from laughing so hard."
     CW_side -happy "So I had to add sixteen more pumps of caramel with what I’d already added and she was still insisting it wasn’t sweet enough. I watched her, with my own two eyes, add more of that artificial sweetener that we keep on the tables. Who needs that much sugar? Just because she had almond milk, doesn’t make it \"healthy\"."
     Customer angryopen "I don’t believe you. That can’t be real."
+    show customer -angryopen
     CW_side "No, it gets better. I offered her one of Jun’s muffins after for that promo we’re having and she said -- you wouldn’t believe it -- \"oh, no, I’m on a diet. I have to watch my figure!\""
     Customer neutral "Pretty sure eighteen pumps of caramel is like, three days worth of sugar intake."
     CW_side "My head hurts just thinking about it."
     Customer "My teeth hurt just thinking about it."
     CW_side "One of my ex’s actually, her usual order was a caramel macchiato with six extra pumps. She had one basically everyday. I tried it once and nearly spat it all over her. I mean I have a sweet tooth, but oh my God."
     "Marllie’s eyes widen and she blurts out the question before she can stop herself."
-    Customer "\"Her\"?"
+    Customer panicked "\"Her\"?"
     CW_side "Oh, yeah. You didn’t know? Shay always says I dress like a walking stereotype but I guess you haven’t seen me outside my work clothes."
-    Customer "I guess she’s right. No offense, but you do look like a walking stereotype right now."
+    Customer happy "I guess she’s right. No offense, but you do look like a walking stereotype right now."
     CW_side "Wow."
     Customer "Don’t be like that. I… like it."
     CW_side happy "You like it, huh?"
     show customer angry
     show customer blush with dis
     "Marllie blushes. She quickly changes the subject and soon they’re talking away again, and soon an hour’s passed and the little dog is trailing along at a slower, tired speed. Blake leans down to ruffle his fur."
-    show customer -blush with dis
+    show customer -blush with dissolve
     CW_side -happy "Aw, are you getting sleepy, buddy?"
-    show alfredo open with dis
+    show alfredo open with dissolve
     Customer -angry "You’d better get him home. I’d better get going, too, actually..."
     "She whips out her phone and calls a cab. There’s one close by, so Blake heads off to wait with her."
     CW_side "You know… as long as I’m with them, you’re more than welcome to come along when I’m walking some dogs. I wouldn’t mind the company."
     show customer happy
-    show alfredo closed with dis
+    show alfredo closed with dissolve
     "Marllie pauses as she approaches the car, a slow, beaming smile spreading across her lips. Blake isn’t sure if she’s mistaking the faint sheen of colour on the other girl’s face."
     Customer "That would be wonderful."
     "Marllie leans down to give both dogs a goodbye scratch. She straightens up again, hesitates for a second before wrapping her arms around Blake’s shoulders for a quick hug. The sudden, unexpected contact and hands too full of dog leashes stops Blake from hugging back."
