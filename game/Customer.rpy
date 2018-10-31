@@ -15,5 +15,5 @@ image customer_back = "sprites/customer/MARLLIE.png"
 
 define Customer = Character("Marllie", image= "customer", who_color="#fff2d3")
 define Marrlley = Character("Marrlley", image= "customer", who_color="#fff2d3")
-define BandM = Character("Blake&Marley", image= "customer_side", who_color="#fff2d3")
+define BandM = Character("Blake&Marllie", image= "customer_side", who_color="#fff2d3")
 define Customer_side = Character("Marllie", image= "customer_side", who_color="#fff2d3")

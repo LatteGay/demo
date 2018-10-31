@@ -148,7 +148,7 @@ label scene_a6:
     "Blake grumbles under her breath. The milk is finally ready. Blake is ready for this to be over."
     "Finally, the order is done. She wipes her sweaty hands on her apron and snaps a lid onto the cup."
     CW_side happy "Order for Marrlley!"
-    show customer neutral with dissolve
+    show customer neutral with dis
     "Marrlley is up at the counter in a flash. She takes the coffee with another thank you and glides away. The silver glittering letters on the back of her jacket catches Blake’s eye."
     hide customer with dissolve
     show customer_back
@@ -160,7 +160,7 @@ label scene_a6:
     CW_side panicked_open panic"{i}Her name was right there. God damn it. That’s embarrassing.{/i}" #panic face TODO
     "She leans on the countertop and covers her face with her hands just as Asher walks back out."
     hide customer with dissolve
-    show bestie with dissolve
+    show bestie with dis
     "Asher makes a sympathetic noise while Blake just lets out a long groan."
     Bestie happy "Aw, did you have to it again?"
     CW_side panicked_closed "No, worse."
@@ -229,14 +229,14 @@ label scene_a8:
     "Maya leans against the counter tiredly. Blake half-shrugs, a mug in hand that she’s now cleaning."
     CW_side -panicked_closed "You’re the one who offered to help."
     MC annoyed "Please don’t remind me."
-    show mc happy with dissolve
+    show mc happy with dis
     "Maya notices the customer. She offers her her patented Customer Service Worker smile, slipping back into the role easily."
     show mc at right with moveinright
     show customer panicked panic at left with moveinleft #panic TODO
     MC "Oh, hey Marllie! You’re here late."
-    show customer angryopen with dissolve
+    show customer angryopen with dis
     "Marllie looks like a deer in headlights. Her mouth opens and closes several times, trying and failing to find words."
-    show customer angry with dissolve
+    show customer angry with dis
     CW_side "Weren’t you looking for Maya? I didn’t even have to interrupt them."
     MC "Oh? What can I do for you?"
     stop music fadeout 3.0
