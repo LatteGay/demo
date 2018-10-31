@@ -1,7 +1,15 @@
 
 
 define dis = { "master" : Dissolve(0.5) }
-
+image the_kiss_animated:
+    "images/cg/the_kiss/the_kiss2.png"
+    0.5
+    "images/cg/the_kiss/the_kiss3.png"
+    0.5
+    "images/cg/the_kiss/the_kiss4.png"
+    0.5
+    repeat
+image the_kiss  = "images/cg/the_kiss/the_kiss1.png"
 ################# Game backgrounds ###################
 image bg_shop = "backgrounds/bg_cs_main.png"
 image bg_cs_lounge = "backgrounds/bg_cs_lounge.png"

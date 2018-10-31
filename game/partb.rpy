@@ -1001,25 +1001,27 @@ label choice2:
     show coworker neutral with dis
     "Blake doesn't reply. She stares at Marllie, unblinking, mouth opening and closing multiple times. As the seconds tick on, the small iota of confidence she had trickles away and Marllie scrambles to backtrack. "
     Customer_side "I-It’s… it’s okay, Blake. Don't worry about it. I didn't me- "
+    show the_kiss with fade
+    show the_kiss_animated with Dissolve(1.0)
     "The rest of the words are muffled as Blake kisses her. Her lips are warmer and much softer than Marllie had imagined, slightly chapped against her own. She stiffens in surprise, a small, high-pitched sound escaping her throat but as soon as she feels Blake attempting to pull back she feels the panic, the loss. She curls her arms about Blake's neck to halt her and returns the kiss with all she has."
     "They pull apart eventually, panting. Blake’s forehead rests against hers and she’s so close Marllie can feel each puff of her breath."
     "Blake nudges the tip of her nose against Marllie's."
     CW "Just to be clear… you like like me, right?"
     "Marllie leans back enough to fix Blake with an incredulous expression."
-    Customer_side "Yes, Blake. I like like you."
+    Customer "Yes, Blake. I like like you."
     CW happy "Okay. Cool. Sweet! Cool! That's really rad."
-    Customer_side "Rad? Did you really just use the word “rad”?"
+    Customer "Rad? Did you really just use the word “rad”?"
     CW "Pretty girls make me lose my words. And you're really pretty."
     "Marllie feels her face turn bright red immediately."
     CW "Oh, God, was that too much already? I mean, I don't find you pr-"
     "Marllie moves close again, her lips close enough to brush against Blake’s as she speaks. Blake sucks in a breath."
-    Customer_side "Hush. Stop talking. "
+    Customer "Hush. Stop talking. "
     "Blake smiles wide then. She brings up a hand, brushing a lock of Marllie’s hair behind her ear."
     CW "I think that's a good idea. And by the way..."
     "Blake kisses her, featherlight and all too brief; a promise of what’s to come."
     CW "I lied. I do find you very pretty. "
-    stop music fadeout 5.0
-    scene black with fade
+    stop music fadeout 2.0
+    scene black with Fade(1.0, 0.0, 1.0)
     #Fade to black:
     #[Have the background fade away to a black screen with just the text boxes and then:]
     CW "Fuck. I dropped my pizza."
@@ -1048,6 +1050,7 @@ label scene_epilogue:
     show customer happy at left with move
     show coworker happy at right with easeinright
     CW "Hi there."
+    show coworker at center with easeinright
     "Blake leans in again but a loud crash makes both of them whip around. Asher is standing in front of the kitchen door, an empty tray hanging loosely from his grip as metal jugs and utensils lay scattered around his feet. The expression on his face is positively gleeful." with vpunch
     CW sad "Oh here we go."
     hide customer
