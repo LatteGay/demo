@@ -53,7 +53,7 @@ cellphone code and template from {a=https://nadianova.itch.io/phone-message-syst
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "COFFEE"
+define build.name = "LatteGay_Demo"
 
 ## Custom Game Configs ############################################################
 #define config.say_attributes_use_side_image = False
