@@ -30,9 +30,22 @@ define config.version = "1.00"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _("""\
+Hi! Welcome to The Daily Grind. /(^.^)\\
+
+
+LatteGay is a Gay™ visual novel about the trials and tribulations of working in a coffee shop. And dating your coworkers or customers.
+
+This demo is a side story to a larger planned VN, and follows the journey of two possible love interests if neither of them are romanced. Marllie spends all her free time in the Daily grind working on... whatever it is. To Blake, the newbie, she's the one customer that sends her into a panic with her impossible orders.
+
+They'll have to overcome awkward conversations, exasperated friends and disastrous flirting on their journey to become something more.
+
+Maybe the cute dogs might help a little bit.
+
+(Doubt it though. Blake and Marllie are pretty useless.)
+_________________________________
 Created by {a=https://lattegaygame.tumblr.com/theteam}LatteGayGames{/a}
 
-cellphone code from {a=https://nadianova.itch.io/phone-message-system-for-renpy}nadianova{/a}
+cellphone code and template from {a=https://nadianova.itch.io/phone-message-system-for-renpy}nadianova{/a}
 """)
 
 

@@ -5,7 +5,7 @@
 # The game starts here.
 
 label splashscreen:
-    "This is a release for Yuri Game Jam 2018 and is still a work in progress. We are working on a more polished version that is going to be released in about a month"
+    "This is a release for Yuri Game Jam 2018 and is still a work in progress. We are working on a more polished version that is going to be released in about a month. Please look forward to version 2.0!"
     return
 
 label start:
@@ -60,6 +60,7 @@ label start:
     label j_scene_epilogue:
     jump scene_epilogue
     label end:
+    call credits
 
     #show CoWorker
 
@@ -70,5 +71,42 @@ label start:
     #CoWorker "HELLO WELCOME TO COFFEE SHOP?"
 
     # This ends the game.
-
     return
+
+    label credits:
+    play music love_beat loop fadein 3.0
+    $ credits_speed = 25 #scrolling speed in seconds
+    scene black #replace this with a fancy background
+    with dissolve
+    show theend:
+        yanchor 0.5 ypos 0.5
+        xanchor 0.5 xpos 0.5
+    with dissolve
+    with Pause(3)
+    hide theend
+    show cred at Move((0.5, 5.0), (0.5, 0.0), credits_speed, repeat=False, bounce=False, xanchor="center", yanchor="bottom")
+    with Pause(credits_speed)
+    show thanks:
+        yanchor 0.5 ypos 0.5
+        xanchor 0.5 xpos 0.5
+    with dissolve
+    with Pause(3)
+    hide thanks
+    return
+
+init python:
+    credits = ('Writer', '{a=http://shepardtsoni.tumblr.com/}shepardtsoni{/a}'), ('Writer', '{a=http://elystias.tumblr.com/}elystias{/a}'), ('Sprites and CG', '{a=http://magicalzebra.tumblr.com/}magicalzebra{/a} Jasmine Lau'), ('Sprite Colorist', '{a=http://fiori-ed-orrori.tumblr.com/}fiori-ed-orrori{/a}'),  ('Backgrounds', '{a=http://sarahanne-art.tumblr.com/}sarahannebirch{/a}'), ('Programming', '{a=http://hiddenbooty.tumblr.com/}hiddenbootyz{/a}'), ('Programming', '{a=http://hiddenexample.tumblr.com/}hiddenexample{/a}'), ('Music', 'TazLazuli')
+    credits_s = "{size=80}Credits\n\n"
+    c1 = ''
+    for c in credits:
+        if not c1==c[0]:
+            credits_s += "\n{size=40}" + c[0] + "\n"
+        credits_s += "{size=60}" + c[1] + "\n"
+        c1=c[0]
+    credits_s += "\n{size=40}Engine\n{size=60}" + renpy.version()
+
+init:
+#    image cred = Text(credits_s, font="myfont.ttf", text_align=0.5) #use this if you want to use special fonts
+    image cred = Text(credits_s, text_align=0.5)
+    image theend = Text("{size=80}The end", text_align=0.5)
+    image thanks = Text("{size=80}Thanks for Playing!", text_align=0.5)
